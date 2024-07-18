@@ -1,6 +1,0 @@
-Set parameter Username
-Set parameter WLSAccessID
-Set parameter WLSSecret
-Set parameter LicenseID to value 2533279
-Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
-slurmstepd: error: *** JOB 908986 ON owlet00 CANCELLED AT 2024-07-16T11:14:39 ***
