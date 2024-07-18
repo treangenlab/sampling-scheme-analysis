@@ -1,0 +1,29 @@
+Set parameter Username
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2533279
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+w=8, k=1, sigma=2  396.0/512  -->  0.2265625
+	Command being timed: "/home/Users/blk6/Projects/dbmers/scripts/run-fwd.py -w 8 -k 1 --sigma 2"
+	User time (seconds): 179.38
+	System time (seconds): 23.37
+	Percent of CPU this job got: 3258%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.22
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 742224
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 206145
+	Voluntary context switches: 98717
+	Involuntary context switches: 447051
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

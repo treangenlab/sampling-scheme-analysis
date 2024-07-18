@@ -1,0 +1,48 @@
+
+Gurobi 10.0.3 (linux64) logging started Mon Jul 15 11:56:45 2024
+
+Set parameter LogFile to value "fwd/logs/w2-k4-s2.log"
+Set parameter BestObjStop to value 27
+Set parameter PoolSearchMode to value 2
+Set parameter PoolSolutions to value 1
+Set parameter Heuristics to value 0.9
+Set parameter Threads to value 60
+Set parameter Threads to value 60
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 153 rows, 96 columns and 978 nonzeros
+Model fingerprint: 0x19ea17f3
+Model has 128 general constraints
+Variable types: 0 continuous, 96 integer (64 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 4e+00]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve added 82 rows and 61 columns
+Presolve time: 0.00s
+Presolved: 235 rows, 157 columns, 1208 nonzeros
+Presolved model has 62 SOS constraint(s)
+Variable types: 0 continuous, 157 integer (94 binary)
+
+Root relaxation: objective 2.700000e+01, 139 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0      27.0000000   27.00000  0.00%     -    0s
+
+Explored 1 nodes (324 simplex iterations) in 0.02 seconds (0.01 work units)
+Thread count was 60 (of 128 available processors)
+
+Solution count 1: 27 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.700000000000e+01, best bound 2.700000000000e+01, gap 0.0000%
