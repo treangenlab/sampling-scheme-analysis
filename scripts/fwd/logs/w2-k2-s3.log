@@ -1,0 +1,64 @@
+
+Gurobi 10.0.3 (linux64) logging started Mon Jul 15 12:39:45 2024
+
+Set parameter LogFile to value "fwd/logs/w2-k2-s3.log"
+Set parameter BestObjStop to value 32
+Set parameter PoolSearchMode to value 2
+Set parameter PoolSolutions to value 1
+Set parameter Heuristics to value 0.9
+Set parameter Threads to value 60
+Set parameter Threads to value 60
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 95 rows, 108 columns and 363 nonzeros
+Model fingerprint: 0x3f8f54a3
+Model has 162 general constraints
+Variable types: 0 continuous, 108 integer (81 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve added 129 rows and 78 columns
+Presolve time: 0.00s
+Presolved: 224 rows, 186 columns, 747 nonzeros
+Presolved model has 78 SOS constraint(s)
+Variable types: 0 continuous, 186 integer (105 binary)
+
+Root relaxation: objective 3.120000e+01, 297 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   31.20000    0   46   -0.00000   31.20000      -     -    0s
+H    0     0                      27.0000000   31.20000  15.6%     -    0s
+H    0     0                      28.0000000   31.20000  11.4%     -    0s
+H    0     0                      29.0000000   31.20000  7.59%     -    0s
+H    0     0                      30.0000000   31.20000  4.00%     -    0s
+     0     0   31.00000    0   63   30.00000   31.00000  3.33%     -    0s
+     0     0   31.00000    0   74   30.00000   31.00000  3.33%     -    0s
+     0     0   31.00000    0  121   30.00000   31.00000  3.33%     -    0s
+     0     0   31.00000    0   39   30.00000   31.00000  3.33%     -    0s
+     0     2   31.00000    0   22   30.00000   31.00000  3.33%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 82
+  Flow cover: 4
+  Zero half: 70
+  RLT: 9
+
+Explored 4 nodes (2365 simplex iterations) in 0.16 seconds (0.07 work units)
+Thread count was 60 (of 128 available processors)
+
+Solution count 1: 30 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.000000000000e+01, best bound 3.000000000000e+01, gap 0.0000%

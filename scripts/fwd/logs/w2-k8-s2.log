@@ -1,0 +1,74 @@
+
+Gurobi 10.0.3 (linux64) logging started Mon Jul 15 11:56:51 2024
+
+Set parameter LogFile to value "fwd/logs/w2-k8-s2.log"
+Set parameter BestObjStop to value 465
+Set parameter PoolSearchMode to value 2
+Set parameter PoolSolutions to value 1
+Set parameter Heuristics to value 0.9
+Set parameter Threads to value 60
+Set parameter Threads to value 60
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 4807 rows, 1536 columns and 65047 nonzeros
+Model fingerprint: 0xb56a9ead
+Model has 2048 general constraints
+Variable types: 0 continuous, 1536 integer (1024 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 7e+00]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve added 1887 rows and 1021 columns
+Presolve time: 0.19s
+Presolved: 6694 rows, 2557 columns, 70177 nonzeros
+Presolved model has 1022 SOS constraint(s)
+Variable types: 0 continuous, 2557 integer (1534 binary)
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   24880    4.7155615e+02   1.007549e+04   0.000000e+00      5s
+   46850    4.6887068e+02   1.522397e+04   0.000000e+00     10s
+   70448    4.6731985e+02   5.107624e+04   0.000000e+00     15s
+   95768    4.6587736e+02   7.027435e+03   0.000000e+00     20s
+  113483    4.6500000e+02   0.000000e+00   6.817620e-03     25s
+  113504    4.6500000e+02   0.000000e+00   0.000000e+00     25s
+
+Root relaxation: objective 4.650000e+02, 113504 iterations, 24.80 seconds (34.89 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  465.00000    0  266   -0.00000  465.00000      -     -   26s
+H    0     0                     336.0000000  465.00000  38.4%     -   26s
+H    0     0                     371.0000000  465.00000  25.3%     -   26s
+H    0     0                     376.0000000  465.00000  23.7%     -   26s
+     0     0  465.00000    0 1104  376.00000  465.00000  23.7%     -   29s
+H    0     0                     385.0000000  465.00000  20.8%     -   30s
+     0     0  465.00000    0 1104  385.00000  465.00000  20.8%     -   30s
+*    0     0               0     465.0000000  465.00000  0.00%     -   34s
+
+Cutting planes:
+  Learned: 2
+  Gomory: 3
+  Cover: 426
+  Implied bound: 572
+  Clique: 707
+  MIR: 283
+  Zero half: 29
+
+Explored 1 nodes (135035 simplex iterations) in 34.88 seconds (47.69 work units)
+Thread count was 60 (of 128 available processors)
+
+Solution count 1: 465 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.650000000000e+02, best bound 4.650000000000e+02, gap 0.0000%
