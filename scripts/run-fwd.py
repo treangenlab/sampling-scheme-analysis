@@ -7,7 +7,7 @@ import argparse
 from utils import *
 
 
-def get_ILP_fwd(n, r, sigma=2, nSolutions=1, heuristics=0.1):
+def get_ILP_fwd(n, r, sigma=2, nSolutions=1, heuristics=0.1, seed=None):
     pgap = 0.0000
     k = n - r + 1
     # print(n, k, r, 2**(n+1) * (1 - aperiodic_bound_suff(w, k)))
@@ -34,6 +34,10 @@ def get_ILP_fwd(n, r, sigma=2, nSolutions=1, heuristics=0.1):
             m.addConstr((y[(u,v)] == 1) >> (x[u] == x[v] + 1))
             m.addConstr((y[(u,v)] == 0) >> (x[u] <= x[v]))
 
+        if seed:
+            for node in nodes:
+                x[node].Start = seed[node]
+            
         # if k % r == 1:
             # for x in range(n+1, n+2):
                 # necklaces = get_necklaces(x, sigma)
@@ -90,8 +94,24 @@ if __name__ == "__main__":
     wksig_to_dens = {}
         
     n = w + k - 1
-    gp.setParam("LogFile", f"fwd-naive/logs/w{w}-k{k}-s{sigma}.log")
-    m = get_ILP_fwd(n, w, sigma=sigma, heuristics=1 if (k % w) == 1 else 0.9)
+    gp.setParam("LogFile", f"fwd/logs/w{w}-k{k}-s{sigma}.log")
+
+    seed = None
+    if os.path.isfile(f"fwd/sols/w{w}-k{k-1}-s{sigma}.pck"):
+        alphabet = list(str(c) for c in range(sigma))
+        with open(f"fwd/sols/w{w}-k{k-1}-s{sigma}.pck", 'rb') as pck_in:
+            seed = pck.load(pck_in)[(w, k-1, sigma)][0]
+      
+    elif os.path.isfile(f"fwd/sols/w{w-1}-k{k}-s{sigma}.pck"):
+        with open(f"fwd/sols/w{w-1}-k{k}-s{sigma}.pck", 'rb') as pck_in:
+            seed = pck.load(pck_in)[(w-1, k, sigma)][0]
+    if seed is not None:
+        alphabet = list(str(c) for c in range(sigma))
+        seed_ext = {}
+        for node, val in seed.items():
+            seed_ext.update({node + c: val for c in alphabet})
+        seed = seed_ext
+    m = get_ILP_fwd(n, w, sigma=sigma, heuristics=1 if (k % w) == 1 else 0.9, seed=seed)
 
     # Optimize model
     gp.setParam("Threads", 60)
@@ -116,10 +136,10 @@ if __name__ == "__main__":
         sols.append(wm)
 
     wksig_to_sols[(w, k, sigma)] = sols
-    sols_pck = f"fwd-naive/sols/w{w}-k{k}-s{sigma}.pck"
+    sols_pck = f"fwd/sols/w{w}-k{k}-s{sigma}.pck"
     with open(sols_pck, 'wb') as sols_out:
         pck.dump(wksig_to_sols, sols_out)
 
-    dens_pck = f"fwd-naive/dens/w{w}-k{k}-s{sigma}.pck"
+    dens_pck = f"fwd/dens/w{w}-k{k}-s{sigma}.pck"
     with open(dens_pck, 'wb') as dens_out:
         pck.dump(wksig_to_dens, dens_out)
