@@ -18,6 +18,7 @@ from functools import cache
 from sympy import totient, isprime, divisors
 from sympy.ntheory.residue_ntheory import mobius
 import networkx as nx
+from fractions import Fraction
 
 def de_bruijn_invBWT(n, k):
     """de Bruijn sequence for alphabet k
@@ -59,30 +60,27 @@ def create_dbg(n, sigma):
     return G
 
 def necklace(n, sigma=2):
-    return 1/n * (sum(totient(d)*(sigma**(n / d)) for d in divisors(n)))
+    return int((sum(totient(d)*(sigma**(n // d)) for d in divisors(n))) // n)
 
 def aperiodic_necklaces(n, sigma=2):
-    return 1/n * (sum(mobius(d) * sigma**(n/d) for d in divisors(n)))
+    return int((sum(mobius(d) * sigma**(n // d) for d in divisors(n))) // n)
 
-def aperiodic_bound(w, k, sigma=2):
-    # sampled = sigma ** (w+k)
+def aperiodic_bound(w, k, sigma=2, sketch_size=1):
     sampled = 0
     for d in divisors(w+k):
         primitive_n = aperiodic_necklaces(d, sigma)
-        # slack = (w - (d % w)) % w
-        slack = math.ceil(d / w)
+        slack = math.ceil(sketch_size*d / w)
         sampled += primitive_n * slack
-    return float(sampled / (sigma ** (w+k)))
-    # return float(sampled / (w * sigma ** (w+k)))
+    return Fraction(sampled , (sigma ** (w+k)))
 
-def aperiodic_bound_suff(w, k, sigma=2):
-    ret = aperiodic_bound(w, k, sigma)
+def aperiodic_bound_suff(w, k, sigma=2, sketch_size=1):
+    ret = aperiodic_bound(w, k, sigma, sketch_size)
     if k % w != 1:
-        ret = max(ret, aperiodic_bound(w, math.ceil(k/w)*w + 1, sigma))
+        ret = max(ret, aperiodic_bound(w, math.ceil(k/w)*w + 1, sigma, sketch_size))
     return ret
     
 def ragnar_ceil_LB(w, k):
-    return math.ceil((w+k) / w) / (w+k)
+    return Fraction(math.ceil((w+k) / w) , (w+k))
 
 def ragnar_WABI_LB(w, k):
     return 1.5 / (w + k - 0.5)
