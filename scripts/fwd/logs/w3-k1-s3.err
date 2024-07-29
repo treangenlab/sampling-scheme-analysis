@@ -3,25 +3,25 @@ Set parameter WLSAccessID
 Set parameter WLSSecret
 Set parameter LicenseID to value 2533279
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
-w=3, k=1, sigma=3  39.0/81  -->  0.5185185185185186
-	Command being timed: "/home/Users/blk6/Projects/dbmers/scripts/run-fwd.py -w 3 -k 1 --sigma 3"
-	User time (seconds): 1.44
-	System time (seconds): 6.67
-	Percent of CPU this job got: 602%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.34
+Already completed!
+	Command being timed: "/home/Users/blk6/Projects/winnowing-LB-manuscript/scripts/run-fwd.py -w 3 -k 1 --sigma 3"
+	User time (seconds): 1.43
+	System time (seconds): 7.02
+	Percent of CPU this job got: 733%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.15
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 117688
+	Maximum resident set size (kbytes): 104236
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 22790
-	Voluntary context switches: 4695
-	Involuntary context switches: 45
+	Minor (reclaiming a frame) page faults: 20809
+	Voluntary context switches: 4568
+	Involuntary context switches: 17
 	Swaps: 0
 	File system inputs: 0
-	File system outputs: 56
+	File system outputs: 16
 	Socket messages sent: 0
 	Socket messages received: 0
 	Signals delivered: 0

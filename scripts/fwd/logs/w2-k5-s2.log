@@ -1,11 +1,11 @@
 
-Gurobi 10.0.3 (linux64) logging started Mon Jul 15 11:56:46 2024
+Gurobi 10.0.3 (linux64) logging started Sun Jul 28 15:08:56 2024
 
 Set parameter LogFile to value "fwd/logs/w2-k5-s2.log"
-Set parameter BestObjStop to value 54
 Set parameter PoolSearchMode to value 2
 Set parameter PoolSolutions to value 1
 Set parameter Heuristics to value 1
+Set parameter PoolGap to value 0
 Set parameter Threads to value 60
 Set parameter Threads to value 60
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
@@ -15,34 +15,49 @@ Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
 Optimize a model with 20 rows, 192 columns and 128 nonzeros
-Model fingerprint: 0x1af78ce6
+Model fingerprint: 0x86fb93fa
 Model has 256 general constraints
 Variable types: 0 continuous, 192 integer (128 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 1e+00]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 1e+00]
-  RHS range        [3e+00, 3e+00]
+  RHS range        [1e+00, 4e+00]
   GenCon rhs range [1e+00, 1e+00]
   GenCon coe range [1e+00, 1e+00]
-Found heuristic solution: objective -0.0000000
+
+User MIP start produced solution with objective 74 (0.02s)
+Loaded user MIP start with objective 74
+
 Presolve added 251 rows and 125 columns
 Presolve time: 0.00s
 Presolved: 271 rows, 317 columns, 881 nonzeros
 Presolved model has 126 SOS constraint(s)
 Variable types: 0 continuous, 317 integer (190 binary)
 
-Root relaxation: objective 5.400000e+01, 108 iterations, 0.00 seconds (0.00 work units)
+Root relaxation: cutoff, 18 iterations, 0.00 seconds (0.00 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-*    0     0               0      54.0000000   54.00000  0.00%     -    0s
+     0     0     cutoff    0        74.00000   74.00000  0.00%     -    0s
 
-Explored 1 nodes (419 simplex iterations) in 0.02 seconds (0.01 work units)
+Explored 1 nodes (18 simplex iterations) in 0.03 seconds (0.00 work units)
 Thread count was 60 (of 128 available processors)
 
-Solution count 1: 54 
+Solution count 1: 74 
 
 Optimal solution found (tolerance 1.00e-04)
-Best objective 5.400000000000e+01, best bound 5.400000000000e+01, gap 0.0000%
+Best objective 7.400000000000e+01, best bound 7.400000000000e+01, gap 0.0000%
+
+Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:05:48 2024
+
+Set parameter LogFile to value "fwd/logs/w2-k5-s2.log"
+
+Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:07:00 2024
+
+Set parameter LogFile to value "fwd/logs/w2-k5-s2.log"
+
+Gurobi 10.0.3 (linux64) logging started Sun Jul 28 19:25:38 2024
+
+Set parameter LogFile to value "fwd/logs/w2-k5-s2.log"

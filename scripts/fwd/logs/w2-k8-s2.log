@@ -1,11 +1,11 @@
 
-Gurobi 10.0.3 (linux64) logging started Mon Jul 15 11:56:51 2024
+Gurobi 10.0.3 (linux64) logging started Sun Jul 28 15:09:00 2024
 
 Set parameter LogFile to value "fwd/logs/w2-k8-s2.log"
-Set parameter BestObjStop to value 465
 Set parameter PoolSearchMode to value 2
 Set parameter PoolSolutions to value 1
 Set parameter Heuristics to value 0.9
+Set parameter PoolGap to value 0
 Set parameter Threads to value 60
 Set parameter Threads to value 60
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
@@ -14,61 +14,90 @@ CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
 Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
-Optimize a model with 4807 rows, 1536 columns and 65047 nonzeros
-Model fingerprint: 0xb56a9ead
+Optimize a model with 16635 rows, 1536 columns and 259388 nonzeros
+Model fingerprint: 0x8b0f2afc
 Model has 2048 general constraints
 Variable types: 0 continuous, 1536 integer (1024 binary)
 Coefficient statistics:
-  Matrix range     [1e+00, 5e+00]
+  Matrix range     [1e+00, 7e+00]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 1e+00]
-  RHS range        [1e+00, 7e+00]
+  RHS range        [1e+00, 9e+00]
   GenCon rhs range [1e+00, 1e+00]
   GenCon coe range [1e+00, 1e+00]
-Found heuristic solution: objective -0.0000000
-Presolve added 1887 rows and 1021 columns
-Presolve time: 0.19s
-Presolved: 6694 rows, 2557 columns, 70177 nonzeros
+
+User MIP start produced solution with objective 572 (0.38s)
+Loaded user MIP start with objective 572
+
+Presolve added 1612 rows and 1021 columns
+Presolve time: 0.56s
+Presolved: 18247 rows, 2557 columns, 261708 nonzeros
 Presolved model has 1022 SOS constraint(s)
 Variable types: 0 continuous, 2557 integer (1534 binary)
+Root relaxation presolved: 18247 rows, 2557 columns, 261708 nonzeros
+
 
 Root simplex log...
 
 Iteration    Objective       Primal Inf.    Dual Inf.      Time
-   24880    4.7155615e+02   1.007549e+04   0.000000e+00      5s
-   46850    4.6887068e+02   1.522397e+04   0.000000e+00     10s
-   70448    4.6731985e+02   5.107624e+04   0.000000e+00     15s
-   95768    4.6587736e+02   7.027435e+03   0.000000e+00     20s
-  113483    4.6500000e+02   0.000000e+00   6.817620e-03     25s
-  113504    4.6500000e+02   0.000000e+00   0.000000e+00     25s
+    8611    5.4410011e+02   2.391116e+04   0.000000e+00      5s
+   20746    5.4880555e+02   7.426714e+04   0.000000e+00     10s
+   33360    5.5224083e+02   9.860521e+04   0.000000e+00     15s
+   45929    5.5434330e+02   1.352064e+05   0.000000e+00     20s
+   56636    5.5597341e+02   1.959288e+04   0.000000e+00     25s
+   64782    5.5655503e+02   9.223756e+03   0.000000e+00     30s
+   73499    5.5696164e+02   1.050892e+04   0.000000e+00     35s
+   82160    5.5731451e+02   5.575091e+04   0.000000e+00     40s
+   91430    5.5772061e+02   4.183446e+04   0.000000e+00     45s
+  100330    5.5793802e+02   3.614760e+05   0.000000e+00     50s
+  109025    5.5820215e+02   8.136466e+04   0.000000e+00     55s
+  117753    5.5835461e+02   1.132597e+05   0.000000e+00     60s
+  125973    5.5854155e+02   3.430499e+04   0.000000e+00     65s
+  133778    5.5861510e+02   5.271608e+04   0.000000e+00     70s
+  142060    5.5881227e+02   5.792344e+04   0.000000e+00     75s
+  149382    5.5893132e+02   2.643628e+06   0.000000e+00     80s
+  156392    5.5901291e+02   2.128958e+03   0.000000e+00     85s
+  158457    5.5900000e+02   0.000000e+00   0.000000e+00     87s
 
-Root relaxation: objective 4.650000e+02, 113504 iterations, 24.80 seconds (34.89 work units)
+Root relaxation: objective 5.590000e+02, 158457 iterations, 85.91 seconds (156.69 work units)
+Total elapsed time = 90.92s
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0  465.00000    0  266   -0.00000  465.00000      -     -   26s
-H    0     0                     336.0000000  465.00000  38.4%     -   26s
-H    0     0                     371.0000000  465.00000  25.3%     -   26s
-H    0     0                     376.0000000  465.00000  23.7%     -   26s
-     0     0  465.00000    0 1104  376.00000  465.00000  23.7%     -   29s
-H    0     0                     385.0000000  465.00000  20.8%     -   30s
-     0     0  465.00000    0 1104  385.00000  465.00000  20.8%     -   30s
-*    0     0               0     465.0000000  465.00000  0.00%     -   34s
+     0     0  559.00000    0  363  572.00000  559.00000  2.27%     -   92s
+     0     0  559.00000    0 1314  572.00000  559.00000  2.27%     -  103s
+     0     0  559.00000    0 1186  572.00000  559.00000  2.27%     -  105s
+     0     0  559.00000    0  146  572.00000  559.00000  2.27%     -  128s
+H    0     0                     571.0000000  559.00000  2.10%     -  128s
+     0     0  559.00000    0   74  571.00000  559.00000  2.10%     -  129s
+*    0     0               0     559.0000000  559.00000  0.00%     -  130s
 
 Cutting planes:
-  Learned: 2
   Gomory: 3
-  Cover: 426
-  Implied bound: 572
-  Clique: 707
-  MIR: 283
-  Zero half: 29
+  Cover: 418
+  Implied bound: 483
+  Clique: 705
+  MIR: 1034
+  Zero half: 34
+  Mod-K: 18
 
-Explored 1 nodes (135035 simplex iterations) in 34.88 seconds (47.69 work units)
+Explored 1 nodes (200615 simplex iterations) in 130.11 seconds (241.45 work units)
 Thread count was 60 (of 128 available processors)
 
-Solution count 1: 465 
+Solution count 1: 559 
 
 Optimal solution found (tolerance 1.00e-04)
-Best objective 4.650000000000e+02, best bound 4.650000000000e+02, gap 0.0000%
+Best objective 5.590000000000e+02, best bound 5.590000000000e+02, gap 0.0000%
+
+Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:05:52 2024
+
+Set parameter LogFile to value "fwd/logs/w2-k8-s2.log"
+
+Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:07:03 2024
+
+Set parameter LogFile to value "fwd/logs/w2-k8-s2.log"
+
+Gurobi 10.0.3 (linux64) logging started Sun Jul 28 19:25:39 2024
+
+Set parameter LogFile to value "fwd/logs/w2-k8-s2.log"
