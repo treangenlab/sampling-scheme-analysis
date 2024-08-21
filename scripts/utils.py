@@ -66,6 +66,9 @@ def aperiodic_necklaces(n, sigma=2):
     return int((sum(mobius(d) * sigma**(n // d) for d in divisors(n))) // n)
 
 def aperiodic_bound(w, k, sigma=2, sketch_size=1):
+    if (w+k)*np.log2(sigma) > 31:
+        return ragnar_ceil_LB(w, k)
+        
     sampled = 0
     for d in divisors(w+k):
         primitive_n = aperiodic_necklaces(d, sigma)
