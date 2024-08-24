@@ -11,8 +11,6 @@ import copy
 from pprint import pprint
 from sympy.ntheory.modular import solve_congruence
 
-# import gurobipy as gp
-# from gurobipy import GRB
 from copy import deepcopy
 import pickle as pck
 from functools import cache
