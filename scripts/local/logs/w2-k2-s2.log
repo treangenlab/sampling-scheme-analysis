@@ -1,0 +1,49 @@
+
+Gurobi 10.0.3 (linux64) logging started Sun Aug 25 08:19:45 2024
+
+Set parameter LogFile to value "local/logs/w2-k2-s2.log"
+
+Gurobi 10.0.3 (linux64) logging started Sun Aug 25 08:19:45 2024
+
+Set parameter LogFile to value "local/logs/w2-k2-s2.log"
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 30 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 72 rows, 48 columns and 144 nonzeros
+Model fingerprint: 0x7aa9d041
+Variable types: 0 continuous, 48 integer (48 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+
+User MIP start produced solution with objective 20 (0.01s)
+Loaded user MIP start with objective 20
+
+Presolve removed 16 rows and 12 columns
+Presolve time: 0.00s
+Presolved: 56 rows, 36 columns, 112 nonzeros
+Variable types: 0 continuous, 36 integer (36 binary)
+
+Root relaxation: objective 1.800000e+01, 40 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   18.00000    0   36   20.00000   18.00000  10.0%     -    0s
+
+Cutting planes:
+  Gomory: 2
+  Zero half: 4
+
+Explored 1 nodes (42 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 30 (of 128 available processors)
+
+Solution count 1: 20 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.000000000000e+01, best bound 2.000000000000e+01, gap 0.0000%
