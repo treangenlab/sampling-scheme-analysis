@@ -79,10 +79,10 @@ if __name__ == "__main__":
                 print(f"({w}, {k}, {sigma})-forward scheme not found. There's no hope...")
                 continue
 
-            with open("fwd/sols/w{w}-k{k}-s{sigma}.pck", 'rb') as pck_in:
+            with open(f"fwd/sols/w{w}-k{k}-s{sigma}.pck", 'rb') as pck_in:
                 fwd_seed = pck.load(pck_in)[w, k, sigma][0]
 
-            with open("fwd/dens/w{w}-k{k}-s{sigma}.pck", 'rb') as pck_in:
+            with open(f"fwd/dens/w{w}-k{k}-s{sigma}.pck", 'rb') as pck_in:
                 fwd_dens = pck.load(pck_in)[w, k, sigma]
 
             m = get_ILP_local(w, k, sigma=sigma, seed=fwd_seed)

@@ -2,10 +2,10 @@ import gurobipy as gp
 from gurobipy import GRB
 
 from utils import *
-TIME_LIMIT = 15 * 60 # Run for 1h
+TIME_LIMIT = 30 * 60 # min * sec/min
 
 
-def get_ILP_local(w, k, sigma=2, nSolutions=1, start=None, sketch_size=1):
+def get_ILP_local(w, k, sigma=2, nSolutions=1, seed=None, sketch_size=1):
     pgap = 0.0000
     context_size = 2*w + k - 1
     ell = w + k - 1
@@ -38,10 +38,10 @@ def get_ILP_local(w, k, sigma=2, nSolutions=1, start=None, sketch_size=1):
         y = [m.addVar(vtype=GRB.BINARY , name=f"y_{a}") for a in range(N)]
 
         # Seed start values if provided
-        if start:
+        if seed:
             for node in x:
                 for i in range(w):
-                    x[node][i].Start = 0 if i != start[node] else 1
+                    x[node][i].Start = 0 if i != seed[node] else 1
                 
     except gp.GurobiError as e:
         print('Error code ' + str(e.errno) + ': ' + str(e))
