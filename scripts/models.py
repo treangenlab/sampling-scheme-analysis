@@ -2,7 +2,7 @@ import gurobipy as gp
 from gurobipy import GRB
 
 from utils import *
-TIME_LIMIT = 30 * 60 # Run for 30 min
+TIME_LIMIT = 15 * 60 # Run for 1h
 
 
 def get_ILP_local(w, k, sigma=2, nSolutions=1, start=None, sketch_size=1):
@@ -13,7 +13,7 @@ def get_ILP_local(w, k, sigma=2, nSolutions=1, start=None, sketch_size=1):
     gp.setParam("PoolSearchMode", 2)
     gp.setParam("PoolSolutions", nSolutions)
     gp.setParam("PoolGap", pgap)
-    gp.setParam("Method", 3)
+    # gp.setParam("Method", 3)
     gp.setParam("TimeLimit", TIME_LIMIT)
 
     
@@ -75,7 +75,7 @@ def get_ILP_fwd(w, k, sigma=2, nSolutions=1, heuristics=0.1, seed=None):
     gp.setParam("PoolSolutions", nSolutions)
     gp.setParam("Heuristics", heuristics)
     gp.setParam("PoolGap", pgap)
-    gp.setParam("Method", 3)
+    # gp.setParam("Method", 3)
     gp.setParam("TimeLimit", TIME_LIMIT)
 
     n = w + k - 1
