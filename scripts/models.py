@@ -2,18 +2,18 @@ import gurobipy as gp
 from gurobipy import GRB
 
 from utils import *
-TIME_LIMIT = 30 * 60 # min * sec/min
+TIME_LIMIT = 360 * 60 # min * sec/min
 
 
-def get_ILP_local(w, k, sigma=2, nSolutions=1, seed=None, sketch_size=1):
+def get_ILP_local(w, k, sigma=2, nSolutions=1, seed=None, sketch_size=1, method=-1):
     pgap = 0.0000
-    context_size = 2*w + k - 1
+    context_size = 2*w + k - 2
     ell = w + k - 1
     
     gp.setParam("PoolSearchMode", 2)
     gp.setParam("PoolSolutions", nSolutions)
     gp.setParam("PoolGap", pgap)
-    # gp.setParam("Method", 3)
+    gp.setParam("Method", method)
     gp.setParam("TimeLimit", TIME_LIMIT)
 
     
@@ -69,13 +69,13 @@ def get_ILP_local(w, k, sigma=2, nSolutions=1, seed=None, sketch_size=1):
     return m
 
 
-def get_ILP_fwd(w, k, sigma=2, nSolutions=1, heuristics=0.1, seed=None):
+def get_ILP_fwd(w, k, sigma=2, nSolutions=1, heuristics=0.1, seed=None, method=-1):
     pgap = 0
     gp.setParam("PoolSearchMode", 2)
     gp.setParam("PoolSolutions", nSolutions)
     gp.setParam("Heuristics", heuristics)
     gp.setParam("PoolGap", pgap)
-    # gp.setParam("Method", 3)
+    gp.setParam("Method", method)
     gp.setParam("TimeLimit", TIME_LIMIT)
 
     n = w + k - 1
@@ -110,10 +110,10 @@ def get_ILP_fwd(w, k, sigma=2, nSolutions=1, heuristics=0.1, seed=None):
             cycle_constraints = 0
 
             # Reduce cycle space for larger alphabets
-            max_cycle = {2: 16, 3: 12, 4: 8}[sigma]
+            max_cycle = {2: 20, 3: 12, 4: 8}[sigma]
 
             # Use other simple cycles
-            for d in range(1, min(2*n, max_cycle) + 1):
+            for d in range(1, min(3*n, max_cycle) + 1):
                 necks = [neck for neck, rots in get_necklaces(d, sigma).items()]
                 for neck in necks:
                     s = ""
@@ -133,7 +133,7 @@ def get_ILP_fwd(w, k, sigma=2, nSolutions=1, heuristics=0.1, seed=None):
                         continue
 
                     # If not helpful cycle
-                    if p % w == 0:
+                    if p % w != 1:
                         continue
 
                     neck_edges = [(v[:-1], v[1:]) for v in cycle]
