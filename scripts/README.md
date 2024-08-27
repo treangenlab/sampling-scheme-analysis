@@ -33,6 +33,15 @@ To generate benchmarking results for this specific input text, we use the `--inp
 RUSTFLAGS="-C target-cpu=native" cargo +nightly run -r -- -s 4 eval --practical -o output/practical-chm13Y.json --input input/chm13Y.trimmed.txt
 ```
 
+### Analyzing output in `plots.ipynb`
+In order to plot the benchmarking results, the output json files must be gzipped and 
+moved to `scripts/data`
+
+```
+gzip output/*.json
+cp output/*.json ../data/
+```
+
 
 ## Instructions for running the ILP models
 The ILP models are built with [gurobipy](https://support.gurobi.com/hc/en-us/articles/360044290292-How-do-I-install-Gurobi-for-Python).
