@@ -20,6 +20,7 @@ import networkx as nx
 from fractions import Fraction
 
 
+# This name is weird?
 def de_bruijn_invBWT(n, k):
     """de Bruijn sequence for alphabet k
     and subsequences of length n.
