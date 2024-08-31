@@ -15,27 +15,41 @@ if __name__ == "__main__":
     parser.add_argument("-k", "--kmer", nargs="+", required=True) 
     parser.add_argument("--sigma", nargs="+", required=True) 
     parser.add_argument("--local", help="Find minimum local scheme density", action="store_true") 
+    parser.add_argument("-o", "--output", type=str, help="Path to output directory")
+    parser.add_argument("--time-limit", type=int, help="Time limit (in seconds)")
     parser.add_argument("-t", "--threads", type=int, default=1)
     parser.add_argument("-v", "--verbose", help="Log ILP to output", action="store_true")
     args = parser.parse_args()
 
-    ws = args.window_size
-    ks = args.kmer
-    sigmas = args.sigma
+    ws = list(map(int, args.window_size))
+    ks = list(map(int, args.kmer))
+    sigmas = list(map(int, args.sigma))
     is_local = args.local
     n_threads = args.threads
-    out_dir = "local" if is_local else "fwd"
+    if args.output:
+        out_dir = args.output
+    else:
+        out_dir = "local" if is_local else "fwd"
+
+    for sub in ("dens", "sols", "logs", "models"):
+        os.makedirs(f"{out_dir}/{sub}", exist_ok=True)
+
     param_list = sorted(itertools.product(ws, ks, sigmas), key=lambda x: int(x[0]) + int(x[1]))
 
+    last_failed = False
+    last_was_tight = False
     for w, k, sigma in param_list:
-        w = int(w)
-        k = int(k)
-        sigma = int(sigma)
+        if last_failed:
+            if last_was_tight:
+                break
+
+            if k % w != 1:
+                continue
+
+        last_was_tight = k % w == 1
+
         print(f"Working on w={w}, k={k}, s={sigma}")
         num_contexts = sigma ** (2*w + k - 1 if is_local else w + k)
-        if num_contexts > 2**16:
-            print("Too many contexts to feasibly solve...")
-            continue
 
         # Set model
         gp.setParam("LogToConsole", args.verbose)
@@ -47,6 +61,7 @@ if __name__ == "__main__":
         if not is_local:
             if os.path.isfile(f"fwd/sols/w{w}-k{k}-s{sigma}.pck"):
                 print("Already completed!")
+                continue
                 # exit(0)
 
             seed = None
@@ -72,7 +87,7 @@ if __name__ == "__main__":
                         seed_ext.update({node + c : val for c in alphabet})
                     seed = seed_ext
 
-            m = get_ILP_fwd(w, k, sigma=sigma, heuristics=1 if (k % w) == 1 else 0.9, seed=seed)
+            m = get_ILP_fwd(w, k, sigma=sigma, heuristics=1 if ((k % w) == 1 or w == 2) else 0.5, seed=seed, method=3, concurrentMIP=n_threads//2, time_limit=args.time_limit)
 
         else:
             if not os.path.isfile(f"fwd/sols/w{w}-k{k}-s{sigma}.pck"):
@@ -85,16 +100,19 @@ if __name__ == "__main__":
             with open(f"fwd/dens/w{w}-k{k}-s{sigma}.pck", 'rb') as pck_in:
                 fwd_dens = pck.load(pck_in)[w, k, sigma]
 
-            m = get_ILP_local(w, k, sigma=sigma, seed=fwd_seed)
+            m = get_ILP_local(w, k, sigma=sigma, seed=fwd_seed, method=3, time_limit=args.time_limit)
 
         # Optimize model
         gp.setParam("Threads", n_threads)
+        m.write(f"{out_dir}/models/w{w}-k{k}-s{sigma}.mps")
         m.optimize()
 
         if m.status != GRB.OPTIMAL:
             print(f"Optimization terminated at non-zero gap = {100*m.MIPGap:.2f}%")
+            last_failed = True
             continue
         
+        last_failed = False
         sampled = int(np.round(m.ObjVal))
         density = Fraction(sampled, num_contexts)
         wksig_to_dens[(w, k, sigma)] = density
