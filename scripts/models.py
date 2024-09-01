@@ -111,10 +111,10 @@ def get_ILP_fwd(w, k, sigma=2, nSolutions=1, heuristics=0.1, seed=None, method=-
             cycle_constraints = 0
 
             # Reduce cycle space for larger alphabets
-            max_cycle = {2: 16, 3: 10, 4: 8}[sigma]
+            max_cycle = {2: 14, 3: 12, 4: 8}[sigma]
 
             # Use other simple cycles
-            for d in range(1, min(2*n, max_cycle) + 1):
+            for d in range(1, max_cycle + 1):
                 necks = [neck for neck, rots in get_necklaces(d, sigma).items()]
                 for neck in necks:
                     s = ""
