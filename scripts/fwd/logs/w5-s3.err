@@ -1,0 +1,8 @@
+Working on w=5, k=1, s=3
+Set parameter Username
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2533279
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+slurmstepd: error: *** JOB 914977 ON owlet03 CANCELLED AT 2024-09-02T14:01:33 ***
+slurmstepd: error: *** JOB 914977 STEPD TERMINATED ON owlet03 AT 2024-09-02T14:02:38 DUE TO JOB NOT ENDING WITH SIGNALS ***

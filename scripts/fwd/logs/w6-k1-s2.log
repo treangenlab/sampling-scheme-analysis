@@ -1,21 +1,24 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 15:38:48 2024
+Gurobi 10.0.3 (linux64) logging started Sun Sep  1 10:46:01 2024
 
 Set parameter LogFile to value "fwd/logs/w6-k1-s2.log"
 Set parameter PoolSearchMode to value 2
 Set parameter PoolSolutions to value 1
 Set parameter Heuristics to value 1
 Set parameter PoolGap to value 0
-Set parameter Threads to value 60
-Set parameter Threads to value 60
+Set parameter Method to value 3
+Set parameter ConcurrentMIP to value 64
+Set parameter TimeLimit to value 43200
+Set parameter Threads to value 128
+Set parameter Threads to value 128
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
 Optimize a model with 20 rows, 192 columns and 128 nonzeros
-Model fingerprint: 0x4c950be6
+Model fingerprint: 0xd93a3aba
 Model has 256 general constraints
 Variable types: 0 continuous, 192 integer (128 binary)
 Coefficient statistics:
@@ -26,7 +29,10 @@ Coefficient statistics:
   GenCon rhs range [1e+00, 1e+00]
   GenCon coe range [1e+00, 1e+00]
 
-User MIP start produced solution with objective 46 (0.01s)
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 46 (0.09s)
 Loaded user MIP start with objective 46
 
 Presolve added 375 rows and 249 columns
@@ -34,47 +40,25 @@ Presolve time: 0.00s
 Presolved: 395 rows, 441 columns, 1005 nonzeros
 Presolved model has 126 SOS constraint(s)
 Variable types: 0 continuous, 441 integer (126 binary)
+Root relaxation presolved: 395 rows, 441 columns, 1005 nonzeros
 
-Root relaxation: objective 3.800000e+01, 227 iterations, 0.00 seconds (0.00 work units)
+
+Root relaxation: objective 3.800000e+01, 224 iterations, 0.00 seconds (0.00 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0   38.00000    0  107   46.00000   38.00000  17.4%     -    0s
-H    0     0                      45.0000000   38.00000  15.6%     -    0s
-H    0     0                      44.0000000   38.00000  13.6%     -    0s
-     0     0   38.00000    0  297   44.00000   38.00000  13.6%     -    0s
-     0     0   38.00000    0  139   44.00000   38.00000  13.6%     -    0s
-     0     0   38.00000    0   68   44.00000   38.00000  13.6%     -    0s
-     0     0   38.00000    0   68   44.00000   38.00000  13.6%     -    0s
-     0     0   38.00000    0   80   44.00000   38.00000  13.6%     -    0s
-     0     0   38.00000    0   80   44.00000   38.00000  13.6%     -    0s
-     0     2   38.00000    0   80   44.00000   38.00000  13.6%     -    0s
-H   37    60                      43.0000000   38.00000  11.6%   114    0s
-H   41    60                      42.0000000   38.00000  9.52%   112    0s
-H   68   120                      41.0000000   38.00000  7.32%   123    0s
-H  125   180                      40.0000000   38.00000  5.00%   119    0s
-H  130   180                      39.0000000   38.00000  2.56%   117    0s
-H  191   125                      38.0000000   38.00000  0.00%  98.5    0s
+     0     0      -    -    -       46.00000   38.00000  17.4%     -    0s
 
 Cutting planes:
-  Learned: 68
-  Gomory: 49
-  Implied bound: 6
-  Clique: 1
-  Flow cover: 1
-  Zero half: 3
-  RLT: 1
-  Relax-and-lift: 4
+  Learned: 105
 
-Explored 191 nodes (22797 simplex iterations) in 0.57 seconds (0.15 work units)
-Thread count was 60 (of 128 available processors)
+Instance 3 was solved
+
+Explored 1 nodes (1918 simplex iterations) in 0.13 seconds (0.05 work units)
+Thread count was 2 (of 128 available processors)
 
 Solution count 1: 38 
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 3.800000000000e+01, best bound 3.800000000000e+01, gap 0.0000%
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 19:25:50 2024
-
-Set parameter LogFile to value "fwd/logs/w6-k1-s2.log"

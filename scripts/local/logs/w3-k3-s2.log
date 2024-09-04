@@ -1,63 +1,65 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Aug 25 08:19:46 2024
+Gurobi 10.0.3 (linux64) logging started Sun Sep  1 14:27:48 2024
 
 Set parameter LogFile to value "local/logs/w3-k3-s2.log"
 
-Gurobi 10.0.3 (linux64) logging started Sun Aug 25 08:19:46 2024
+Gurobi 10.0.3 (linux64) logging started Sun Sep  1 14:27:48 2024
 
 Set parameter LogFile to value "local/logs/w3-k3-s2.log"
+Warning: variable name "x_(00000, 0)" has a space
+Warning: default variable names used to write mps file
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 30 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
-Optimize a model with 800 rows, 352 columns and 1632 nonzeros
-Model fingerprint: 0xe79eaf91
-Variable types: 0 continuous, 352 integer (352 binary)
+Optimize a model with 416 rows, 224 columns and 864 nonzeros
+Model fingerprint: 0xd4a04637
+Variable types: 0 continuous, 224 integer (224 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 1e+00]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 1e+00]
   RHS range        [1e+00, 1e+00]
 
-User MIP start produced solution with objective 116 (0.01s)
-Loaded user MIP start with objective 116
+User MIP start produced solution with objective 58 (0.01s)
+Loaded user MIP start with objective 58
 
-Presolve removed 24 rows and 4 columns
+Presolve removed 14 rows and 4 columns
 Presolve time: 0.00s
-Presolved: 776 rows, 348 columns, 1584 nonzeros
-Variable types: 0 continuous, 348 integer (348 binary)
+Presolved: 402 rows, 220 columns, 840 nonzeros
+Variable types: 0 continuous, 220 integer (220 binary)
+Root relaxation presolved: 402 rows, 220 columns, 840 nonzeros
 
-Root relaxation: objective 9.200000e+01, 424 iterations, 0.01 seconds (0.01 work units)
+
+Root relaxation: objective 4.600000e+01, 275 iterations, 0.00 seconds (0.00 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0   92.00000    0  348  116.00000   92.00000  20.7%     -    0s
-     0     0   95.00000    0  347  116.00000   95.00000  18.1%     -    0s
-     0     0   95.00000    0  348  116.00000   95.00000  18.1%     -    0s
-     0     0   96.33333    0  344  116.00000   96.33333  17.0%     -    0s
-     0     0   96.66667    0  346  116.00000   96.66667  16.7%     -    0s
-     0     0   98.66667    0  347  116.00000   98.66667  14.9%     -    0s
-     0     0   98.66667    0  348  116.00000   98.66667  14.9%     -    0s
-     0     0   98.66667    0  347  116.00000   98.66667  14.9%     -    0s
-     0     0   98.66667    0  347  116.00000   98.66667  14.9%     -    0s
-     0     0   98.66667    0  347  116.00000   98.66667  14.9%     -    0s
-     0     0  100.00000    0  346  116.00000  100.00000  13.8%     -    0s
-     0     0  100.00000    0  346  116.00000  100.00000  13.8%     -    0s
-     0     2  100.00000    0  346  116.00000  100.00000  13.8%     -    0s
+     0     0   46.00000    0  220   58.00000   46.00000  20.7%     -    0s
+     0     0   48.66667    0  219   58.00000   48.66667  16.1%     -    0s
+     0     0   49.58757    0  220   58.00000   49.58757  14.5%     -    0s
+     0     0   49.87095    0  220   58.00000   49.87095  14.0%     -    0s
+     0     0   49.89960    0  220   58.00000   49.89960  14.0%     -    0s
+     0     0   50.66667    0  218   58.00000   50.66667  12.6%     -    0s
+     0     0   51.16667    0  219   58.00000   51.16667  11.8%     -    0s
+     0     0   51.16667    0  219   58.00000   51.16667  11.8%     -    0s
+     0     0   51.16667    0  219   58.00000   51.16667  11.8%     -    0s
+     0     0   52.58333    0  220   58.00000   52.58333  9.34%     -    0s
+     0     0   52.58333    0  220   58.00000   52.58333  9.34%     -    0s
+     0     2   52.58333    0  220   58.00000   52.58333  9.34%     -    0s
 
 Cutting planes:
   Gomory: 4
-  MIR: 1
-  Zero half: 84
-  RLT: 5
+  Zero half: 46
+  RLT: 3
 
-Explored 236 nodes (21534 simplex iterations) in 0.34 seconds (0.29 work units)
-Thread count was 30 (of 128 available processors)
+Explored 166 nodes (10892 simplex iterations) in 0.23 seconds (0.13 work units)
+Thread count was 128 (of 128 available processors)
 
-Solution count 1: 116 
+Solution count 1: 58 
 
 Optimal solution found (tolerance 1.00e-04)
-Best objective 1.160000000000e+02, best bound 1.160000000000e+02, gap 0.0000%
+Best objective 5.800000000000e+01, best bound 5.800000000000e+01, gap 0.0000%

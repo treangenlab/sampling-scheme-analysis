@@ -1,0 +1,81 @@
+
+Gurobi 10.0.3 (linux64) logging started Mon Sep  2 14:40:10 2024
+
+Set parameter LogFile to value "fwd/logs/w9-k1-s3.log"
+Set parameter PoolSearchMode to value 2
+Set parameter PoolSolutions to value 1
+Set parameter Heuristics to value 1
+Set parameter PoolGap to value 0
+Set parameter Method to value 3
+Set parameter ConcurrentMIP to value 64
+Set parameter TimeLimit to value 43200
+Set parameter Threads to value 128
+Set parameter Threads to value 128
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 5934 rows, 78732 columns and 59049 nonzeros
+Model fingerprint: 0x41aef656
+Model has 118098 general constraints
+Variable types: 0 continuous, 78732 integer (59049 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+00]
+  RHS range        [1e+00, 2e+00]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+Found heuristic solution: objective 59049.000000
+Presolve removed 6 rows and 0 columns (presolve time = 5s) ...
+Presolve removed 12 rows and 59052 columns (presolve time = 11s) ...
+Presolve removed 177153 rows and 118107 columns (presolve time = 15s) ...
+Presolve added 177132 rows and 118086 columns
+Presolve time: 18.48s
+Presolved: 183066 rows, 196818 columns, 472359 nonzeros
+Presolved model has 59046 SOS constraint(s)
+Variable types: 0 continuous, 196818 integer (59046 binary)
+Root relaxation presolved: 183066 rows, 196818 columns, 472359 nonzeros
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Elapsed ordering time = 5s
+Elapsed ordering time = 6s
+Ordering time: 7.03s
+
+Barrier statistics:
+ AA' NZ     : 5.314e+05
+ Factor NZ  : 2.115e+08 (roughly 2.0 GB of memory)
+ Factor Ops : 1.940e+12 (roughly 70 seconds per iteration)
+ Threads    : 1
+
+Barrier performed 0 iterations in 81.88 seconds (52.39 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+
+Root relaxation: objective 1.181400e+04, 80368 iterations, 17.06 seconds (1.39 work units)
+Total elapsed time = 94.61s
+Total elapsed time = 99.28s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0      -    -    -     59049.0000 11814.0000  80.0%     -  102s
+     0     0      -    -    -     16922.0000 11814.0000  30.2%     -  113s
+     0     0      -    -    -     16922.0000 11814.0000  30.2%     -  125s
+     0     0      -    -    -     16922.0000 11814.0000  30.2%     -  184s
+     0     0      -    -    -     16922.0000 11814.0000  30.2%     -  200s
+     0     0      -    -    -     16922.0000 11814.0000  30.2%     -  307s
+     0     0      -    -    -     16922.0000 11814.0000  30.2%     -  421s
+     0     2      -    -    -     15513.0000 11814.0000  23.8%     -  770s
+     1     4      -    -    -     15513.0000 11814.0000  23.8%     -  779s

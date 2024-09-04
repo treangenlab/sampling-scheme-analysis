@@ -1,21 +1,21 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 15:11:33 2024
+Gurobi 10.0.3 (linux64) logging started Sat Aug 31 18:30:55 2024
 
 Set parameter LogFile to value "fwd/logs/w4-k5-s2.log"
-Set parameter PoolSearchMode to value 2
-Set parameter PoolSolutions to value 1
+
+Gurobi 10.0.3 (linux64) logging started Sat Aug 31 18:30:55 2024
+
+Set parameter LogFile to value "fwd/logs/w4-k5-s2.log"
 Set parameter Heuristics to value 1
-Set parameter PoolGap to value 0
-Set parameter Threads to value 60
-Set parameter Threads to value 60
+Set parameter Heuristics to value 1
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
 Optimize a model with 60 rows, 768 columns and 512 nonzeros
-Model fingerprint: 0x9bce0a02
+Model fingerprint: 0x02e33740
 Model has 1024 general constraints
 Variable types: 0 continuous, 768 integer (512 binary)
 Coefficient statistics:
@@ -26,7 +26,10 @@ Coefficient statistics:
   GenCon rhs range [1e+00, 1e+00]
   GenCon coe range [1e+00, 1e+00]
 
-User MIP start produced solution with objective 174 (0.02s)
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 174 (0.06s)
 Loaded user MIP start with objective 174
 
 Presolve added 1527 rows and 1017 columns
@@ -34,41 +37,48 @@ Presolve time: 0.01s
 Presolved: 1587 rows, 1785 columns, 4077 nonzeros
 Presolved model has 510 SOS constraint(s)
 Variable types: 0 continuous, 1785 integer (510 binary)
+Root relaxation presolved: 1587 rows, 1785 columns, 4077 nonzeros
 
-Root relaxation: objective 1.720000e+02, 1040 iterations, 0.00 seconds (0.00 work units)
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 3.564e+03
+ Factor NZ  : 3.670e+04 (roughly 2 MB of memory)
+ Factor Ops : 2.117e+06 (less than 1 second per iteration)
+ Threads    : 1
+
+Barrier performed 0 iterations in 0.08 seconds (0.02 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+
+Root relaxation: objective 1.720000e+02, 463 iterations, 0.01 seconds (0.00 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0  172.00000    0  417  174.00000  172.00000  1.15%     -    0s
-     0     0  172.00000    0 1708  174.00000  172.00000  1.15%     -    0s
-H    0     0                     173.0000000  172.00000  0.58%     -    0s
-H    0     0                     172.0000000  172.00000  0.00%     -    0s
-     0     0  172.00000    0 1489  172.00000  172.00000  0.00%     -    0s
+     0     0      -    -    -      174.00000  172.00000  1.15%     -    0s
+     0     0      -    -    -      174.00000  172.00000  1.15%     -    0s
 
 Cutting planes:
-  Learned: 434
+  Learned: 451
   Gomory: 8
-  Implied bound: 130
-  Zero half: 40
-  Relax-and-lift: 32
+  Implied bound: 109
+  Zero half: 41
+  Relax-and-lift: 21
 
-Explored 1 nodes (4589 simplex iterations) in 0.32 seconds (0.20 work units)
-Thread count was 60 (of 128 available processors)
+Instance 17 was solved
+
+Explored 1 nodes (2976 simplex iterations) in 0.25 seconds (0.15 work units)
+Thread count was 2 (of 128 available processors)
 
 Solution count 1: 172 
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 1.720000000000e+02, best bound 1.720000000000e+02, gap 0.0000%
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:06:01 2024
-
-Set parameter LogFile to value "fwd/logs/w4-k5-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:07:12 2024
-
-Set parameter LogFile to value "fwd/logs/w4-k5-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 19:25:42 2024
-
-Set parameter LogFile to value "fwd/logs/w4-k5-s2.log"

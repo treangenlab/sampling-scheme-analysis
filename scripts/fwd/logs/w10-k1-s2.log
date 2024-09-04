@@ -1,21 +1,24 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 15:39:06 2024
+Gurobi 10.0.3 (linux64) logging started Sun Sep  1 13:13:26 2024
 
 Set parameter LogFile to value "fwd/logs/w10-k1-s2.log"
 Set parameter PoolSearchMode to value 2
 Set parameter PoolSolutions to value 1
 Set parameter Heuristics to value 1
 Set parameter PoolGap to value 0
-Set parameter Threads to value 60
-Set parameter Threads to value 60
+Set parameter Method to value 3
+Set parameter ConcurrentMIP to value 64
+Set parameter TimeLimit to value 43200
+Set parameter Threads to value 128
+Set parameter Threads to value 128
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
 Optimize a model with 188 rows, 3072 columns and 2048 nonzeros
-Model fingerprint: 0x31e5749c
+Model fingerprint: 0x646671d4
 Model has 4096 general constraints
 Variable types: 0 continuous, 3072 integer (2048 binary)
 Coefficient statistics:
@@ -26,58 +29,77 @@ Coefficient statistics:
   GenCon rhs range [1e+00, 1e+00]
   GenCon coe range [1e+00, 1e+00]
 
-User MIP start produced solution with objective 414 (0.02s)
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 414 (0.77s)
 Loaded user MIP start with objective 414
 
 Presolve added 6135 rows and 4089 columns
-Presolve time: 0.04s
+Presolve time: 0.05s
 Presolved: 6323 rows, 7161 columns, 16365 nonzeros
 Presolved model has 2046 SOS constraint(s)
 Variable types: 0 continuous, 7161 integer (2046 binary)
+Root relaxation presolved: 6323 rows, 7161 columns, 16365 nonzeros
 
-Root relaxation: objective 3.740000e+02, 3804 iterations, 0.01 seconds (0.01 work units)
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 0.04s
+
+Barrier performed 0 iterations in 0.92 seconds (0.06 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+
+Root relaxation: objective 3.740000e+02, 1893 iterations, 0.07 seconds (0.01 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0  374.00000    0 1799  414.00000  374.00000  9.66%     -    0s
-     0     0  374.00000    0 4070  414.00000  374.00000  9.66%     -    0s
-H    0     0                     411.0000000  374.00000  9.00%     -    0s
-     0     0  374.00000    0 5248  411.00000  374.00000  9.00%     -    0s
-H    0     0                     406.0000000  374.00000  7.88%     -    2s
-H    0     0                     405.0000000  374.00000  7.65%     -    2s
-H    0     0                     404.0000000  374.00000  7.43%     -    2s
-H    0     0                     401.0000000  374.00000  6.73%     -    2s
-     0     0  374.00000    0 1535  401.00000  374.00000  6.73%     -    2s
-H    0     0                     400.0000000  374.00000  6.50%     -    2s
-     0     0  374.00000    0 1770  400.00000  374.00000  6.50%     -    2s
-     0     0  374.00000    0 1592  400.00000  374.00000  6.50%     -    2s
-H    0     0                     399.0000000  374.00000  6.27%     -    2s
-H    0     0                     398.0000000  374.00000  6.03%     -    2s
-     0     0  374.00000    0 1283  398.00000  374.00000  6.03%     -    2s
-H    0     0                     397.0000000  374.00000  5.79%     -    3s
-     0     2  374.00000    0  973  397.00000  374.00000  5.79%     -    3s
-H   31    64                     395.0000000  374.00000  5.32%   816    4s
-H  123   184                     389.0000000  374.00000  3.86%   718    5s
-H  243   304                     386.0000000  374.00000  3.11%   587   17s
-H  243   304                     374.0000000  374.00000  0.00%   587   17s
+     0     0      -    -    -      414.00000  374.00000  9.66%     -    1s
+     0     0      -    -    -      414.00000  374.00000  9.66%     -    1s
+     0     0      -    -    -      413.00000  374.00000  9.44%     -    1s
+     0     0      -    -    -      413.00000  374.00000  9.44%     -    2s
+     0     0      -    -    -      413.00000  374.00000  9.44%     -    2s
+     0     0      -    -    -      399.00000  374.00000  6.27%     -    3s
+     0     0      -    -    -      399.00000  374.00000  6.27%     -    3s
+     0     0      -    -    -      395.00000  374.00000  5.32%     -    3s
+     0     0      -    -    -      395.00000  374.00000  5.32%     -    4s
+     0     2      -    -    -      393.00000  374.00000  4.83%     -    6s
+    23    35      -    -    -      392.00000  374.00000  4.59%     -   10s
+    56   102      -    -    -      392.00000  374.00000  4.59%     -   17s
+   101   309      -    -    -      388.00000  374.00000  3.61%     -   23s
+   310   476      -    -    -      384.00000  374.00000  2.60%     -   28s
+   486   622      -    -    -      384.00000  374.00000  2.60%     -   31s
+   781   933      -    -    -      383.00000  374.00000  2.35%     -   38s
+   981  1114      -    -    -      382.00000  374.00000  2.09%     -   41s
+  1461  1544      -    -    -      382.00000  374.00000  2.09%     -   45s
+  1708  1548      -    -    -      382.00000  374.00000  2.09%     -   50s
+  1717  1554      -    -    -      381.00000  374.00000  1.84%     -   56s
+  1812  1521      -    -    -      379.00000  374.00000  1.32%     -   60s
+  1959  1647      -    -    -      379.00000  374.00000  1.32%     -   65s
+  2158  1661      -    -    -      377.00000  374.00000  0.80%     -   70s
+  2410  1744      -    -    -      376.00000  374.00000  0.53%     -   77s
 
 Cutting planes:
-  Learned: 1938
-  Gomory: 24
-  Implied bound: 115
-  MIR: 9
-  Zero half: 55
-  Relax-and-lift: 20
+  Learned: 1935
+  Gomory: 45
+  Implied bound: 511
+  Flow cover: 11
+  Zero half: 24
+  Relax-and-lift: 11
 
-Explored 303 nodes (201899 simplex iterations) in 17.05 seconds (12.43 work units)
-Thread count was 60 (of 128 available processors)
+Instance 36 was solved
+
+Explored 3497 nodes (1659776 simplex iterations) in 77.66 seconds (38.05 work units)
+Thread count was 2 (of 128 available processors)
 
 Solution count 1: 374 
+No other solutions better than 374
 
 Optimal solution found (tolerance 1.00e-04)
-Best objective 3.740000000000e+02, best bound 3.740000000000e+02, gap 0.0000%
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 19:25:55 2024
-
-Set parameter LogFile to value "fwd/logs/w10-k1-s2.log"
+Best objective 3.740000000000e+02, best bound 3.740000006290e+02, gap 0.0000%

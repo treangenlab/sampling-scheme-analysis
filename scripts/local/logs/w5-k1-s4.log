@@ -1,0 +1,61 @@
+
+Gurobi 10.0.3 (linux64) logging started Wed Sep  4 08:30:19 2024
+
+Set parameter LogFile to value "local/logs/w5-k1-s4.log"
+Set parameter PoolSearchMode to value 2
+Set parameter PoolSolutions to value 1
+Set parameter PoolGap to value 0
+Set parameter Method to value 3
+Set parameter ConcurrentMIP to value 64
+Set parameter TimeLimit to value 43200
+Set parameter Heuristics to value 0.95
+Set parameter MIPFocus to value 1
+Set parameter Threads to value 128
+Set parameter Threads to value 128
+Warning: variable name "x_(00000, 0)" has a space
+Warning: default variable names used to write mps file
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 1311744 rows, 267264 columns and 2626560 nonzeros
+Model fingerprint: 0xbd17d4b8
+Variable types: 0 continuous, 267264 integer (267264 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+Warning: Completing partial solution with 262144 unfixed non-continuous variables out of 267264
+User MIP start produced solution with objective 87680 (8.60s)
+Loaded user MIP start with objective 87680
+Processed MIP start in 1.62 seconds (0.55 work units)
+
+Presolve removed 292 rows and 0 columns (presolve time = 5s) ...
+Presolve removed 400 rows and 0 columns (presolve time = 10s) ...
+Presolve removed 400 rows and 4 columns (presolve time = 15s) ...
+Presolve removed 400 rows and 4 columns (presolve time = 20s) ...
+Presolve removed 400 rows and 4 columns (presolve time = 25s) ...
+Presolve removed 400 rows and 4 columns (presolve time = 30s) ...
+Presolve removed 400 rows and 4 columns (presolve time = 35s) ...
+Presolve removed 400 rows and 4 columns (presolve time = 40s) ...
+Presolve removed 416 rows and 4 columns (presolve time = 45s) ...
+Presolve removed 416 rows and 4 columns (presolve time = 50s) ...
+Presolve removed 416 rows and 4 columns
+Presolve time: 54.52s
+Presolved: 1311328 rows, 267260 columns, 2626124 nonzeros
+Variable types: 0 continuous, 267260 integer (267260 binary)
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root relaxation presolved: 1311328 rows, 267260 columns, 2626124 nonzeros
+
+Root barrier log...
+

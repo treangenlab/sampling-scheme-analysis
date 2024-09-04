@@ -1,55 +1,121 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Aug 25 08:19:45 2024
+Gurobi 10.0.3 (linux64) logging started Tue Sep  3 20:09:03 2024
 
 Set parameter LogFile to value "local/logs/w2-k2-s3.log"
 
-Gurobi 10.0.3 (linux64) logging started Sun Aug 25 08:19:45 2024
+Gurobi 10.0.3 (linux64) logging started Tue Sep  3 20:09:03 2024
 
 Set parameter LogFile to value "local/logs/w2-k2-s3.log"
+Warning: variable name "x_(000, 0)" has a space
+Warning: default variable names used to write mps file
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 30 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
-Optimize a model with 513 rows, 297 columns and 1026 nonzeros
-Model fingerprint: 0x2ae9cc47
-Variable types: 0 continuous, 297 integer (297 binary)
+Optimize a model with 189 rows, 135 columns and 378 nonzeros
+Model fingerprint: 0xf2beddd6
+Variable types: 0 continuous, 135 integer (135 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 1e+00]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 1e+00]
   RHS range        [1e+00, 1e+00]
 
-User MIP start produced solution with objective 153 (0.02s)
-Loaded user MIP start with objective 153
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
 
-Presolve removed 45 rows and 36 columns
+
+User MIP start produced solution with objective 51 (0.04s)
+Loaded user MIP start with objective 51
+
+Presolve removed 33 rows and 30 columns
 Presolve time: 0.00s
-Presolved: 468 rows, 261 columns, 936 nonzeros
-Variable types: 0 continuous, 261 integer (261 binary)
+Presolved: 156 rows, 105 columns, 312 nonzeros
+Variable types: 0 continuous, 105 integer (105 binary)
+Root relaxation presolved: 156 rows, 105 columns, 312 nonzeros
 
-Root relaxation: objective 1.260000e+02, 293 iterations, 0.00 seconds (0.00 work units)
+
+Root relaxation: objective 4.200000e+01, 115 iterations, 0.00 seconds (0.00 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0  126.00000    0  261  153.00000  126.00000  17.6%     -    0s
-     0     0  141.00000    0  254  153.00000  141.00000  7.84%     -    0s
-     0     0  144.00000    0  248  153.00000  144.00000  5.88%     -    0s
-     0     0  144.00000    0  248  153.00000  144.00000  5.88%     -    0s
-     0     0  144.50000    0  246  153.00000  144.50000  5.56%     -    0s
-     0     0  145.00000    0  246  153.00000  145.00000  5.23%     -    0s
-     0     2  145.00000    0  246  153.00000  145.00000  5.23%     -    0s
+     0     0      -    -    -       51.00000   42.00000  17.6%     -    0s
+     0     0      -    -    -       51.00000   49.00000  3.92%     -    0s
+     0     0      -    -    -       51.00000   51.00000  0.00%     -    0s
 
 Cutting planes:
-  Gomory: 5
-  Zero half: 50
+  Gomory: 4
+  Zero half: 36
 
-Explored 161 nodes (5002 simplex iterations) in 0.17 seconds (0.08 work units)
-Thread count was 30 (of 128 available processors)
+Instance 5 was solved
 
-Solution count 1: 153 
+Explored 6 nodes (572 simplex iterations) in 0.06 seconds (0.02 work units)
+Thread count was 2 (of 128 available processors)
+
+Solution count 1: 51 
 
 Optimal solution found (tolerance 1.00e-04)
-Best objective 1.530000000000e+02, best bound 1.530000000000e+02, gap 0.0000%
+Best objective 5.100000000000e+01, best bound 5.100000000000e+01, gap 0.0000%
+
+Gurobi 10.0.3 (linux64) logging started Tue Sep  3 20:30:09 2024
+
+Set parameter LogFile to value "local/logs/w2-k2-s3.log"
+
+Gurobi 10.0.3 (linux64) logging started Tue Sep  3 20:30:09 2024
+
+Set parameter LogFile to value "local/logs/w2-k2-s3.log"
+Warning: variable name "x_(000, 0)" has a space
+Warning: default variable names used to write mps file
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 189 rows, 135 columns and 378 nonzeros
+Model fingerprint: 0xf2beddd6
+Variable types: 0 continuous, 135 integer (135 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 51 (0.03s)
+Loaded user MIP start with objective 51
+
+Presolve removed 33 rows and 30 columns
+Presolve time: 0.00s
+Presolved: 156 rows, 105 columns, 312 nonzeros
+Variable types: 0 continuous, 105 integer (105 binary)
+Root relaxation presolved: 156 rows, 105 columns, 312 nonzeros
+
+
+Root relaxation: objective 4.200000e+01, 115 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0      -    -    -       51.00000   42.00000  17.6%     -    0s
+     0     0      -    -    -       51.00000   45.87500  10.0%     -    0s
+     0     0      -    -    -       51.00000   50.00000  1.96%     -    0s
+     0     0      -    -    -       51.00000   50.00000  1.96%     -    0s
+
+Cutting planes:
+  Gomory: 3
+  Zero half: 20
+
+Instance 5 was solved
+
+Explored 6 nodes (572 simplex iterations) in 0.05 seconds (0.02 work units)
+Thread count was 2 (of 128 available processors)
+
+Solution count 1: 51 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.100000000000e+01, best bound 5.100000000000e+01, gap 0.0000%

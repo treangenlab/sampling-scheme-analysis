@@ -1,94 +1,79 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 15:08:43 2024
+Gurobi 10.0.3 (linux64) logging started Sat Aug 31 18:30:30 2024
 
 Set parameter LogFile to value "fwd/logs/w3-k3-s2.log"
-Set parameter PoolSearchMode to value 2
-Set parameter PoolSolutions to value 1
-Set parameter Heuristics to value 0.9
-Set parameter PoolGap to value 0
-Set parameter Threads to value 60
-Set parameter Threads to value 60
+
+Gurobi 10.0.3 (linux64) logging started Sat Aug 31 18:30:30 2024
+
+Set parameter LogFile to value "fwd/logs/w3-k3-s2.log"
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
-Optimize a model with 153 rows, 96 columns and 978 nonzeros
-Model fingerprint: 0x786a4672
+Optimize a model with 637 rows, 96 columns and 5761 nonzeros
+Model fingerprint: 0x583c66dd
 Model has 128 general constraints
 Variable types: 0 continuous, 96 integer (64 binary)
 Coefficient statistics:
-  Matrix range     [1e+00, 3e+00]
+  Matrix range     [1e+00, 1e+00]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 2e+00]
-  RHS range        [1e+00, 3e+00]
+  RHS range        [1e+00, 5e+00]
   GenCon rhs range [1e+00, 1e+00]
   GenCon coe range [1e+00, 1e+00]
-Found heuristic solution: objective 64.0000000
-Presolve added 139 rows and 121 columns
-Presolve time: 0.00s
-Presolved: 292 rows, 217 columns, 1243 nonzeros
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 30 (0.08s)
+Loaded user MIP start with objective 30
+
+Presolve added 0 rows and 121 columns
+Presolve removed 28 rows and 0 columns
+Presolve time: 0.01s
+Presolved: 609 rows, 217 columns, 5531 nonzeros
 Presolved model has 62 SOS constraint(s)
 Variable types: 0 continuous, 217 integer (62 binary)
+Root relaxation presolved: 609 rows, 217 columns, 5531 nonzeros
 
-Root relaxation: objective 2.800000e+01, 285 iterations, 0.00 seconds (0.00 work units)
+
+Root relaxation: objective 2.800000e+01, 344 iterations, 0.01 seconds (0.01 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0   28.00000    0   48   64.00000   28.00000  56.3%     -    0s
-H    0     0                      37.0000000   28.00000  24.3%     -    0s
-H    0     0                      36.0000000   28.00000  22.2%     -    0s
-     0     0   28.00000    0   76   36.00000   28.00000  22.2%     -    0s
-H    0     0                      34.0000000   28.00000  17.6%     -    0s
-     0     0   28.00000    0   67   34.00000   28.00000  17.6%     -    0s
-H    0     0                      32.0000000   28.00000  12.5%     -    0s
-H    0     0                      31.0000000   28.00000  9.68%     -    0s
-H    0     0                      30.0000000   28.00000  6.67%     -    0s
-     0     0   28.00000    0   20   30.00000   28.00000  6.67%     -    0s
-     0     0   28.00000    0   40   30.00000   28.00000  6.67%     -    0s
-     0     0   28.00000    0   41   30.00000   28.00000  6.67%     -    0s
-     0     0   28.00000    0   53   30.00000   28.00000  6.67%     -    0s
-H    0     0                      29.0000000   28.00000  3.45%     -    0s
-     0     0   28.00000    0   73   29.00000   28.00000  3.45%     -    0s
-     0     0   28.00000    0   46   29.00000   28.00000  3.45%     -    0s
-     0     2   28.00000    0   26   29.00000   28.00000  3.45%     -    0s
+     0     0      -    -    -       30.00000   28.00000  6.67%     -    0s
+     0     0      -    -    -       30.00000   28.00000  6.67%     -    0s
+     0     0      -    -    -       30.00000   28.00000  6.67%     -    0s
+     0     0      -    -    -       30.00000   28.00000  6.67%     -    0s
+     0     0      -    -    -       29.00000   28.00000  3.45%     -    0s
+     0     0      -    -    -       29.00000   28.00000  3.45%     -    0s
+     0     0      -    -    -       29.00000   28.00000  3.45%     -    0s
+     0     0      -    -    -       29.00000   28.00000  3.45%     -    0s
+     0     0      -    -    -       29.00000   28.00000  3.45%     -    0s
+     0     0      -    -    -       29.00000   28.00000  3.45%     -    0s
+     0     0      -    -    -       29.00000   28.00000  3.45%     -    0s
+     0     2      -    -    -       29.00000   28.00000  3.45%     -    0s
 
 Cutting planes:
-  Learned: 45
-  Gomory: 11
-  Cover: 10
+  Learned: 27
+  Gomory: 12
+  Cover: 3
   Implied bound: 11
-  MIR: 4
-  Flow cover: 3
-  Zero half: 11
-  Relax-and-lift: 10
+  Clique: 2
+  MIR: 6
+  Flow cover: 2
+  Zero half: 18
+  Relax-and-lift: 6
 
-Explored 31 nodes (6434 simplex iterations) in 0.30 seconds (0.17 work units)
-Thread count was 60 (of 128 available processors)
+Instance 61 was solved
+
+Explored 35 nodes (3971 simplex iterations) in 0.57 seconds (0.37 work units)
+Thread count was 2 (of 128 available processors)
 
 Solution count 1: 29 
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 2.900000000000e+01, best bound 2.900000000000e+01, gap 0.0000%
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:05:40 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k3-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:06:52 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k3-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:12:31 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k3-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:20:44 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k3-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:25:10 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k3-s2.log"

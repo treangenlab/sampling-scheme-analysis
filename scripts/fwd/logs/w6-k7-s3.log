@@ -1,0 +1,30 @@
+
+Gurobi 10.0.3 (linux64) logging started Mon Sep  2 14:14:07 2024
+
+Set parameter LogFile to value "fwd/logs/w6-k7-s3.log"
+
+Gurobi 10.0.3 (linux64) logging started Mon Sep  2 14:14:07 2024
+
+Set parameter LogFile to value "fwd/logs/w6-k7-s3.log"
+Set parameter Heuristics to value 1
+Set parameter Heuristics to value 1
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 122643 rows, 2125764 columns and 1594323 nonzeros
+Model fingerprint: 0x25a86261
+Model has 3188646 general constraints
+Variable types: 0 continuous, 2125764 integer (1594323 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [1e+00, 3e+00]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+

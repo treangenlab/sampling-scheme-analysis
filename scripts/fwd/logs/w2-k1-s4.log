@@ -1,21 +1,24 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 16:05:39 2024
+Gurobi 10.0.3 (linux64) logging started Mon Sep  2 15:01:04 2024
 
 Set parameter LogFile to value "fwd/logs/w2-k1-s4.log"
 Set parameter PoolSearchMode to value 2
 Set parameter PoolSolutions to value 1
 Set parameter Heuristics to value 1
 Set parameter PoolGap to value 0
-Set parameter Threads to value 60
-Set parameter Threads to value 60
+Set parameter Method to value 3
+Set parameter ConcurrentMIP to value 64
+Set parameter TimeLimit to value 43200
+Set parameter Threads to value 128
+Set parameter Threads to value 128
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
 Optimize a model with 24 rows, 80 columns and 64 nonzeros
-Model fingerprint: 0xbecf4a66
+Model fingerprint: 0x1a9ec283
 Model has 128 general constraints
 Variable types: 0 continuous, 80 integer (64 binary)
 Coefficient statistics:
@@ -25,28 +28,16 @@ Coefficient statistics:
   RHS range        [1e+00, 2e+00]
   GenCon rhs range [1e+00, 1e+00]
   GenCon coe range [1e+00, 1e+00]
-Found heuristic solution: objective 64.0000000
-Presolve added 122 rows and 62 columns
-Presolve time: 0.00s
-Presolved: 146 rows, 142 columns, 414 nonzeros
-Presolved model has 60 SOS constraint(s)
-Variable types: 0 continuous, 142 integer (76 binary)
 
-Root relaxation: objective 4.400000e+01, 40 iterations, 0.00 seconds (0.00 work units)
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
 
-    Nodes    |    Current Node    |     Objective Bounds      |     Work
- Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-*    0     0               0      44.0000000   44.00000  0.00%     -    0s
+Instance 53 was solved
 
-Explored 1 nodes (117 simplex iterations) in 0.02 seconds (0.00 work units)
-Thread count was 60 (of 128 available processors)
+Explored 1 nodes (123 simplex iterations) in 0.04 seconds (0.00 work units)
+Thread count was 2 (of 128 available processors)
 
 Solution count 1: 44 
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 4.400000000000e+01, best bound 4.400000000000e+01, gap 0.0000%
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 19:26:15 2024
-
-Set parameter LogFile to value "fwd/logs/w2-k1-s4.log"

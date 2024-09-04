@@ -1,103 +1,88 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 15:08:43 2024
+Gurobi 10.0.3 (linux64) logging started Sat Aug 31 18:30:30 2024
 
 Set parameter LogFile to value "fwd/logs/w3-k5-s2.log"
-Set parameter PoolSearchMode to value 2
-Set parameter PoolSolutions to value 1
-Set parameter Heuristics to value 0.9
-Set parameter PoolGap to value 0
-Set parameter Threads to value 60
-Set parameter Threads to value 60
+
+Gurobi 10.0.3 (linux64) logging started Sat Aug 31 18:30:30 2024
+
+Set parameter LogFile to value "fwd/logs/w3-k5-s2.log"
+Set parameter Heuristics to value 0.8
+Set parameter Heuristics to value 0.8
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
-Optimize a model with 1433 rows, 384 columns and 15953 nonzeros
-Model fingerprint: 0xc1b66706
+Optimize a model with 759 rows, 384 columns and 8505 nonzeros
+Model fingerprint: 0x0a8f5d64
 Model has 512 general constraints
 Variable types: 0 continuous, 384 integer (256 binary)
 Coefficient statistics:
-  Matrix range     [1e+00, 5e+00]
+  Matrix range     [1e+00, 1e+00]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 2e+00]
   RHS range        [1e+00, 5e+00]
   GenCon rhs range [1e+00, 1e+00]
   GenCon coe range [1e+00, 1e+00]
-Found heuristic solution: objective 256.0000000
-Presolve added 622 rows and 505 columns
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 112 (0.07s)
+Loaded user MIP start with objective 112
+
+Presolve added 670 rows and 505 columns
 Presolve time: 0.04s
-Presolved: 2055 rows, 889 columns, 16874 nonzeros
+Presolved: 1429 rows, 889 columns, 10021 nonzeros
 Presolved model has 254 SOS constraint(s)
 Variable types: 0 continuous, 889 integer (254 binary)
+Root relaxation presolved: 1429 rows, 889 columns, 10021 nonzeros
 
-Root relaxation: objective 1.040000e+02, 4315 iterations, 0.23 seconds (0.32 work units)
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 0.07s
+
+Barrier statistics:
+ AA' NZ     : 7.124e+04
+ Factor NZ  : 3.094e+05 (roughly 3 MB of memory)
+ Factor Ops : 1.289e+08 (less than 1 second per iteration)
+ Threads    : 1
+
+Barrier performed 0 iterations in 0.37 seconds (0.06 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+
+Root relaxation: objective 1.040000e+02, 1527 iterations, 0.22 seconds (0.10 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0  104.00000    0  127  256.00000  104.00000  59.4%     -    0s
-H    0     0                     153.0000000  104.00000  32.0%     -    0s
-H    0     0                     142.0000000  104.00000  26.8%     -    0s
-H    0     0                     141.0000000  104.00000  26.2%     -    0s
-H    0     0                     133.0000000  104.00000  21.8%     -    0s
-H    0     0                     132.0000000  104.00000  21.2%     -    0s
-H    0     0                     127.0000000  104.00000  18.1%     -    0s
-     0     0  104.00000    0  692  127.00000  104.00000  18.1%     -    0s
-     0     0  104.00000    0  377  127.00000  104.00000  18.1%     -    0s
-H    0     0                     126.0000000  104.00000  17.5%     -    1s
-     0     0  104.00000    0  171  126.00000  104.00000  17.5%     -    1s
-     0     0  104.00000    0  321  126.00000  104.00000  17.5%     -    1s
-H    0     0                     124.0000000  104.00000  16.1%     -    1s
-     0     0  104.00000    0  172  124.00000  104.00000  16.1%     -    1s
-     0     0  104.00000    0  172  124.00000  104.00000  16.1%     -    2s
-H    0     0                     116.0000000  104.00000  10.3%     -    2s
-H    0     0                     115.0000000  104.00000  9.57%     -    2s
-H    0     0                     114.0000000  104.00000  8.77%     -    2s
-H    0     0                     113.0000000  104.00000  7.96%     -    2s
-H    0     0                     111.0000000  104.00000  6.31%     -    2s
-     0     2  104.00000    0  163  111.00000  104.00000  6.31%     -    2s
-H    5     8                     110.0000000  104.00000  5.45%   615    3s
-H    6     8                     109.0000000  104.00000  4.59%   660    3s
-H   15    32                     106.0000000  104.00000  1.89%   882    4s
-    31    64  104.33333    5  819  106.00000  104.00000  1.89%  2064    5s
-H   53    64                     105.0000000  104.00000  0.95%  3565    5s
-H   68    21                     104.0000000  104.00000  0.00%  3281    7s
+     0     0      -    -    -      112.00000  104.00000  7.14%     -    0s
+     0     0      -    -    -      112.00000  104.00000  7.14%     -    0s
+     0     0      -    -    -      112.00000  104.00000  7.14%     -    0s
+     0     0      -    -    -      104.00000  104.00000  0.00%     -    0s
 
 Cutting planes:
-  Learned: 149
-  Gomory: 26
-  Cover: 104
-  Implied bound: 71
-  Flow cover: 2
-  Zero half: 23
-  Relax-and-lift: 34
+  Learned: 180
+  Gomory: 11
+  Cover: 46
+  Implied bound: 108
+  MIR: 3
+  Zero half: 39
+  Relax-and-lift: 17
 
-Explored 68 nodes (248686 simplex iterations) in 7.56 seconds (10.80 work units)
-Thread count was 60 (of 128 available processors)
+Instance 7 was solved
+
+Explored 1 nodes (6757 simplex iterations) in 0.93 seconds (0.71 work units)
+Thread count was 2 (of 128 available processors)
 
 Solution count 1: 104 
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 1.040000000000e+02, best bound 1.040000000000e+02, gap 0.0000%
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:05:42 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k5-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:06:54 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k5-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:12:32 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k5-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:20:46 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k5-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:25:11 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k5-s2.log"

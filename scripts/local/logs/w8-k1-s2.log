@@ -1,0 +1,92 @@
+
+Gurobi 10.0.3 (linux64) logging started Sun Sep  1 17:06:47 2024
+
+Set parameter LogFile to value "local/logs/w8-k1-s2.log"
+Set parameter PoolSearchMode to value 2
+Set parameter PoolSolutions to value 1
+Set parameter PoolGap to value 0
+Set parameter Method to value 3
+Set parameter ConcurrentMIP to value 64
+Set parameter TimeLimit to value 43200
+Set parameter Threads to value 128
+Set parameter Threads to value 128
+Warning: variable name "x_(00000000, 0)" has a space
+Warning: default variable names used to write mps file
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 262400 rows, 34816 columns and 526336 nonzeros
+Model fingerprint: 0x7a7fa768
+Variable types: 0 continuous, 34816 integer (34816 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+Warning: Completing partial solution with 32768 unfixed non-continuous variables out of 34816
+User MIP start produced solution with objective 7424 (1.81s)
+Loaded user MIP start with objective 7424
+
+Presolve removed 875 rows and 2 columns (presolve time = 5s) ...
+Presolve removed 875 rows and 2 columns
+Presolve time: 9.38s
+Presolved: 261525 rows, 34814 columns, 525433 nonzeros
+Variable types: 0 continuous, 34814 integer (34814 binary)
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root relaxation presolved: 261525 rows, 34814 columns, 525433 nonzeros
+
+Root barrier log...
+
+Elapsed ordering time = 5s
+Elapsed ordering time = 12s
+Elapsed ordering time = 16s
+Elapsed ordering time = 20s
+Elapsed ordering time = 26s
+Elapsed ordering time = 35s
+Elapsed ordering time = 40s
+Elapsed ordering time = 45s
+Elapsed ordering time = 56s
+Elapsed ordering time = 60s
+Elapsed ordering time = 65s
+Elapsed ordering time = 70s
+Elapsed ordering time = 75s
+Elapsed ordering time = 83s
+Elapsed ordering time = 86s
+Elapsed ordering time = 90s
+Elapsed ordering time = 95s
+Elapsed ordering time = 104s
+Elapsed ordering time = 107s
+Elapsed ordering time = 110s
+Elapsed ordering time = 115s
+Elapsed ordering time = 120s
+Ordering time: 122.92s
+
+Barrier statistics:
+ AA' NZ     : 1.780e+07
+ Factor NZ  : 1.085e+09 (roughly 9.0 GB of memory)
+ Factor Ops : 7.667e+12 (roughly 360 seconds per iteration)
+ Threads    : 1
+
+Barrier performed 0 iterations in 3048.99 seconds (209.16 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+
+Root relaxation: objective 4.192125e+03, 133830 iterations, 3130.53 seconds (1190.50 work units)
+Total elapsed time = 3324.17s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0      -    -    -     7424.00000 4192.12500  43.5%     - 3364s

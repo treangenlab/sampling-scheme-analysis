@@ -1,63 +1,53 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Aug 25 08:16:40 2024
-
-Set parameter LogFile to value "local/logs/w2-k1-s4.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Aug 25 08:19:45 2024
+Gurobi 10.0.3 (linux64) logging started Tue Sep  3 20:35:33 2024
 
 Set parameter LogFile to value "local/logs/w2-k1-s4.log"
 Set parameter PoolSearchMode to value 2
 Set parameter PoolSolutions to value 1
 Set parameter PoolGap to value 0
-Set parameter TimeLimit to value 1800
-Set parameter Threads to value 30
-Set parameter Threads to value 30
+Set parameter Method to value 3
+Set parameter ConcurrentMIP to value 64
+Set parameter TimeLimit to value 43200
+Set parameter Heuristics to value 0.95
+Set parameter MIPFocus to value 1
+Set parameter Threads to value 128
+Set parameter Threads to value 128
+Warning: variable name "x_(00, 0)" has a space
+Warning: default variable names used to write mps file
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 30 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
-Optimize a model with 528 rows, 288 columns and 1056 nonzeros
-Model fingerprint: 0xcdf13303
-Variable types: 0 continuous, 288 integer (288 binary)
+Optimize a model with 144 rows, 96 columns and 288 nonzeros
+Model fingerprint: 0x191f4056
+Variable types: 0 continuous, 96 integer (96 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 1e+00]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 1e+00]
   RHS range        [1e+00, 1e+00]
 
-User MIP start produced solution with objective 176 (0.02s)
-Loaded user MIP start with objective 176
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
 
-Presolve removed 48 rows and 32 columns
+
+User MIP start produced solution with objective 44 (0.06s)
+Loaded user MIP start with objective 44
+
+Presolve removed 24 rows and 20 columns
 Presolve time: 0.00s
-Presolved: 480 rows, 256 columns, 960 nonzeros
-Variable types: 0 continuous, 256 integer (256 binary)
+Presolved: 120 rows, 76 columns, 240 nonzeros
+Variable types: 0 continuous, 76 integer (76 binary)
 
-Root relaxation: objective 1.360000e+02, 283 iterations, 0.00 seconds (0.00 work units)
+Root relaxation: interrupted, 0 iterations, 0.00 seconds (0.00 work units)
 
-    Nodes    |    Current Node    |     Objective Bounds      |     Work
- Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+Instance 5 was solved
 
-     0     0  136.00000    0  256  176.00000  136.00000  22.7%     -    0s
-     0     0  160.50000    0  250  176.00000  160.50000  8.81%     -    0s
-     0     0  166.00000    0  248  176.00000  166.00000  5.68%     -    0s
-     0     0  166.00000    0  247  176.00000  166.00000  5.68%     -    0s
-     0     0  166.00000    0  244  176.00000  166.00000  5.68%     -    0s
-     0     0  166.00000    0  244  176.00000  166.00000  5.68%     -    0s
-     0     0  166.00000    0  241  176.00000  166.00000  5.68%     -    0s
-     0     0  166.00000    0  240  176.00000  166.00000  5.68%     -    0s
-     0     2  166.00000    0  240  176.00000  166.00000  5.68%     -    0s
+Explored 7 nodes (438 simplex iterations) in 0.08 seconds (0.02 work units)
+Thread count was 2 (of 128 available processors)
 
-Cutting planes:
-  Gomory: 5
-  Zero half: 56
-
-Explored 202 nodes (5122 simplex iterations) in 0.27 seconds (0.10 work units)
-Thread count was 30 (of 128 available processors)
-
-Solution count 1: 176 
+Solution count 1: 44 
 
 Optimal solution found (tolerance 1.00e-04)
-Best objective 1.760000000000e+02, best bound 1.760000000000e+02, gap 0.0000%
+Best objective 4.400000000000e+01, best bound 4.400000000000e+01, gap 0.0000%

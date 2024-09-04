@@ -1,0 +1,118 @@
+
+Gurobi 10.0.3 (linux64) logging started Mon Sep  2 07:36:33 2024
+
+Set parameter LogFile to value "fwd/logs/w2-k8-s3.log"
+
+Gurobi 10.0.3 (linux64) logging started Mon Sep  2 07:36:33 2024
+
+Set parameter LogFile to value "fwd/logs/w2-k8-s3.log"
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 2595 rows, 78732 columns and 22179 nonzeros
+Model fingerprint: 0x0fec0315
+Model has 118098 general constraints
+Variable types: 0 continuous, 78732 integer (59049 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 5e+00]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 32817 (5.62s)
+Loaded user MIP start with objective 32817
+
+Presolve removed 52 rows and 59052 columns (presolve time = 5s) ...
+Presolve added 118052 rows and 59046 columns
+Presolve time: 8.30s
+Presolved: 120647 rows, 137778 columns, 376377 nonzeros
+Presolved model has 59046 SOS constraint(s)
+Variable types: 0 continuous, 137778 integer (78729 binary)
+Root relaxation presolved: 120647 rows, 137778 columns, 376377 nonzeros
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 3.75s
+
+Barrier performed 0 iterations in 19.31 seconds (2.25 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+
+Root relaxation: objective 3.063400e+04, 94227 iterations, 4.84 seconds (0.71 work units)
+Total elapsed time = 23.01s
+Total elapsed time = 25.44s
+Total elapsed time = 30.74s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0      -    -    -     32817.0000 30634.0000  6.65%     -   41s
+     0     0      -    -    -     32816.0000 30634.0000  6.65%     -   48s
+     0     0      -    -    -     32816.0000 30634.0000  6.65%     -   50s
+     0     0      -    -    -     32816.0000 30634.0000  6.65%     -   59s
+     0     0      -    -    -     32758.0000 30634.0000  6.48%     -   62s
+     0     0      -    -    -     32758.0000 30634.0000  6.48%     -   76s
+     0     0      -    -    -     32758.0000 30634.0000  6.48%     -   81s
+     0     2      -    -    -     32758.0000 30634.0000  6.48%     -  120s
+     1     4      -    -    -     32758.0000 30634.0000  6.48%     -  165s
+     3     6      -    -    -     32698.0000 30634.0000  6.31%     -  231s
+     5     8      -    -    -     32698.0000 30634.0000  6.31%     -  235s
+    11    14      -    -    -     32691.0000 30634.0000  6.29%     -  263s
+    17    24      -    -    -     32678.0000 30634.0000  6.25%     -  291s
+    23    34      -    -    -     32678.0000 30634.0000  6.25%     -  343s
+    33    42      -    -    -     32667.0000 30634.0000  6.22%     -  430s
+    41   164      -    -    -     32589.0000 30634.0000  6.00%     -  636s
+   163   406      -    -    -     32562.0000 30634.0000  5.92%     -  956s
+   405   568      -    -    -     32537.0000 30634.5000  5.85%     - 1271s
+   567   648      -    -    -     32516.0000 30634.5000  5.79%     - 2040s
+   647   806      -    -    -     32503.0000 30634.5000  5.75%     - 2387s
+   805  1042      -    -    -     32497.0000 30634.5000  5.73%     - 2731s
+  1041  1276      -    -    -     32497.0000 30634.5000  5.73%     - 3046s
+  1275  1476      -    -    -     32491.0000 30634.5000  5.71%     - 3361s
+  1475  1681      -    -    -     32485.0000 30634.5000  5.70%     - 3709s
+  1680  1880      -    -    -     32482.0000 30634.5000  5.69%     - 4055s
+  1879  2067      -    -    -     32477.0000 30634.5000  5.67%     - 4398s
+  2066  2292      -    -    -     32471.0000 30634.5000  5.66%     - 4763s
+  2291  2525      -    -    -     32455.0000 30634.5000  5.61%     - 5152s
+  2524  2767      -    -    -     32448.0000 30634.5000  5.59%     - 5512s
+  2766  3009      -    -    -     32443.0000 30634.5000  5.57%     - 5929s
+  3008  3251      -    -    -     32434.0000 30634.5000  5.55%     - 6327s
+  3250  3493      -    -    -     32426.0000 30634.5000  5.52%     - 6693s
+  3492  3730      -    -    -     32421.0000 30634.5000  5.51%     - 7071s
+  3730  3731      -    -    -     32413.0000 30634.5000  5.49%     - 7355s
+  3732  3732      -    -    -     32364.0000 30634.5000  5.34%     - 12403s
+  3733  3733      -    -    -     32364.0000 30634.5000  5.34%     - 14008s
+  3734  3734      -    -    -     32364.0000 30634.5000  5.34%     - 14504s
+  3735  3734      -    -    -     32364.0000 30634.5000  5.34%     - 15680s
+  3736  3735      -    -    -     32364.0000 30637.0000  5.34%     - 16665s
+  3737  3736      -    -    -     32364.0000 30637.0016  5.34%     - 18867s
+  3738  3736      -    -    -     32364.0000 30637.0016  5.34%     - 22421s
+
+Cutting planes:
+  Gomory: 1
+  Implied bound: 11350
+  MIR: 45
+  Flow cover: 6923
+  Zero half: 12402
+  RLT: 16049
+
+Explored 3738 nodes (16908217 simplex iterations) in 24439.99 seconds (6470.56 work units)
+Thread count was 2 (of 128 available processors)
+
+Solution count 1: 32364 
+
+Solve interrupted
+Best objective 3.236400000000e+04, best bound 3.063700157233e+04, gap 5.3362%

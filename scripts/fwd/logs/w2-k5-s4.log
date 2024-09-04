@@ -1,21 +1,19 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 16:05:28 2024
+Gurobi 10.0.3 (linux64) logging started Tue Sep  3 03:01:32 2024
 
 Set parameter LogFile to value "fwd/logs/w2-k5-s4.log"
-Set parameter PoolSearchMode to value 2
-Set parameter PoolSolutions to value 1
-Set parameter Heuristics to value 1
-Set parameter PoolGap to value 0
-Set parameter Threads to value 60
-Set parameter Threads to value 60
+
+Gurobi 10.0.3 (linux64) logging started Tue Sep  3 03:01:32 2024
+
+Set parameter LogFile to value "fwd/logs/w2-k5-s4.log"
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
 Optimize a model with 2344 rows, 20480 columns and 16384 nonzeros
-Model fingerprint: 0x8059029d
+Model fingerprint: 0xa95a8c30
 Model has 32768 general constraints
 Variable types: 0 continuous, 20480 integer (16384 binary)
 Coefficient statistics:
@@ -25,65 +23,46 @@ Coefficient statistics:
   RHS range        [1e+00, 4e+00]
   GenCon rhs range [1e+00, 1e+00]
   GenCon coe range [1e+00, 1e+00]
-Found heuristic solution: objective 16384.000000
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 9856 (1.41s)
+Loaded user MIP start with objective 9856
+
 Presolve added 32762 rows and 16382 columns
-Presolve time: 0.62s
+Presolve time: 2.48s
 Presolved: 35106 rows, 36862 columns, 114654 nonzeros
 Presolved model has 16380 SOS constraint(s)
 Variable types: 0 continuous, 36862 integer (20476 binary)
 Root relaxation presolved: 35106 rows, 36862 columns, 114654 nonzeros
 
-Deterministic concurrent LP optimizer: primal and dual simplex
-Showing first log only...
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
 
-Concurrent spin time: 0.03s
+Root barrier log...
+
+Ordering time: 0.76s
+
+Barrier performed 0 iterations in 5.02 seconds (0.68 work units)
+Barrier solve interrupted - model solved by another algorithm
+
 
 Solved with dual simplex
 
-Root relaxation: objective 9.364000e+03, 15327 iterations, 0.18 seconds (0.09 work units)
+Root relaxation: objective 9.364000e+03, 15327 iterations, 0.98 seconds (0.09 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0 9364.00000    0  502 16384.0000 9364.00000  42.8%     -    1s
-H    0     0                    9649.0000000 9364.00000  2.95%     -    1s
-H    0     0                    9576.0000000 9364.00000  2.21%     -    1s
-H    0     0                    9575.0000000 9364.00000  2.20%     -    1s
-H    0     0                    9573.0000000 9364.00000  2.18%     -    2s
-     0     0 9364.00000    0 1192 9573.00000 9364.00000  2.18%     -    2s
-H    0     0                    9500.0000000 9364.00000  1.43%     -    2s
-     0     0 9364.00000    0 1187 9500.00000 9364.00000  1.43%     -    2s
-H    0     0                    9459.0000000 9364.00000  1.00%     -    3s
-     0     0 9364.00000    0  462 9459.00000 9364.00000  1.00%     -    3s
-     0     0 9364.00000    0  506 9459.00000 9364.00000  1.00%     -    3s
-H    0     0                    9450.0000000 9364.00000  0.91%     -    3s
-     0     0 9364.00000    0  347 9450.00000 9364.00000  0.91%     -    5s
-H    0     0                    9394.0000000 9364.00000  0.32%     -    5s
-     0     0 9364.00000    0  423 9394.00000 9364.00000  0.32%     -    5s
-     0     0 9364.00000    0  276 9394.00000 9364.00000  0.32%     -    6s
-     0     0 9364.00000    0  278 9394.00000 9364.00000  0.32%     -    6s
-     0     0 9364.00000    0  108 9394.00000 9364.00000  0.32%     -    7s
-H    0     0                    9374.0000000 9364.00000  0.11%     -    8s
-     0     0 9364.00000    0  162 9374.00000 9364.00000  0.11%     -    8s
-     0     0 9364.00000    0  123 9374.00000 9364.00000  0.11%     -    8s
-     0     0 9364.00000    0  177 9374.00000 9364.00000  0.11%     -    9s
-*    0     0               0    9364.0000000 9364.00000  0.00%     -    9s
+     0     0      -    -    -     9364.00000 9364.00000  0.00%     -    5s
 
-Cutting planes:
-  Gomory: 4
-  Cover: 1735
-  Implied bound: 1923
-  Clique: 3772
-  MIR: 8
+Instance 8 was solved
 
-Explored 1 nodes (160141 simplex iterations) in 9.43 seconds (4.58 work units)
-Thread count was 60 (of 128 available processors)
+Explored 1 nodes (66613 simplex iterations) in 5.29 seconds (1.55 work units)
+Thread count was 2 (of 128 available processors)
 
 Solution count 1: 9364 
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 9.364000000000e+03, best bound 9.364000000000e+03, gap 0.0000%
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 19:26:14 2024
-
-Set parameter LogFile to value "fwd/logs/w2-k5-s4.log"

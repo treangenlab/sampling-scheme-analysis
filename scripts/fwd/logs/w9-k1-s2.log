@@ -1,21 +1,24 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 15:38:57 2024
+Gurobi 10.0.3 (linux64) logging started Sun Sep  1 13:11:36 2024
 
 Set parameter LogFile to value "fwd/logs/w9-k1-s2.log"
 Set parameter PoolSearchMode to value 2
 Set parameter PoolSolutions to value 1
 Set parameter Heuristics to value 1
 Set parameter PoolGap to value 0
-Set parameter Threads to value 60
-Set parameter Threads to value 60
+Set parameter Method to value 3
+Set parameter ConcurrentMIP to value 64
+Set parameter TimeLimit to value 43200
+Set parameter Threads to value 128
+Set parameter Threads to value 128
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
 Optimize a model with 108 rows, 1536 columns and 1024 nonzeros
-Model fingerprint: 0x605ebeaa
+Model fingerprint: 0xec445618
 Model has 2048 general constraints
 Variable types: 0 continuous, 1536 integer (1024 binary)
 Coefficient statistics:
@@ -26,60 +29,70 @@ Coefficient statistics:
   GenCon rhs range [1e+00, 1e+00]
   GenCon coe range [1e+00, 1e+00]
 
-User MIP start produced solution with objective 232 (0.01s)
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 232 (0.39s)
 Loaded user MIP start with objective 232
 
 Presolve added 3063 rows and 2041 columns
-Presolve time: 0.02s
+Presolve time: 0.03s
 Presolved: 3171 rows, 3577 columns, 8173 nonzeros
 Presolved model has 1022 SOS constraint(s)
 Variable types: 0 continuous, 3577 integer (1022 binary)
+Root relaxation presolved: 3171 rows, 3577 columns, 8173 nonzeros
 
-Root relaxation: objective 2.070000e+02, 2471 iterations, 0.01 seconds (0.01 work units)
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 0.01s
+
+Barrier performed 0 iterations in 0.46 seconds (0.03 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+
+Root relaxation: objective 2.070000e+02, 934 iterations, 0.02 seconds (0.01 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0  207.00000    0  651  232.00000  207.00000  10.8%     -    0s
-     0     0  207.00000    0 2289  232.00000  207.00000  10.8%     -    0s
-H    0     0                     228.0000000  207.00000  9.21%     -    0s
-H    0     0                     227.0000000  207.00000  8.81%     -    0s
-     0     0  207.00000    0 1405  227.00000  207.00000  8.81%     -    0s
-     0     0  207.00000    0  466  227.00000  207.00000  8.81%     -    1s
-     0     0  207.00000    0  566  227.00000  207.00000  8.81%     -    1s
-H    0     0                     223.0000000  207.00000  7.17%     -    1s
-     0     0  207.00000    0  522  223.00000  207.00000  7.17%     -    1s
-     0     0  207.00000    0  523  223.00000  207.00000  7.17%     -    1s
-H    0     0                     220.0000000  207.00000  5.91%     -    1s
-     0     2  207.00000    0 1059  220.00000  207.00000  5.91%     -    2s
-H   33    64                     219.0000000  207.00000  5.48%   917    2s
-H   39    64                     217.0000000  207.00000  4.61%   851    2s
-H  124   184                     216.0000000  207.00000  4.17%   757    3s
-H  124   184                     215.0000000  207.00000  3.72%   757    3s
-H  130   184                     214.0000000  207.00000  3.27%   747    3s
-H  153   184                     213.0000000  207.00000  2.82%   705    3s
-H  154   184                     212.0000000  207.00000  2.36%   704    3s
-H  243   304                     211.0000000  207.00000  1.90%   614    6s
-H  244   304                     210.0000000  207.00000  1.43%   612    6s
-H  244   304                     208.0000000  207.00000  0.48%   612    6s
-H  245   304                     207.0000000  207.00000  0.00%   611    6s
+     0     0      -    -    -      232.00000  207.00000  10.8%     -    0s
+     0     0      -    -    -      232.00000  207.00000  10.8%     -    0s
+     0     0      -    -    -      229.00000  207.00000  9.61%     -    0s
+     0     0      -    -    -      229.00000  207.00000  9.61%     -    1s
+     0     0      -    -    -      229.00000  207.00000  9.61%     -    1s
+     0     0      -    -    -      223.00000  207.00000  7.17%     -    1s
+     0     0      -    -    -      222.00000  207.00000  6.76%     -    1s
+     0     0      -    -    -      222.00000  207.00000  6.76%     -    1s
+     0     0      -    -    -      222.00000  207.00000  6.76%     -    1s
+     0     0      -    -    -      220.00000  207.00000  5.91%     -    1s
+     0     0      -    -    -      219.00000  207.00000  5.48%     -    2s
+     0     2      -    -    -      218.00000  207.00000  5.05%     -    2s
+    17    27      -    -    -      216.00000  207.00000  4.17%     -    5s
+   156   313      -    -    -      212.00000  207.00000  2.36%     -   12s
+   511   740      -    -    -      210.00000  207.00000  1.43%     -   17s
+   954  1070      -    -    -      209.00000  207.00000  0.96%     -   20s
 
 Cutting planes:
-  Learned: 978
-  Gomory: 41
-  Implied bound: 287
-  MIR: 3
-  Zero half: 41
-  Relax-and-lift: 20
+  Learned: 912
+  Gomory: 68
+  Cover: 1
+  Implied bound: 120
+  MIR: 1
+  Flow cover: 2
+  Zero half: 16
+  Relax-and-lift: 6
 
-Explored 303 nodes (188450 simplex iterations) in 6.90 seconds (5.82 work units)
-Thread count was 60 (of 128 available processors)
+Instance 17 was solved
+
+Explored 2080 nodes (612934 simplex iterations) in 24.57 seconds (16.28 work units)
+Thread count was 2 (of 128 available processors)
 
 Solution count 1: 207 
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 2.070000000000e+02, best bound 2.070000000000e+02, gap 0.0000%
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 19:25:53 2024
-
-Set parameter LogFile to value "fwd/logs/w9-k1-s2.log"

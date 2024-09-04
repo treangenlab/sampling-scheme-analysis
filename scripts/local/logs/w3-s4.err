@@ -1,0 +1,30 @@
+Working on w=3, k=1, s=4
+Set parameter Username
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2533279
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimization terminated at non-zero gap = 12.50%
+	Command being timed: "python /home/Users/blk6/Projects/winnowing-LB-manuscript/scripts/run-ilp.py -w 3 -k 1 2 3 4 --sigma 4 --threads 128 --output local --time-limit 43200 --local"
+	User time (seconds): 4755267.12
+	System time (seconds): 7088.01
+	Percent of CPU this job got: 11022%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 12:00:06
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 19223116
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 7
+	Minor (reclaiming a frame) page faults: 6465279
+	Voluntary context switches: 729841306
+	Involuntary context switches: 4268463
+	Swaps: 0
+	File system inputs: 1104
+	File system outputs: 5720
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

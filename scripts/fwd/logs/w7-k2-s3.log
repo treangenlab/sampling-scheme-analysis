@@ -1,0 +1,82 @@
+
+Gurobi 10.0.3 (linux64) logging started Mon Sep  2 14:34:26 2024
+
+Set parameter LogFile to value "fwd/logs/w7-k2-s3.log"
+
+Gurobi 10.0.3 (linux64) logging started Mon Sep  2 14:34:26 2024
+
+Set parameter LogFile to value "fwd/logs/w7-k2-s3.log"
+Set parameter Heuristics to value 0.8
+Set parameter Heuristics to value 0.8
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 3257 rows, 26244 columns and 27339 nonzeros
+Model fingerprint: 0x06bc8392
+Model has 39366 general constraints
+Variable types: 0 continuous, 26244 integer (19683 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 6e+00]
+  RHS range        [1e+00, 2e+00]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+Found heuristic solution: objective 19683.000000
+Presolve added 58967 rows and 39354 columns
+Presolve time: 2.02s
+Presolved: 62224 rows, 65598 columns, 164925 nonzeros
+Presolved model has 19680 SOS constraint(s)
+Variable types: 0 continuous, 65598 integer (19680 binary)
+Root relaxation presolved: 62224 rows, 65598 columns, 164925 nonzeros
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 0.78s
+
+Barrier performed 0 iterations in 4.58 seconds (0.63 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+
+Root relaxation: objective 4.379857e+03, 24993 iterations, 1.06 seconds (0.23 work units)
+Total elapsed time = 7.25s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0      -    -    -     19683.0000 4379.85714  77.7%     -   15s
+     0     0      -    -    -     9846.00000 4379.85714  55.5%     -   29s
+     0     0      -    -    -     9106.00000 4379.85714  51.9%     -   44s
+     0     0      -    -    -     9106.00000 4379.85714  51.9%     -   59s
+     0     0      -    -    -     9104.00000 4379.85714  51.9%     -   76s
+     0     0      -    -    -     9104.00000 4379.85714  51.9%     -  115s
+     0     0      -    -    -     9104.00000 4379.85714  51.9%     -  144s
+     0     2      -    -    -     7250.00000 4379.85714  39.6%     -  239s
+     1     4      -    -    -     7250.00000 4379.85714  39.6%     -  242s
+     3     6      -    -    -     7143.00000 4379.85714  38.7%     -  293s
+
+Cutting planes:
+  Learned: 19027
+  Gomory: 1
+  Implied bound: 37
+  Zero half: 3805
+  Relax-and-lift: 894
+
+Explored 5 nodes (670031 simplex iterations) in 294.02 seconds (78.08 work units)
+Thread count was 2 (of 128 available processors)
+
+Solution count 1: 7143 
+
+Solve interrupted
+Best objective 7.143000000000e+03, best bound 4.380000000000e+03, gap 38.6812%

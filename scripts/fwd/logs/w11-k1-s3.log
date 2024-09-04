@@ -1,0 +1,13 @@
+
+Gurobi 10.0.3 (linux64) logging started Mon Sep  2 15:00:34 2024
+
+Set parameter LogFile to value "fwd/logs/w11-k1-s3.log"
+Set parameter PoolSearchMode to value 2
+Set parameter PoolSolutions to value 1
+Set parameter Heuristics to value 1
+Set parameter PoolGap to value 0
+Set parameter Method to value 3
+Set parameter ConcurrentMIP to value 64
+Set parameter TimeLimit to value 43200
+Set parameter Threads to value 128
+Set parameter Threads to value 128

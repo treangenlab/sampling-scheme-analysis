@@ -1,21 +1,21 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 15:08:43 2024
+Gurobi 10.0.3 (linux64) logging started Sat Aug 31 18:30:30 2024
 
 Set parameter LogFile to value "fwd/logs/w3-k4-s2.log"
-Set parameter PoolSearchMode to value 2
-Set parameter PoolSolutions to value 1
+
+Gurobi 10.0.3 (linux64) logging started Sat Aug 31 18:30:30 2024
+
+Set parameter LogFile to value "fwd/logs/w3-k4-s2.log"
 Set parameter Heuristics to value 1
-Set parameter PoolGap to value 0
-Set parameter Threads to value 60
-Set parameter Threads to value 60
+Set parameter Heuristics to value 1
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
 Optimize a model with 20 rows, 192 columns and 128 nonzeros
-Model fingerprint: 0x2c2e7812
+Model fingerprint: 0x13786af3
 Model has 256 general constraints
 Variable types: 0 continuous, 192 integer (128 binary)
 Coefficient statistics:
@@ -25,71 +25,42 @@ Coefficient statistics:
   RHS range        [1e+00, 3e+00]
   GenCon rhs range [1e+00, 1e+00]
   GenCon coe range [1e+00, 1e+00]
-Found heuristic solution: objective 128.0000000
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 58 (0.04s)
+Loaded user MIP start with objective 58
+
 Presolve added 375 rows and 249 columns
 Presolve time: 0.00s
 Presolved: 395 rows, 441 columns, 1005 nonzeros
 Presolved model has 126 SOS constraint(s)
 Variable types: 0 continuous, 441 integer (126 binary)
+Root relaxation presolved: 395 rows, 441 columns, 1005 nonzeros
+
 
 Root relaxation: objective 5.600000e+01, 206 iterations, 0.00 seconds (0.00 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0   56.00000    0   26  128.00000   56.00000  56.2%     -    0s
-H    0     0                      74.0000000   56.00000  24.3%     -    0s
-H    0     0                      69.0000000   56.00000  18.8%     -    0s
-     0     0   56.00000    0   73   69.00000   56.00000  18.8%     -    0s
-H    0     0                      68.0000000   56.00000  17.6%     -    0s
-     0     0   56.00000    0   63   68.00000   56.00000  17.6%     -    0s
-H    0     0                      66.0000000   56.00000  15.2%     -    0s
-H    0     0                      64.0000000   56.00000  12.5%     -    0s
-H    0     0                      63.0000000   56.00000  11.1%     -    0s
-     0     0   56.00000    0   35   63.00000   56.00000  11.1%     -    0s
-H    0     0                      62.0000000   56.00000  9.68%     -    0s
-H    0     0                      61.0000000   56.00000  8.20%     -    0s
-     0     0   56.00000    0   41   61.00000   56.00000  8.20%     -    0s
-     0     0   56.00000    0   46   61.00000   56.00000  8.20%     -    0s
-     0     0   56.00000    0   46   61.00000   56.00000  8.20%     -    0s
-     0     2   56.00000    0   46   61.00000   56.00000  8.20%     -    0s
-H   33    64                      60.0000000   56.00000  6.67%   117    0s
-H   65   124                      58.0000000   56.00000  3.45%   137    0s
-H  124   180                      57.0000000   56.00000  1.75%   215    0s
-H  162   180                      56.0000000   56.00000  0.00%   242    0s
+     0     0      -    -    -       58.00000   56.00000  3.45%     -    0s
+     0     0      -    -    -       58.00000   56.00000  3.45%     -    0s
 
 Cutting planes:
-  Learned: 126
-  Gomory: 24
-  Cover: 158
-  Implied bound: 244
-  Zero half: 12
-  Relax-and-lift: 12
+  Learned: 28
+  Gomory: 6
+  Implied bound: 22
+  Zero half: 2
+  Relax-and-lift: 6
 
-Explored 183 nodes (47580 simplex iterations) in 0.59 seconds (0.16 work units)
-Thread count was 60 (of 128 available processors)
+Instance 6 was solved
+
+Explored 1 nodes (1112 simplex iterations) in 0.07 seconds (0.02 work units)
+Thread count was 2 (of 128 available processors)
 
 Solution count 1: 56 
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 5.600000000000e+01, best bound 5.600000000000e+01, gap 0.0000%
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:05:40 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k4-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:06:52 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k4-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:12:31 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k4-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:20:44 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k4-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:25:10 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k4-s2.log"

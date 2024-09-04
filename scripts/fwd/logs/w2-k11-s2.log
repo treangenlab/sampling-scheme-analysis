@@ -1,21 +1,19 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 15:09:35 2024
+Gurobi 10.0.3 (linux64) logging started Sat Aug 31 18:34:03 2024
 
 Set parameter LogFile to value "fwd/logs/w2-k11-s2.log"
-Set parameter PoolSearchMode to value 2
-Set parameter PoolSolutions to value 1
-Set parameter Heuristics to value 1
-Set parameter PoolGap to value 0
-Set parameter Threads to value 60
-Set parameter Threads to value 60
+
+Gurobi 10.0.3 (linux64) logging started Sat Aug 31 18:34:03 2024
+
+Set parameter LogFile to value "fwd/logs/w2-k11-s2.log"
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
 Optimize a model with 632 rows, 12288 columns and 8192 nonzeros
-Model fingerprint: 0x2917eed2
+Model fingerprint: 0x3f2d7df8
 Model has 16384 general constraints
 Variable types: 0 continuous, 12288 integer (8192 binary)
 Coefficient statistics:
@@ -25,89 +23,16 @@ Coefficient statistics:
   RHS range        [1e+00, 7e+00]
   GenCon rhs range [1e+00, 1e+00]
   GenCon coe range [1e+00, 1e+00]
-Found heuristic solution: objective 8192.0000000
-Presolve added 16379 rows and 8189 columns
-Presolve time: 0.22s
-Presolved: 17011 rows, 20477 columns, 57329 nonzeros
-Presolved model has 8190 SOS constraint(s)
-Variable types: 0 continuous, 20477 integer (12286 binary)
 
-Root relaxation: objective 4.412000e+03, 9067 iterations, 0.04 seconds (0.02 work units)
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
 
-    Nodes    |    Current Node    |     Objective Bounds      |     Work
- Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0 4412.00000    0 1332 8192.00000 4412.00000  46.1%     -    0s
-H    0     0                    5078.0000000 4412.00000  13.1%     -    0s
-H    0     0                    5075.0000000 4412.00000  13.1%     -    0s
-H    0     0                    5052.0000000 4412.00000  12.7%     -    0s
-H    0     0                    5045.0000000 4412.00000  12.5%     -    0s
-     0     0 4412.00000    0 2133 5045.00000 4412.00000  12.5%     -    0s
-H    0     0                    5007.0000000 4412.00000  11.9%     -    1s
-     0     0 4412.00000    0 2581 5007.00000 4412.00000  11.9%     -    1s
-H    0     0                    5000.0000000 4412.00000  11.8%     -    1s
-H    0     0                    4978.0000000 4412.00000  11.4%     -    1s
-H    0     0                    4975.0000000 4412.00000  11.3%     -    2s
-H    0     0                    4968.0000000 4412.00000  11.2%     -    2s
-     0     0 4412.00000    0 2204 4968.00000 4412.00000  11.2%     -    2s
-H    0     0                    4950.0000000 4412.00000  10.9%     -    2s
-     0     0 4412.00000    0 4085 4950.00000 4412.00000  10.9%     -    2s
-H    0     0                    4948.0000000 4412.00000  10.8%     -    3s
-H    0     0                    4947.0000000 4412.00000  10.8%     -    3s
-H    0     0                    4929.0000000 4412.00000  10.5%     -    3s
-H    0     0                    4928.0000000 4412.00000  10.5%     -    3s
-H    0     0                    4922.0000000 4412.00000  10.4%     -    3s
-H    0     0                    4921.0000000 4412.00000  10.3%     -    3s
-H    0     0                    4902.0000000 4412.00000  10.0%     -    3s
-     0     0 4412.00000    0 2950 4902.00000 4412.00000  10.0%     -    3s
-     0     0 4412.00000    0 2844 4902.00000 4412.00000  10.0%     -    4s
-H    0     0                    4792.0000000 4412.00000  7.93%     -    4s
-H    0     0                    4771.0000000 4412.00000  7.52%     -    7s
-H    0     0                    4747.0000000 4412.00000  7.06%     -    7s
-     0     2 4412.00000    0 2826 4747.00000 4412.00000  7.06%     -    7s
-    15    32 4412.00000    4 7556 4747.00000 4412.00000  7.06% 10906   10s
-H   31    64                    4744.0000000 4412.00000  7.00% 14892  111s
-H   32    64                    4743.0000000 4412.00000  6.98% 17281  111s
-H   33    64                    4741.0000000 4412.00000  6.94% 19423  111s
-H   36    64                    4740.0000000 4412.00000  6.92% 24568  111s
-H   47    64                    4731.0000000 4412.00000  6.74% 28586  111s
-H   48    64                    4689.0000000 4412.00000  5.91% 29576  111s
-H   50    64                    4626.0000000 4412.00000  4.63% 31821  111s
-H   53    64                    4572.0000000 4412.00000  3.50% 34301  111s
-H   63   124                    4478.0000000 4412.00000  1.47% 42054  630s
-H   63   124                    4476.0000000 4412.00000  1.43% 42054  630s
-H   63   124                    4471.0000000 4412.00000  1.32% 42054  630s
-H   63   124                    4424.0000000 4412.00000  0.27% 42054  630s
-H   63   124                    4423.0000000 4412.00000  0.25% 42054  630s
-H   64   124                    4417.0000000 4412.00000  0.11% 42983  630s
-H   64   124                    4415.0000000 4412.00000  0.07% 42983  630s
-H   79   124                    4412.0000000 4412.00000  0.00% 52568  630s
+Instance 54 was solved
 
-Cutting planes:
-  Learned: 2
-  Gomory: 40
-  Cover: 16187
-  Implied bound: 8118
-  Clique: 5488
-  MIR: 967
-  Zero half: 35
-
-Explored 123 nodes (8041126 simplex iterations) in 630.74 seconds (866.77 work units)
-Thread count was 60 (of 128 available processors)
+Explored 1 nodes (630 simplex iterations) in 0.94 seconds (0.26 work units)
+Thread count was 2 (of 128 available processors)
 
 Solution count 1: 4412 
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 4.412000000000e+03, best bound 4.412000000000e+03, gap 0.0000%
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:05:56 2024
-
-Set parameter LogFile to value "fwd/logs/w2-k11-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:07:07 2024
-
-Set parameter LogFile to value "fwd/logs/w2-k11-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 19:25:40 2024
-
-Set parameter LogFile to value "fwd/logs/w2-k11-s2.log"

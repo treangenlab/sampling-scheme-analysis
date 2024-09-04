@@ -1,75 +1,40 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 15:08:43 2024
+Gurobi 10.0.3 (linux64) logging started Sat Aug 31 18:30:29 2024
 
 Set parameter LogFile to value "fwd/logs/w3-k2-s2.log"
-Set parameter PoolSearchMode to value 2
-Set parameter PoolSolutions to value 1
-Set parameter Heuristics to value 0.9
-Set parameter PoolGap to value 0
-Set parameter Threads to value 60
-Set parameter Threads to value 60
+
+Gurobi 10.0.3 (linux64) logging started Sat Aug 31 18:30:29 2024
+
+Set parameter LogFile to value "fwd/logs/w3-k2-s2.log"
+Set parameter Heuristics to value 0.8
+Set parameter Heuristics to value 0.8
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
-Optimize a model with 57 rows, 48 columns and 243 nonzeros
-Model fingerprint: 0xda222058
+Optimize a model with 576 rows, 48 columns and 3273 nonzeros
+Model fingerprint: 0x4451a312
 Model has 64 general constraints
 Variable types: 0 continuous, 48 integer (32 binary)
 Coefficient statistics:
-  Matrix range     [1e+00, 2e+00]
+  Matrix range     [1e+00, 1e+00]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 2e+00]
-  RHS range        [1e+00, 3e+00]
+  RHS range        [1e+00, 5e+00]
   GenCon rhs range [1e+00, 1e+00]
   GenCon coe range [1e+00, 1e+00]
-Found heuristic solution: objective 32.0000000
-Presolve added 65 rows and 57 columns
-Presolve time: 0.00s
-Presolved: 122 rows, 105 columns, 393 nonzeros
-Presolved model has 30 SOS constraint(s)
-Variable types: 0 continuous, 105 integer (30 binary)
 
-Root relaxation: objective 1.500000e+01, 72 iterations, 0.00 seconds (0.00 work units)
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
 
-    Nodes    |    Current Node    |     Objective Bounds      |     Work
- Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0   15.00000    0    2   32.00000   15.00000  53.1%     -    0s
-H    0     0                      17.0000000   15.00000  11.8%     -    0s
-H    0     0                      16.0000000   15.00000  6.25%     -    0s
-H    0     0                      15.0000000   15.00000  0.00%     -    0s
+Instance 2 was solved
 
-Cutting planes:
-  Learned: 2
-  Implied bound: 2
-
-Explored 1 nodes (137 simplex iterations) in 0.03 seconds (0.00 work units)
-Thread count was 60 (of 128 available processors)
+Explored 1 nodes (182 simplex iterations) in 0.05 seconds (0.01 work units)
+Thread count was 2 (of 128 available processors)
 
 Solution count 1: 15 
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 1.500000000000e+01, best bound 1.500000000000e+01, gap 0.0000%
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:05:40 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k2-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:06:52 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k2-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:12:31 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k2-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:20:44 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k2-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:25:10 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k2-s2.log"

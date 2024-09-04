@@ -1,0 +1,86 @@
+
+Gurobi 10.0.3 (linux64) logging started Tue Sep  3 19:27:56 2024
+
+Set parameter LogFile to value "fwd/logs/w7-k1-s4.log"
+Set parameter PoolSearchMode to value 2
+Set parameter PoolSolutions to value 1
+Set parameter Heuristics to value 1
+Set parameter PoolGap to value 0
+Set parameter Method to value 3
+Set parameter ConcurrentMIP to value 64
+Set parameter TimeLimit to value 43200
+Set parameter Threads to value 128
+Set parameter Threads to value 128
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 8230 rows, 81920 columns and 65536 nonzeros
+Model fingerprint: 0xb5d7889b
+Model has 131072 general constraints
+Variable types: 0 continuous, 81920 integer (65536 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 6e+00]
+  RHS range        [1e+00, 2e+00]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 18736 (11.72s)
+Loaded user MIP start with objective 18736
+Processed MIP start in 1.63 seconds (0.26 work units)
+
+Presolve removed 16 rows and 65540 columns (presolve time = 5s) ...
+Presolve added 196586 rows and 131054 columns
+Presolve time: 6.82s
+Presolved: 204816 rows, 212974 columns, 524238 nonzeros
+Presolved model has 65532 SOS constraint(s)
+Variable types: 0 continuous, 212974 integer (65532 binary)
+Root relaxation presolved: 204816 rows, 212974 columns, 524238 nonzeros
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 3.17s
+
+Barrier performed 0 iterations in 23.89 seconds (2.31 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+
+Root relaxation: objective 1.639000e+04, 59926 iterations, 4.19 seconds (0.87 work units)
+Total elapsed time = 35.62s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0      -    -    -     18736.0000 16390.0000  12.5%     -   44s
+     0     0      -    -    -     18736.0000 16390.0000  12.5%     -   66s
+     0     0      -    -    -     18736.0000 16390.0000  12.5%     -   85s
+     0     0      -    -    -     18736.0000 16390.0000  12.5%     -  143s
+     0     0      -    -    -     18736.0000 16390.0000  12.5%     -  161s
+     0     0      -    -    -     18736.0000 16390.0000  12.5%     -  222s
+     0     0      -    -    -     18736.0000 16390.0000  12.5%     -  293s
+     0     2      -    -    -     18299.0000 16390.0000  10.4%     -  621s
+     1     4      -    -    -     18299.0000 16390.0000  10.4%     -  629s
+     3     6      -    -    -     18299.0000 16390.0000  10.4%     -  651s
+     5     8      -    -    -     18299.0000 16390.0000  10.4%     -  664s
+     7    10      -    -    -     18260.0000 16390.0000  10.2%     -  674s
+     9    12      -    -    -     18260.0000 16390.0000  10.2%     -  685s
+    11    14      -    -    -     18260.0000 16390.0000  10.2%     -  710s
+    13    16      -    -    -     18260.0000 16390.0000  10.2%     -  720s
+    15    18      -    -    -     18260.0000 16390.0000  10.2%     -  732s
+    17    24      -    -    -     18239.0000 16390.0000  10.1%     -  774s
+    23    34      -    -    -     18205.0000 16390.0000  10.0%     -  836s
+    33    44      -    -    -     18099.0000 16390.0000  9.44%     - 1010s
+    43    62      -    -    -     18099.0000 16390.0000  9.44%     - 1407s
+    61   135      -    -    -     17888.0000 16390.0000  8.37%     - 2169s

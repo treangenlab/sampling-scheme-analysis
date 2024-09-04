@@ -1,21 +1,24 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 15:38:53 2024
+Gurobi 10.0.3 (linux64) logging started Sun Sep  1 10:46:14 2024
 
 Set parameter LogFile to value "fwd/logs/w8-k1-s2.log"
 Set parameter PoolSearchMode to value 2
 Set parameter PoolSolutions to value 1
 Set parameter Heuristics to value 1
 Set parameter PoolGap to value 0
-Set parameter Threads to value 60
-Set parameter Threads to value 60
+Set parameter Method to value 3
+Set parameter ConcurrentMIP to value 64
+Set parameter TimeLimit to value 43200
+Set parameter Threads to value 128
+Set parameter Threads to value 128
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
 Optimize a model with 60 rows, 768 columns and 512 nonzeros
-Model fingerprint: 0x434d3ef2
+Model fingerprint: 0xaaace892
 Model has 1024 general constraints
 Variable types: 0 continuous, 768 integer (512 binary)
 Coefficient statistics:
@@ -26,57 +29,69 @@ Coefficient statistics:
   GenCon rhs range [1e+00, 1e+00]
   GenCon coe range [1e+00, 1e+00]
 
-User MIP start produced solution with objective 132 (0.01s)
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 132 (0.22s)
 Loaded user MIP start with objective 132
 
 Presolve added 1527 rows and 1017 columns
-Presolve time: 0.01s
+Presolve time: 0.02s
 Presolved: 1587 rows, 1785 columns, 4077 nonzeros
 Presolved model has 510 SOS constraint(s)
 Variable types: 0 continuous, 1785 integer (510 binary)
+Root relaxation presolved: 1587 rows, 1785 columns, 4077 nonzeros
 
-Root relaxation: objective 1.160000e+02, 930 iterations, 0.00 seconds (0.00 work units)
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 3.564e+03
+ Factor NZ  : 3.670e+04 (roughly 2 MB of memory)
+ Factor Ops : 2.117e+06 (less than 1 second per iteration)
+ Threads    : 1
+
+Barrier performed 0 iterations in 0.26 seconds (0.01 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+
+Root relaxation: objective 1.160000e+02, 462 iterations, 0.01 seconds (0.00 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0  116.00000    0  443  132.00000  116.00000  12.1%     -    0s
-H    0     0                     131.0000000  116.00000  11.5%     -    0s
-     0     0  116.00000    0 1601  131.00000  116.00000  11.5%     -    0s
-H    0     0                     129.0000000  116.00000  10.1%     -    0s
-     0     0  116.00000    0  908  129.00000  116.00000  10.1%     -    0s
-     0     0  116.00000    0  293  129.00000  116.00000  10.1%     -    0s
-     0     0  116.00000    0  444  129.00000  116.00000  10.1%     -    0s
-H    0     0                     128.0000000  116.00000  9.37%     -    0s
-     0     0  116.00000    0  332  128.00000  116.00000  9.37%     -    0s
-     0     0  116.00000    0  324  128.00000  116.00000  9.37%     -    0s
-H    0     0                     127.0000000  116.00000  8.66%     -    0s
-     0     2  116.00000    0  319  127.00000  116.00000  8.66%     -    0s
-H   41    64                     126.0000000  116.00000  7.94%   273    1s
-H  124   184                     125.0000000  116.00000  7.20%   268    1s
-H  126   184                     124.0000000  116.00000  6.45%   266    1s
-H  126   184                     123.0000000  116.00000  5.69%   266    1s
-H  141   184                     119.0000000  116.00000  2.52%   255    1s
-H  243   304                     118.0000000  116.00000  1.69%   213    3s
-H  244   304                     117.0000000  116.00000  0.85%   213    3s
-H  248   304                     116.0000000  116.00000  0.00%   212    3s
+     0     0      -    -    -      132.00000  116.00000  12.1%     -    0s
+     0     0      -    -    -      132.00000  116.00000  12.1%     -    0s
+     0     0      -    -    -      129.00000  116.00000  10.1%     -    0s
+     0     0      -    -    -      123.00000  116.00000  5.69%     -    0s
+     0     0      -    -    -      123.00000  116.00000  5.69%     -    0s
+     0     0      -    -    -      123.00000  116.00000  5.69%     -    0s
+     0     0      -    -    -      123.00000  116.00000  5.69%     -    0s
+     0     0      -    -    -      122.00000  116.00000  4.92%     -    0s
+     0     0      -    -    -      122.00000  116.00000  4.92%     -    0s
+     0     0      -    -    -      122.00000  116.00000  4.92%     -    0s
+     0     0      -    -    -      122.00000  116.00000  4.92%     -    0s
+     0     2      -    -    -      121.00000  116.00000  4.13%     -    1s
 
 Cutting planes:
-  Learned: 499
-  Gomory: 14
-  Implied bound: 192
-  Clique: 1
-  Zero half: 34
-  Relax-and-lift: 13
+  Learned: 496
+  Implied bound: 18
+  MIR: 1
+  Zero half: 14
+  Relax-and-lift: 1
 
-Explored 303 nodes (71359 simplex iterations) in 3.11 seconds (1.68 work units)
-Thread count was 60 (of 128 available processors)
+Instance 11 was solved
+
+Explored 740 nodes (97103 simplex iterations) in 3.56 seconds (1.78 work units)
+Thread count was 2 (of 128 available processors)
 
 Solution count 1: 116 
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 1.160000000000e+02, best bound 1.160000000000e+02, gap 0.0000%
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 19:25:52 2024
-
-Set parameter LogFile to value "fwd/logs/w8-k1-s2.log"

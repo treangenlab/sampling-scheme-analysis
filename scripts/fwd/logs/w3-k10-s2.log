@@ -1,21 +1,21 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:12:34 2024
+Gurobi 10.0.3 (linux64) logging started Sun Sep  1 05:12:50 2024
 
 Set parameter LogFile to value "fwd/logs/w3-k10-s2.log"
-Set parameter PoolSearchMode to value 2
-Set parameter PoolSolutions to value 1
+
+Gurobi 10.0.3 (linux64) logging started Sun Sep  1 05:12:50 2024
+
+Set parameter LogFile to value "fwd/logs/w3-k10-s2.log"
 Set parameter Heuristics to value 1
-Set parameter PoolGap to value 0
-Set parameter Threads to value 120
-Set parameter Threads to value 120
+Set parameter Heuristics to value 1
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 120 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
 Optimize a model with 632 rows, 12288 columns and 8192 nonzeros
-Model fingerprint: 0xbb18038f
+Model fingerprint: 0x9cf8b753
 Model has 16384 general constraints
 Variable types: 0 continuous, 12288 integer (8192 binary)
 Coefficient statistics:
@@ -26,172 +26,55 @@ Coefficient statistics:
   GenCon rhs range [1e+00, 1e+00]
   GenCon coe range [1e+00, 1e+00]
 
-User MIP start produced solution with objective 4412 (0.06s)
-Loaded user MIP start with objective 4412
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 3154 (0.59s)
+Loaded user MIP start with objective 3154
 
 Presolve added 24567 rows and 16377 columns
-Presolve time: 0.16s
+Presolve time: 0.57s
 Presolved: 25199 rows, 28665 columns, 65517 nonzeros
 Presolved model has 8190 SOS constraint(s)
 Variable types: 0 continuous, 28665 integer (8190 binary)
+Root relaxation presolved: 25199 rows, 28665 columns, 65517 nonzeros
 
-Root relaxation: objective 3.152000e+03, 17946 iterations, 0.10 seconds (0.07 work units)
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 0.25s
+
+Barrier performed 0 iterations in 1.59 seconds (0.27 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+
+Root relaxation: objective 3.152000e+03, 8001 iterations, 0.32 seconds (0.06 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0 3152.00000    0 6845 4412.00000 3152.00000  28.6%     -    0s
-H    0     0                    4244.0000000 3152.00000  25.7%     -    0s
-H    0     0                    4237.0000000 3152.00000  25.6%     -    0s
-     0     0 3152.00000    0 10139 4237.00000 3152.00000  25.6%     -    1s
-H    0     0                    4120.0000000 3152.00000  23.5%     -    1s
-H    0     0                    4119.0000000 3152.00000  23.5%     -    1s
-     0     0 3152.00000    0 12894 4119.00000 3152.00000  23.5%     -    1s
-H    0     0                    4104.0000000 3152.00000  23.2%     -    2s
-H    0     0                    4102.0000000 3152.00000  23.2%     -    2s
-     0     0 3152.00000    0 5441 4102.00000 3152.00000  23.2%     -    3s
-H    0     0                    4092.0000000 3152.00000  23.0%     -    3s
-     0     0 3152.00000    0 9820 4092.00000 3152.00000  23.0%     -    3s
-     0     0 3152.00000    0 5818 4092.00000 3152.00000  23.0%     -    6s
-     0     0 3152.00000    0 5316 4092.00000 3152.00000  23.0%     -    7s
-H    0     0                    4082.0000000 3152.00000  22.8%     -    7s
-H    0     0                    4049.0000000 3152.00000  22.2%     -    8s
-H    0     0                    3935.0000000 3152.00000  19.9%     -    8s
-H    0     0                    3930.0000000 3152.00000  19.8%     -   11s
-H    0     0                    3912.0000000 3152.00000  19.4%     -   11s
-H    0     0                    3904.0000000 3152.00000  19.3%     -   11s
-H    0     2                    3890.0000000 3152.00000  19.0%     -   13s
-     0     2 3152.00000    0 4734 3890.00000 3152.00000  19.0%     -   13s
-     3     8 3152.00000    2 9894 3890.00000 3152.00000  19.0% 14081   15s
-    15    32 3152.00000    4 16353 3890.00000 3152.00000  19.0% 19529   52s
-H   31    64                    3882.0000000 3152.00000  18.8% 30265  346s
-H   33    64                    3877.0000000 3152.00000  18.7% 33139  346s
-H   38    64                    3876.0000000 3152.00000  18.7% 35476  346s
-H   52    64                    3853.0000000 3152.00000  18.2% 51498  347s
+     0     0      -    -    -     3154.00000 3152.00000  0.06%     -    2s
+     0     0      -    -    -     3154.00000 3152.00000  0.06%     -   11s
+     0     0      -    -    -     3154.00000 3152.00000  0.06%     -   21s
+     0     0      -    -    -     3152.00000 3152.00000  0.00%     -   23s
 
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:20:47 2024
+Cutting planes:
+  Learned: 6056
+  Gomory: 1
+  Implied bound: 259
+  Zero half: 315
+  Relax-and-lift: 119
 
-Set parameter LogFile to value "fwd/logs/w3-k10-s2.log"
-Set parameter PoolSearchMode to value 2
-Set parameter PoolSolutions to value 1
-Set parameter Heuristics to value 1
-Set parameter PoolGap to value 0
-Set parameter Threads to value 120
-Set parameter Threads to value 120
-Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Instance 1 was solved
 
-CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 120 threads
+Explored 1 nodes (77097 simplex iterations) in 23.93 seconds (6.33 work units)
+Thread count was 2 (of 128 available processors)
 
-Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
-Optimize a model with 632 rows, 12288 columns and 8192 nonzeros
-Model fingerprint: 0x9e3f9583
-Model has 16384 general constraints
-Variable types: 0 continuous, 12288 integer (8192 binary)
-Coefficient statistics:
-  Matrix range     [1e+00, 1e+00]
-  Objective range  [1e+00, 1e+00]
-  Bounds range     [1e+00, 2e+00]
-  RHS range        [1e+00, 5e+00]
-  GenCon rhs range [1e+00, 1e+00]
-  GenCon coe range [1e+00, 1e+00]
+Solution count 1: 3152 
 
-User MIP start produced solution with objective 3288 (0.07s)
-Loaded user MIP start with objective 3288
-
-Presolve added 24567 rows and 16377 columns
-Presolve time: 0.16s
-Presolved: 25199 rows, 28665 columns, 65517 nonzeros
-Presolved model has 8190 SOS constraint(s)
-Variable types: 0 continuous, 28665 integer (8190 binary)
-
-Root relaxation: objective 3.152000e+03, 17951 iterations, 0.10 seconds (0.07 work units)
-
-    Nodes    |    Current Node    |     Objective Bounds      |     Work
- Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
-
-     0     0 3152.00000    0 6868 3288.00000 3152.00000  4.14%     -    1s
-     0     0 3152.00000    0 10062 3288.00000 3152.00000  4.14%     -    1s
-     0     0 3152.00000    0 12323 3288.00000 3152.00000  4.14%     -    1s
-     0     0 3152.00000    0 6255 3288.00000 3152.00000  4.14%     -    3s
-H    0     0                    3285.0000000 3152.00000  4.05%     -    3s
-     0     0 3152.00000    0 10936 3285.00000 3152.00000  4.05%     -    4s
-H    0     0                    3282.0000000 3152.00000  3.96%     -    8s
-     0     0 3152.00000    0 6218 3282.00000 3152.00000  3.96%     -    8s
-     0     0 3152.00000    0 5287 3282.00000 3152.00000  3.96%     -    9s
-H    0     0                    3279.0000000 3152.00000  3.87%     -   16s
-     0     2 3152.00000    0 4490 3279.00000 3152.00000  3.87%     -   18s
-     7    16 3152.00000    3 14232 3279.00000 3152.00000  3.87% 12317   20s
-    15    32 3152.00000    4 15918 3279.00000 3152.00000  3.87% 18624   46s
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:25:12 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k10-s2.log"
-Set parameter PoolSearchMode to value 2
-Set parameter PoolSolutions to value 1
-Set parameter Heuristics to value 1
-Set parameter PoolGap to value 0
-Set parameter Threads to value 120
-Set parameter Threads to value 120
-Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
-
-CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 120 threads
-
-Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
-Optimize a model with 632 rows, 12288 columns and 8192 nonzeros
-Model fingerprint: 0xa71acca4
-Model has 16384 general constraints
-Variable types: 0 continuous, 12288 integer (8192 binary)
-Coefficient statistics:
-  Matrix range     [1e+00, 1e+00]
-  Objective range  [1e+00, 1e+00]
-  Bounds range     [1e+00, 2e+00]
-  RHS range        [1e+00, 5e+00]
-  GenCon rhs range [1e+00, 1e+00]
-  GenCon coe range [1e+00, 1e+00]
-
-User MIP start produced solution with objective 3288 (0.06s)
-Loaded user MIP start with objective 3288
-
-Presolve added 24567 rows and 16377 columns
-Presolve time: 0.16s
-Presolved: 25199 rows, 28665 columns, 65517 nonzeros
-Presolved model has 8190 SOS constraint(s)
-Variable types: 0 continuous, 28665 integer (8190 binary)
-
-Root relaxation: objective 3.152000e+03, 17946 iterations, 0.10 seconds (0.07 work units)
-
-    Nodes    |    Current Node    |     Objective Bounds      |     Work
- Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
-
-     0     0 3152.00000    0 6841 3288.00000 3152.00000  4.14%     -    0s
-     0     0 3152.00000    0 9964 3288.00000 3152.00000  4.14%     -    1s
-     0     0 3152.00000    0 13414 3288.00000 3152.00000  4.14%     -    1s
-     0     0 3152.00000    0 6014 3288.00000 3152.00000  4.14%     -    3s
-     0     0 3152.00000    0 10804 3288.00000 3152.00000  4.14%     -    3s
-H    0     0                    3285.0000000 3152.00000  4.05%     -    6s
-     0     0 3152.00000    0 5222 3285.00000 3152.00000  4.05%     -    6s
-     0     0 3152.00000    0 9506 3285.00000 3152.00000  4.05%     -    6s
-H    0     0                    3282.0000000 3152.00000  3.96%     -   16s
-H    0     0                    3278.0000000 3152.00000  3.84%     -   16s
-H    0     0                    3273.0000000 3152.00000  3.70%     -   16s
-H    0     0                    3268.0000000 3152.00000  3.55%     -   16s
-H    0     0                    3267.0000000 3152.00000  3.52%     -   16s
-H    0     0                    3266.0000000 3152.00000  3.49%     -   16s
-H    0     0                    3264.0000000 3152.00000  3.43%     -   16s
-H    0     0                    3262.0000000 3152.00000  3.37%     -   16s
-H    0     0                    3261.0000000 3152.00000  3.34%     -   16s
-     0     0 3152.00000    0 5118 3261.00000 3152.00000  3.34%     -   16s
-     0     0 3152.00000    0 4442 3261.00000 3152.00000  3.34%     -   17s
-H    0     0                    3260.0000000 3152.00000  3.31%     -   21s
-H    0     2                    3259.0000000 3152.00000  3.28%     -   22s
-     0     2 3152.00000    0 3896 3259.00000 3152.00000  3.28%     -   22s
-     7    16 3152.00000    3 13332 3259.00000 3152.00000  3.28% 11292   25s
-    15    32 3152.00000    4 14602 3259.00000 3152.00000  3.28% 18831   67s
-    31    64 3152.00000    5 17491 3259.00000 3152.00000  3.28% 35080  421s
-H   34    64                    3258.0000000 3152.00000  3.25% 36144  421s
-H   39    64                    3257.0000000 3152.00000  3.22% 39714  421s
-H   44    64                    3256.0000000 3152.00000  3.19% 41462  421s
-H   47    64                    3255.0000000 3152.00000  3.16% 41525  421s
-    63   128 3152.00000    6 30063 3255.00000 3152.00000  3.16% 87135 3275s
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.152000000000e+03, best bound 3.152000000000e+03, gap 0.0000%

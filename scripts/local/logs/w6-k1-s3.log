@@ -1,0 +1,58 @@
+
+Gurobi 10.0.3 (linux64) logging started Tue Sep  3 20:23:41 2024
+
+Set parameter LogFile to value "local/logs/w6-k1-s3.log"
+Set parameter PoolSearchMode to value 2
+Set parameter PoolSolutions to value 1
+Set parameter PoolGap to value 0
+Set parameter Method to value 3
+Set parameter ConcurrentMIP to value 64
+Set parameter TimeLimit to value 43200
+Set parameter Heuristics to value 0.95
+Set parameter MIPFocus to value 1
+Set parameter Threads to value 128
+Set parameter Threads to value 128
+Warning: variable name "x_(000000, 0)" has a space
+Warning: default variable names used to write mps file
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 1063611 rows, 181521 columns and 2130138 nonzeros
+Model fingerprint: 0x693e8ebc
+Variable types: 0 continuous, 181521 integer (181521 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+Warning: Completing partial solution with 177147 unfixed non-continuous variables out of 181521
+Processing user MIP start: 0 nodes explored in subMIP, total elapsed time 5s
+User MIP start produced solution with objective 50787 (5.98s)
+Loaded user MIP start with objective 50787
+Processed MIP start in 1.23 seconds (0.43 work units)
+
+Presolve removed 513 rows and 0 columns (presolve time = 5s) ...
+Presolve removed 584 rows and 3 columns (presolve time = 10s) ...
+Presolve removed 584 rows and 3 columns (presolve time = 15s) ...
+Presolve removed 584 rows and 3 columns (presolve time = 20s) ...
+Presolve removed 584 rows and 3 columns (presolve time = 25s) ...
+Presolve removed 597 rows and 3 columns (presolve time = 30s) ...
+Presolve removed 597 rows and 3 columns
+Presolve time: 33.32s
+Presolved: 1063014 rows, 181518 columns, 2129523 nonzeros
+Variable types: 0 continuous, 181518 integer (181518 binary)
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root relaxation presolved: 1063014 rows, 181518 columns, 2129523 nonzeros
+
+Root barrier log...
+

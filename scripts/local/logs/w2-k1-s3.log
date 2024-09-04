@@ -1,56 +1,86 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Aug 25 08:16:40 2024
-
-Set parameter LogFile to value "local/logs/w2-k1-s3.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Aug 25 08:19:45 2024
+Gurobi 10.0.3 (linux64) logging started Tue Sep  3 20:09:03 2024
 
 Set parameter LogFile to value "local/logs/w2-k1-s3.log"
 Set parameter PoolSearchMode to value 2
 Set parameter PoolSolutions to value 1
 Set parameter PoolGap to value 0
-Set parameter TimeLimit to value 1800
-Set parameter Threads to value 30
-Set parameter Threads to value 30
+Set parameter Method to value 3
+Set parameter ConcurrentMIP to value 64
+Set parameter TimeLimit to value 43200
+Set parameter Heuristics to value 0.95
+Set parameter MIPFocus to value 1
+Set parameter Threads to value 128
+Set parameter Threads to value 128
+Warning: variable name "x_(00, 0)" has a space
+Warning: default variable names used to write mps file
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 30 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
-Optimize a model with 171 rows, 99 columns and 342 nonzeros
-Model fingerprint: 0xaa0b282d
-Variable types: 0 continuous, 99 integer (99 binary)
+Optimize a model with 63 rows, 45 columns and 126 nonzeros
+Model fingerprint: 0x2fc789d6
+Variable types: 0 continuous, 45 integer (45 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 1e+00]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 1e+00]
   RHS range        [1e+00, 1e+00]
 
-User MIP start produced solution with objective 57 (0.01s)
-Loaded user MIP start with objective 57
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
 
-Presolve removed 27 rows and 18 columns
-Presolve time: 0.00s
-Presolved: 144 rows, 81 columns, 288 nonzeros
-Variable types: 0 continuous, 81 integer (81 binary)
 
-Root relaxation: objective 4.500000e+01, 90 iterations, 0.00 seconds (0.00 work units)
+Instance 2 was solved
 
-    Nodes    |    Current Node    |     Objective Bounds      |     Work
- Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+Explored 1 nodes (74 simplex iterations) in 0.03 seconds (0.00 work units)
+Thread count was 2 (of 128 available processors)
 
-     0     0   45.00000    0   81   57.00000   45.00000  21.1%     -    0s
-     0     0   57.00000    0   79   57.00000   57.00000  0.00%     -    0s
-
-Cutting planes:
-  Gomory: 1
-  Zero half: 14
-
-Explored 1 nodes (106 simplex iterations) in 0.02 seconds (0.00 work units)
-Thread count was 30 (of 128 available processors)
-
-Solution count 1: 57 
+Solution count 1: 19 
 
 Optimal solution found (tolerance 1.00e-04)
-Best objective 5.700000000000e+01, best bound 5.700000000000e+01, gap 0.0000%
+Best objective 1.900000000000e+01, best bound 1.900000000000e+01, gap 0.0000%
+
+Gurobi 10.0.3 (linux64) logging started Tue Sep  3 20:30:09 2024
+
+Set parameter LogFile to value "local/logs/w2-k1-s3.log"
+Set parameter PoolSearchMode to value 2
+Set parameter PoolSolutions to value 1
+Set parameter PoolGap to value 0
+Set parameter Method to value 3
+Set parameter ConcurrentMIP to value 64
+Set parameter TimeLimit to value 43200
+Set parameter Heuristics to value 0.95
+Set parameter MIPFocus to value 1
+Set parameter Threads to value 128
+Set parameter Threads to value 128
+Warning: variable name "x_(00, 0)" has a space
+Warning: default variable names used to write mps file
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 63 rows, 45 columns and 126 nonzeros
+Model fingerprint: 0x2fc789d6
+Variable types: 0 continuous, 45 integer (45 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+Instance 51 was solved
+
+Explored 1 nodes (74 simplex iterations) in 0.04 seconds (0.00 work units)
+Thread count was 2 (of 128 available processors)
+
+Solution count 1: 19 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.900000000000e+01, best bound 1.900000000000e+01, gap 0.0000%

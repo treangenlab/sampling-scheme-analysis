@@ -1,0 +1,110 @@
+
+Gurobi 10.0.3 (linux64) logging started Tue Sep  3 07:09:18 2024
+
+Set parameter LogFile to value "fwd/logs/w4-k5-s4.log"
+
+Gurobi 10.0.3 (linux64) logging started Tue Sep  3 07:09:18 2024
+
+Set parameter LogFile to value "fwd/logs/w4-k5-s4.log"
+Set parameter Heuristics to value 1
+Set parameter Heuristics to value 1
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 29144 rows, 327680 columns and 262144 nonzeros
+Model fingerprint: 0xf9c97d73
+Model has 524288 general constraints
+Variable types: 0 continuous, 327680 integer (262144 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+00, 3e+00]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+Found heuristic solution: objective 262144.00000
+Presolve removed 4 rows and 0 columns (presolve time = 24s) ...
+Presolve removed 8 rows and 0 columns (presolve time = 28s) ...
+Presolve removed 8 rows and 0 columns (presolve time = 72s) ...
+Presolve removed 16 rows and 8 columns (presolve time = 75s) ...
+Presolve removed 16 rows and 101295 columns (presolve time = 80s) ...
+Presolve removed 16 rows and 262148 columns (presolve time = 101s) ...
+Presolve removed 16 rows and 262148 columns (presolve time = 106s) ...
+Presolve removed 16 rows and 262148 columns (presolve time = 110s) ...
+Presolve removed 16 rows and 262148 columns (presolve time = 122s) ...
+Presolve removed 786442 rows and 524302 columns (presolve time = 129s) ...
+Presolve removed 786442 rows and 524302 columns (presolve time = 130s) ...
+Presolve removed 786442 rows and 524302 columns (presolve time = 137s) ...
+Presolve added 786410 rows and 524270 columns
+Presolve time: 137.60s
+Presolved: 815554 rows, 851950 columns, 2097102 nonzeros
+Presolved model has 262140 SOS constraint(s)
+Variable types: 0 continuous, 851950 integer (262140 binary)
+Root relaxation presolved: 815554 rows, 851950 columns, 2097102 nonzeros
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Elapsed ordering time = 5s
+Elapsed ordering time = 9s
+Elapsed ordering time = 10s
+Elapsed ordering time = 15s
+Elapsed ordering time = 21s
+Elapsed ordering time = 22s
+Ordering time: 21.90s
+
+Barrier performed 0 iterations in 279.26 seconds (11.72 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+
+Root relaxation: objective 8.738400e+04, 342009 iterations, 24.79 seconds (12.03 work units)
+Total elapsed time = 334.86s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0      -    -    -     262144.000 87384.0000  66.7%     -  355s
+     0     0      -    -    -     136603.000 87384.0000  36.0%     -  414s
+     0     0      -    -    -     135058.000 87384.0000  35.3%     -  526s
+     0     0      -    -    -     135058.000 87384.0000  35.3%     -  764s
+     0     0      -    -    -     134779.000 87384.0000  35.2%     -  913s
+     0     0      -    -    -     134779.000 87384.0000  35.2%     - 1635s
+     0     0      -    -    -     134779.000 87384.0000  35.2%     - 1758s
+     0     0      -    -    -     134779.000 87384.0000  35.2%     - 2405s
+     0     0      -    -    -     134493.000 87384.0000  35.0%     - 2587s
+     0     0      -    -    -     134493.000 87384.0000  35.0%     - 3358s
+     0     0      -    -    -     134493.000 87384.0000  35.0%     - 4505s
+     0     2      -    -    -     119134.000 87384.0000  26.7%     - 25057s
+     1     4      -    -    -     119134.000 87384.0000  26.7%     - 25871s
+     2     4      -    -    -     119134.000 87384.0000  26.7%     - 26409s
+     3     6      -    -    -     119134.000 87384.0000  26.7%     - 27063s
+     4     6      -    -    -     119134.000 87384.0000  26.7%     - 27070s
+     5     8      -    -    -     119134.000 87384.0000  26.7%     - 27146s
+     7    10      -    -    -     119134.000 87384.0000  26.7%     - 27192s
+     9    12      -    -    -     119134.000 87384.0000  26.7%     - 27447s
+    11    14      -    -    -     119134.000 87384.0000  26.7%     - 27798s
+    13    16      -    -    -     119134.000 87384.0000  26.7%     - 27855s
+    15    18      -    -    -     119134.000 87384.0000  26.7%     - 28081s
+    17    24      -    -    -     119134.000 87384.0000  26.7%     - 28569s
+    23    34      -    -    -     119134.000 87384.0000  26.7%     - 29976s
+    33    54      -    -    -     119134.000 87384.0000  26.7%     - 32470s
+    53    76      -    -    -     119134.000 87384.0000  26.7%     - 36157s
+    75   114      -    -    -     119134.000 87384.0000  26.7%     - 38738s
+   113   116      -    -    -     118383.000 87384.0000  26.2%     - 44397s
+
+Cutting planes:
+  Learned: 189994
+  Gomory: 3
+  Implied bound: 491
+  Zero half: 9963
+  Relax-and-lift: 17384

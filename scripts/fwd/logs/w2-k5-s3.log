@@ -1,21 +1,19 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 15:45:47 2024
+Gurobi 10.0.3 (linux64) logging started Sun Sep  1 19:36:09 2024
 
 Set parameter LogFile to value "fwd/logs/w2-k5-s3.log"
-Set parameter PoolSearchMode to value 2
-Set parameter PoolSolutions to value 1
-Set parameter Heuristics to value 1
-Set parameter PoolGap to value 0
-Set parameter Threads to value 60
-Set parameter Threads to value 60
+
+Gurobi 10.0.3 (linux64) logging started Sun Sep  1 19:36:09 2024
+
+Set parameter LogFile to value "fwd/logs/w2-k5-s3.log"
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
 Optimize a model with 315 rows, 2916 columns and 2187 nonzeros
-Model fingerprint: 0x07b2a7ef
+Model fingerprint: 0xe4aaa033
 Model has 4374 general constraints
 Variable types: 0 continuous, 2916 integer (2187 binary)
 Coefficient statistics:
@@ -26,41 +24,21 @@ Coefficient statistics:
   GenCon rhs range [1e+00, 1e+00]
   GenCon coe range [1e+00, 1e+00]
 
-User MIP start produced solution with objective 1263 (0.02s)
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 1263 (0.17s)
 Loaded user MIP start with objective 1263
 
 Presolve added 4368 rows and 2184 columns
-Presolve time: 0.06s
-Presolved: 4683 rows, 5100 columns, 15285 nonzeros
-Presolved model has 2184 SOS constraint(s)
-Variable types: 0 continuous, 5100 integer (2913 binary)
+Presolve time: 0.10s
 
-Root relaxation: objective 1.251000e+03, 1908 iterations, 0.01 seconds (0.00 work units)
+Instance 7 was solved
 
-    Nodes    |    Current Node    |     Objective Bounds      |     Work
- Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
-
-     0     0 1251.00000    0   43 1263.00000 1251.00000  0.95%     -    0s
-     0     0 1251.00000    0  162 1263.00000 1251.00000  0.95%     -    0s
-     0     0 1251.00000    0  140 1263.00000 1251.00000  0.95%     -    0s
-     0     0 1251.00000    0   54 1263.00000 1251.00000  0.95%     -    0s
-H    0     0                    1261.0000000 1251.00000  0.79%     -    0s
-*    0     0               0    1251.0000000 1251.00000  0.00%     -    0s
-
-Cutting planes:
-  Gomory: 21
-  Cover: 145
-  Implied bound: 145
-  Clique: 302
-
-Explored 1 nodes (12790 simplex iterations) in 0.44 seconds (0.24 work units)
-Thread count was 60 (of 128 available processors)
+Explored 1 nodes (6243 simplex iterations) in 0.38 seconds (0.12 work units)
+Thread count was 2 (of 128 available processors)
 
 Solution count 1: 1251 
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 1.251000000000e+03, best bound 1.251000000000e+03, gap 0.0000%
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 19:26:01 2024
-
-Set parameter LogFile to value "fwd/logs/w2-k5-s3.log"

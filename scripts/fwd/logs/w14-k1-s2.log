@@ -1,0 +1,75 @@
+
+Gurobi 10.0.3 (linux64) logging started Sun Sep  1 14:23:36 2024
+
+Set parameter LogFile to value "fwd/logs/w14-k1-s2.log"
+Set parameter PoolSearchMode to value 2
+Set parameter PoolSolutions to value 1
+Set parameter Heuristics to value 1
+Set parameter PoolGap to value 0
+Set parameter Method to value 3
+Set parameter ConcurrentMIP to value 64
+Set parameter TimeLimit to value 43200
+Set parameter Threads to value 128
+Set parameter Threads to value 128
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 2192 rows, 49152 columns and 32768 nonzeros
+Model fingerprint: 0xd75cd372
+Model has 65536 general constraints
+Variable types: 0 continuous, 49152 integer (32768 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+01]
+  RHS range        [1e+00, 2e+00]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+Found heuristic solution: objective 32768.000000
+Presolve added 98295 rows and 65529 columns
+Presolve time: 2.97s
+Presolved: 100487 rows, 114681 columns, 262125 nonzeros
+Presolved model has 32766 SOS constraint(s)
+Variable types: 0 continuous, 114681 integer (32766 binary)
+Root relaxation presolved: 100487 rows, 114681 columns, 262125 nonzeros
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 1.03s
+
+Barrier performed 0 iterations in 8.89 seconds (0.96 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+
+Root relaxation: objective 4.374000e+03, 34307 iterations, 1.43 seconds (0.31 work units)
+Total elapsed time = 13.64s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0      -    -    -     32768.0000 4374.00000  86.7%     -   22s
+     0     0      -    -    -     6134.00000 4374.00000  28.7%     -   39s
+     0     0      -    -    -     6134.00000 4374.00000  28.7%     -   54s
+     0     0      -    -    -     6134.00000 4374.00000  28.7%     -   65s
+     0     0      -    -    -     6133.00000 4374.00000  28.7%     -   68s
+     0     0      -    -    -     6133.00000 4374.00000  28.7%     -   96s
+     0     0      -    -    -     6133.00000 4374.00000  28.7%     -  116s
+     0     2      -    -    -     5986.00000 4374.00000  26.9%     -  238s
+     1     4      -    -    -     5986.00000 4374.00000  26.9%     -  243s
+     3     6      -    -    -     5752.00000 4374.00000  24.0%     -  371s
+     5     8      -    -    -     5752.00000 4374.00000  24.0%     -  375s
+     9    12      -    -    -     5752.00000 4374.00000  24.0%     -  380s
+    15    18      -    -    -     5752.00000 4374.00000  24.0%     -  385s
+    17    28      -    -    -     5749.00000 4374.00000  23.9%     -  393s
+    27    47      -    -    -     5749.00000 4374.00000  23.9%     -  411s

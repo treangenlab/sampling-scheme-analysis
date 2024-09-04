@@ -1,21 +1,21 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 15:08:44 2024
+Gurobi 10.0.3 (linux64) logging started Sat Aug 31 18:30:43 2024
 
 Set parameter LogFile to value "fwd/logs/w3-k7-s2.log"
-Set parameter PoolSearchMode to value 2
-Set parameter PoolSolutions to value 1
+
+Gurobi 10.0.3 (linux64) logging started Sat Aug 31 18:30:43 2024
+
+Set parameter LogFile to value "fwd/logs/w3-k7-s2.log"
 Set parameter Heuristics to value 1
-Set parameter PoolGap to value 0
-Set parameter Threads to value 60
-Set parameter Threads to value 60
+Set parameter Heuristics to value 1
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
 Optimize a model with 108 rows, 1536 columns and 1024 nonzeros
-Model fingerprint: 0x6175f200
+Model fingerprint: 0xc49dc65a
 Model has 2048 general constraints
 Variable types: 0 continuous, 1536 integer (1024 binary)
 Coefficient statistics:
@@ -25,99 +25,22 @@ Coefficient statistics:
   RHS range        [1e+00, 4e+00]
   GenCon rhs range [1e+00, 1e+00]
   GenCon coe range [1e+00, 1e+00]
-Found heuristic solution: objective 1024.0000000
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 412 (0.09s)
+Loaded user MIP start with objective 412
+
 Presolve added 3063 rows and 2041 columns
 Presolve time: 0.02s
-Presolved: 3171 rows, 3577 columns, 8173 nonzeros
-Presolved model has 1022 SOS constraint(s)
-Variable types: 0 continuous, 3577 integer (1022 binary)
 
-Root relaxation: objective 4.110000e+02, 1901 iterations, 0.01 seconds (0.00 work units)
+Instance 1 was solved
 
-    Nodes    |    Current Node    |     Objective Bounds      |     Work
- Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
-
-     0     0  411.00000    0  912 1024.00000  411.00000  59.9%     -    0s
-H    0     0                     520.0000000  411.00000  21.0%     -    0s
-     0     0  411.00000    0 2444  520.00000  411.00000  21.0%     -    0s
-     0     0  411.00000    0 2510  520.00000  411.00000  21.0%     -    0s
-H    0     0                     518.0000000  411.00000  20.7%     -    1s
-H    0     0                     517.0000000  411.00000  20.5%     -    1s
-H    0     0                     515.0000000  411.00000  20.2%     -    1s
-H    0     0                     512.0000000  411.00000  19.7%     -    1s
-H    0     0                     509.0000000  411.00000  19.3%     -    1s
-H    0     0                     508.0000000  411.00000  19.1%     -    1s
-H    0     0                     507.0000000  411.00000  18.9%     -    1s
-H    0     0                     506.0000000  411.00000  18.8%     -    1s
-H    0     0                     505.0000000  411.00000  18.6%     -    1s
-H    0     0                     499.0000000  411.00000  17.6%     -    1s
-H    0     0                     498.0000000  411.00000  17.5%     -    1s
-H    0     0                     495.0000000  411.00000  17.0%     -    1s
-H    0     0                     494.0000000  411.00000  16.8%     -    1s
-H    0     0                     489.0000000  411.00000  16.0%     -    1s
-H    0     0                     488.0000000  411.00000  15.8%     -    1s
-H    0     0                     486.0000000  411.00000  15.4%     -    1s
-H    0     0                     485.0000000  411.00000  15.3%     -    1s
-H    0     0                     483.0000000  411.00000  14.9%     -    1s
-H    0     0                     479.0000000  411.00000  14.2%     -    1s
-H    0     0                     475.0000000  411.00000  13.5%     -    1s
-H    0     0                     468.0000000  411.00000  12.2%     -    1s
-H    0     0                     461.0000000  411.00000  10.8%     -    1s
-H    0     0                     458.0000000  411.00000  10.3%     -    1s
-H    0     0                     455.0000000  411.00000  9.67%     -    1s
-H    0     0                     454.0000000  411.00000  9.47%     -    1s
-H    0     0                     453.0000000  411.00000  9.27%     -    1s
-H    0     0                     452.0000000  411.00000  9.07%     -    1s
-H    0     0                     450.0000000  411.00000  8.67%     -    1s
-     0     0  411.00000    0  710  450.00000  411.00000  8.67%     -    1s
-     0     0  411.00000    0  742  450.00000  411.00000  8.67%     -    1s
-H    0     0                     448.0000000  411.00000  8.26%     -    2s
-H    0     0                     447.0000000  411.00000  8.05%     -    2s
-H    0     0                     445.0000000  411.00000  7.64%     -    2s
-H    0     0                     442.0000000  411.00000  7.01%     -    2s
-H    0     0                     441.0000000  411.00000  6.80%     -    2s
-H    0     0                     438.0000000  411.00000  6.16%     -    2s
-H    0     0                     435.0000000  411.00000  5.52%     -    2s
-H    0     0                     433.0000000  411.00000  5.08%     -    2s
-H    0     0                     432.0000000  411.00000  4.86%     -    2s
-     0     0  411.00000    0  604  432.00000  411.00000  4.86%     -    2s
-     0     0  411.00000    0 1001  432.00000  411.00000  4.86%     -    2s
-H    0     0                     431.0000000  411.00000  4.64%     -    3s
-H    0     0                     430.0000000  411.00000  4.42%     -    3s
-H    0     0                     429.0000000  411.00000  4.20%     -    3s
-     0     0  411.00000    0  564  429.00000  411.00000  4.20%     -    3s
-     0     0  411.00000    0  446  429.00000  411.00000  4.20%     -    3s
-     0     2  411.00000    0  383  429.00000  411.00000  4.20%     -    3s
-    15    32  411.00000    4 2150  429.00000  411.00000  4.20%  2204    5s
-H   57    64                     428.0000000  411.00000  3.97%  6275    9s
-    63   124  411.00000    6 3651  428.00000  411.00000  3.97%  7478   40s
-H   79   124                     412.0000000  411.00000  0.24%  9624   40s
-H  123   124                     411.0000000  411.00000  0.00% 13446   46s
-
-Explored 124 nodes (1696934 simplex iterations) in 49.18 seconds (93.41 work units)
-Thread count was 60 (of 128 available processors)
+Explored 1 nodes (1608 simplex iterations) in 0.14 seconds (0.14 work units)
+Thread count was 2 (of 128 available processors)
 
 Solution count 1: 411 
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 4.110000000000e+02, best bound 4.110000000000e+02, gap 0.0000%
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:05:42 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k7-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:06:54 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k7-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:12:32 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k7-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:20:46 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k7-s2.log"
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 18:25:11 2024
-
-Set parameter LogFile to value "fwd/logs/w3-k7-s2.log"

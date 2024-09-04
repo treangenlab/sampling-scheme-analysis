@@ -1,21 +1,19 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 15:45:49 2024
+Gurobi 10.0.3 (linux64) logging started Mon Sep  2 07:36:10 2024
 
 Set parameter LogFile to value "fwd/logs/w2-k7-s3.log"
-Set parameter PoolSearchMode to value 2
-Set parameter PoolSolutions to value 1
-Set parameter Heuristics to value 1
-Set parameter PoolGap to value 0
-Set parameter Threads to value 60
-Set parameter Threads to value 60
+
+Gurobi 10.0.3 (linux64) logging started Mon Sep  2 07:36:10 2024
+
+Set parameter LogFile to value "fwd/logs/w2-k7-s3.log"
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
 Optimize a model with 2195 rows, 26244 columns and 19683 nonzeros
-Model fingerprint: 0x1715aad6
+Model fingerprint: 0x5691571b
 Model has 39366 general constraints
 Variable types: 0 continuous, 26244 integer (19683 binary)
 Coefficient statistics:
@@ -25,93 +23,71 @@ Coefficient statistics:
   RHS range        [1e+00, 5e+00]
   GenCon rhs range [1e+00, 1e+00]
   GenCon coe range [1e+00, 1e+00]
-Found heuristic solution: objective 19683.000000
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 11259 (1.68s)
+Loaded user MIP start with objective 11259
+
 Presolve added 39360 rows and 19680 columns
-Presolve time: 0.75s
+Presolve time: 2.07s
 Presolved: 41555 rows, 45924 columns, 137757 nonzeros
 Presolved model has 19680 SOS constraint(s)
 Variable types: 0 continuous, 45924 integer (26241 binary)
 Root relaxation presolved: 41555 rows, 45924 columns, 137757 nonzeros
 
-Deterministic concurrent LP optimizer: primal and dual simplex
-Showing first log only...
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
 
-Concurrent spin time: 0.04s
+Root barrier log...
+
+Ordering time: 0.69s
+
+Barrier performed 0 iterations in 4.65 seconds (0.76 work units)
+Barrier solve interrupted - model solved by another algorithm
+
 
 Solved with dual simplex
 
-Root relaxation: objective 1.093900e+04, 19157 iterations, 0.21 seconds (0.12 work units)
+Root relaxation: objective 1.093900e+04, 19157 iterations, 0.80 seconds (0.12 work units)
+Total elapsed time = 5.47s
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0 10939.0000    0 1117 19683.0000 10939.0000  44.4%     -    2s
-H    0     0                    11532.000000 10939.0000  5.14%     -    2s
-H    0     0                    11445.000000 10939.0000  4.42%     -    2s
-H    0     0                    11440.000000 10939.0000  4.38%     -    2s
-H    0     0                    11437.000000 10939.0000  4.35%     -    2s
-H    0     0                    11432.000000 10939.0000  4.31%     -    2s
-     0     0 10939.0000    0 1974 11432.0000 10939.0000  4.31%     -    2s
-H    0     0                    11341.000000 10939.0000  3.54%     -    3s
-     0     0 10939.0000    0 2102 11341.0000 10939.0000  3.54%     -    3s
-     0     0 10939.0000    0 1260 11341.0000 10939.0000  3.54%     -    5s
-H    0     0                    11329.000000 10939.0000  3.44%     -    5s
-     0     0 10939.0000    0 1699 11329.0000 10939.0000  3.44%     -    5s
-     0     0 10939.0000    0 1186 11329.0000 10939.0000  3.44%     -    7s
-     0     0 10939.0000    0 1022 11329.0000 10939.0000  3.44%     -    8s
-H    0     0                    11090.000000 10939.0000  1.36%     -    9s
-H    0     0                    11084.000000 10939.0000  1.31%     -   13s
-H    0     2                    11081.000000 10939.0000  1.28%     -   14s
-     0     2 10939.0000    0  962 11081.0000 10939.0000  1.28%     -   14s
-     3     8 10939.0000    2 1658 11081.0000 10939.0000  1.28%  4940   15s
-H   31    64                    11079.000000 10939.0000  1.26%  9739   29s
-H   42    64                    11075.000000 10939.0000  1.23% 14564   29s
-H   47    64                    11062.000000 10939.0000  1.11% 15782   29s
-H   48    64                    11045.000000 10939.0000  0.96% 16013   29s
-H   58    64                    11044.000000 10939.0000  0.95% 18737   29s
-H   63   124                    11009.000000 10939.0000  0.64% 19940  313s
-H   63   124                    10999.000000 10939.0000  0.55% 19940  313s
-H   63   124                    10995.000000 10939.0000  0.51% 19940  313s
-H   63   124                    10991.000000 10939.0000  0.47% 19940  313s
-H   63   124                    10990.000000 10939.0000  0.46% 19940  313s
-H   63   124                    10988.000000 10939.0000  0.45% 19940  313s
-H   64   124                    10979.000000 10939.0000  0.36% 20812  313s
-H   64   124                    10976.000000 10939.0000  0.34% 20812  313s
-H   64   124                    10975.000000 10939.0000  0.33% 20812  313s
-H   64   124                    10974.000000 10939.0000  0.32% 20812  313s
-H   64   124                    10973.000000 10939.0000  0.31% 20812  313s
-H   68   124                    10972.000000 10939.0000  0.30% 23338  313s
-H   80   124                    10968.000000 10939.0000  0.26% 29856  313s
-H   80   124                    10967.000000 10939.0000  0.26% 29856  313s
-H   81   124                    10965.000000 10939.0000  0.24% 30098  313s
-H   81   124                    10963.000000 10939.0000  0.22% 30098  313s
-H   81   124                    10962.000000 10939.0000  0.21% 30098  313s
-H   84   124                    10958.000000 10939.0000  0.17% 30532  313s
-H   85   124                    10955.000000 10939.0000  0.15% 30767  313s
-H   85   124                    10954.000000 10939.0000  0.14% 30767  313s
-H   90   124                    10952.000000 10939.0000  0.12% 31650  313s
-H   94   124                    10951.000000 10939.0000  0.11% 32071  313s
-H  123   184                    10948.000000 10939.0000  0.08% 41282  646s
-H  123   184                    10942.000000 10939.0000  0.03% 41282  646s
-H  124   184                    10939.000000 10939.0000  0.00% 41725  646s
+     0     0      -    -    -     11259.0000 10939.0000  2.84%     -    6s
+     0     0      -    -    -     11259.0000 10939.0000  2.84%     -    7s
+     0     0      -    -    -     11259.0000 10939.0000  2.84%     -    7s
+     0     0      -    -    -     11259.0000 10939.0000  2.84%     -    8s
+     0     0      -    -    -     11225.0000 10939.0000  2.55%     -    8s
+     0     0      -    -    -     11225.0000 10939.0000  2.55%     -   10s
+     0     0      -    -    -     11122.0000 10939.0000  1.65%     -   11s
+     0     0      -    -    -     11122.0000 10939.0000  1.65%     -   12s
+     0     0      -    -    -     11088.0000 10939.0000  1.34%     -   13s
+     0     0      -    -    -     11088.0000 10939.0000  1.34%     -   14s
+     0     0      -    -    -     11071.0000 10939.0000  1.19%     -   14s
+     0     0      -    -    -     10957.0000 10939.0000  0.16%     -   16s
+     0     0      -    -    -     10957.0000 10939.0000  0.16%     -   16s
+     0     0      -    -    -     10957.0000 10939.0000  0.16%     -   18s
+     0     0      -    -    -     10957.0000 10939.0000  0.16%     -   18s
+     0     0      -    -    -     10939.0000 10939.0000  0.00%     -   19s
 
 Cutting planes:
-  Learned: 4
-  Gomory: 78
-  Cover: 30139
-  Implied bound: 16695
-  Clique: 6630
-  MIR: 635
-  Zero half: 11
+  Learned: 2
+  Gomory: 3
+  Cover: 3528
+  Implied bound: 3898
+  Clique: 5605
+  MIR: 28
+  Zero half: 3
 
-Explored 183 nodes (9451592 simplex iterations) in 646.82 seconds (648.05 work units)
-Thread count was 60 (of 128 available processors)
+Instance 31 was solved
+
+Explored 1 nodes (192730 simplex iterations) in 20.36 seconds (6.37 work units)
+Thread count was 2 (of 128 available processors)
 
 Solution count 1: 10939 
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 1.093900000000e+04, best bound 1.093900000000e+04, gap 0.0000%
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 19:26:02 2024
-
-Set parameter LogFile to value "fwd/logs/w2-k7-s3.log"

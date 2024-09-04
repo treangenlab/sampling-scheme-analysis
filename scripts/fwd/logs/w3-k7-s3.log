@@ -1,0 +1,72 @@
+
+Gurobi 10.0.3 (linux64) logging started Mon Sep  2 14:16:38 2024
+
+Set parameter LogFile to value "fwd/logs/w3-k7-s3.log"
+
+Gurobi 10.0.3 (linux64) logging started Mon Sep  2 14:16:38 2024
+
+Set parameter LogFile to value "fwd/logs/w3-k7-s3.log"
+Set parameter Heuristics to value 1
+Set parameter Heuristics to value 1
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 5934 rows, 78732 columns and 59049 nonzeros
+Model fingerprint: 0x613d81a8
+Model has 118098 general constraints
+Variable types: 0 continuous, 78732 integer (59049 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 2e+00]
+  RHS range        [1e+00, 4e+00]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 25353 (7.75s)
+Loaded user MIP start with objective 25353
+Processed MIP start in 1.82 seconds (0.23 work units)
+
+Presolve removed 12 rows and 59052 columns (presolve time = 5s) ...
+Presolve added 177132 rows and 118086 columns
+Presolve time: 7.08s
+Presolved: 183066 rows, 196818 columns, 472359 nonzeros
+Presolved model has 59046 SOS constraint(s)
+Variable types: 0 continuous, 196818 integer (59046 binary)
+Root relaxation presolved: 183066 rows, 196818 columns, 472359 nonzeros
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 3.58s
+
+Barrier performed 0 iterations in 19.87 seconds (2.10 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+
+Root relaxation: objective 2.362200e+04, 57638 iterations, 4.31 seconds (0.81 work units)
+Total elapsed time = 29.93s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0      -    -    -     25353.0000 23622.0000  6.83%     -   39s
+     0     0      -    -    -     25353.0000 23622.0000  6.83%     -   58s
+     0     0      -    -    -     25353.0000 23622.0000  6.83%     -   79s
+     0     0      -    -    -     25353.0000 23622.0000  6.83%     -  143s
+     0     0      -    -    -     25351.0000 23622.0000  6.82%     -  155s
+     0     0      -    -    -     25351.0000 23622.0000  6.82%     -  188s
+     0     0      -    -    -     25351.0000 23622.0000  6.82%     -  198s
+     0     0      -    -    -     25351.0000 23622.0000  6.82%     -  231s
+     0     0      -    -    -     25321.0000 23622.0000  6.71%     -  252s
+     0     0      -    -    -     25321.0000 23622.0000  6.71%     -  771s

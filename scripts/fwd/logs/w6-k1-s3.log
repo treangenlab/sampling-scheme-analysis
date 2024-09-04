@@ -1,21 +1,24 @@
 
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 16:03:56 2024
+Gurobi 10.0.3 (linux64) logging started Mon Sep  2 14:03:38 2024
 
 Set parameter LogFile to value "fwd/logs/w6-k1-s3.log"
 Set parameter PoolSearchMode to value 2
 Set parameter PoolSolutions to value 1
 Set parameter Heuristics to value 1
 Set parameter PoolGap to value 0
-Set parameter Threads to value 60
-Set parameter Threads to value 60
+Set parameter Method to value 3
+Set parameter ConcurrentMIP to value 64
+Set parameter TimeLimit to value 43200
+Set parameter Threads to value 128
+Set parameter Threads to value 128
 Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
 
 CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 64 physical cores, 128 logical processors, using up to 60 threads
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
 
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
 Optimize a model with 315 rows, 2916 columns and 2187 nonzeros
-Model fingerprint: 0xe5156883
+Model fingerprint: 0x17ec568e
 Model has 4374 general constraints
 Variable types: 0 continuous, 2916 integer (2187 binary)
 Coefficient statistics:
@@ -26,83 +29,76 @@ Coefficient statistics:
   GenCon rhs range [1e+00, 1e+00]
   GenCon coe range [1e+00, 1e+00]
 
-User MIP start produced solution with objective 738 (0.02s)
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 738 (0.81s)
 Loaded user MIP start with objective 738
 
 Presolve added 6546 rows and 4362 columns
-Presolve time: 0.05s
+Presolve time: 0.08s
 Presolved: 6861 rows, 7278 columns, 17463 nonzeros
 Presolved model has 2184 SOS constraint(s)
 Variable types: 0 continuous, 7278 integer (2184 binary)
+Root relaxation presolved: 6861 rows, 7278 columns, 17463 nonzeros
 
-Root relaxation: objective 6.270000e+02, 2758 iterations, 0.01 seconds (0.01 work units)
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 0.01s
+
+Barrier performed 0 iterations in 0.95 seconds (0.06 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+
+Root relaxation: objective 6.270000e+02, 1885 iterations, 0.04 seconds (0.01 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0  627.00000    0 1859  738.00000  627.00000  15.0%     -    0s
-     0     0  627.00000    0 4119  738.00000  627.00000  15.0%     -    0s
-H    0     0                     729.0000000  627.00000  14.0%     -    0s
-     0     0  627.00000    0 5418  729.00000  627.00000  14.0%     -    0s
-H    0     0                     722.0000000  627.00000  13.2%     -    4s
-H    0     0                     719.0000000  627.00000  12.8%     -    4s
-H    0     0                     710.0000000  627.00000  11.7%     -    4s
-H    0     0                     709.0000000  627.00000  11.6%     -    4s
-H    0     0                     703.0000000  627.00000  10.8%     -    4s
-H    0     0                     698.0000000  627.00000  10.2%     -    4s
-H    0     0                     697.0000000  627.00000  10.0%     -    4s
-H    0     0                     693.0000000  627.00000  9.52%     -    4s
-H    0     0                     692.0000000  627.00000  9.39%     -    4s
-H    0     0                     687.0000000  627.00000  8.73%     -    4s
-H    0     0                     684.0000000  627.00000  8.33%     -    4s
-H    0     0                     683.0000000  627.00000  8.20%     -    4s
-H    0     0                     682.0000000  627.00000  8.06%     -    4s
-H    0     0                     680.0000000  627.00000  7.79%     -    4s
-H    0     0                     676.0000000  627.00000  7.25%     -    4s
-H    0     0                     674.0000000  627.00000  6.97%     -    4s
-H    0     0                     668.0000000  627.00000  6.14%     -    4s
-H    0     0                     667.0000000  627.00000  6.00%     -    4s
-H    0     0                     665.0000000  627.00000  5.71%     -    4s
-H    0     0                     662.0000000  627.00000  5.29%     -    4s
-H    0     0                     659.0000000  627.00000  4.86%     -    4s
-H    0     0                     656.0000000  627.00000  4.42%     -    4s
-     0     0  627.00000    0 1359  656.00000  627.00000  4.42%     -    5s
-H    0     0                     652.0000000  627.00000  3.83%     -    5s
-H    0     0                     651.0000000  627.00000  3.69%     -    5s
-H    0     0                     649.0000000  627.00000  3.39%     -    5s
-H    0     0                     648.0000000  627.00000  3.24%     -    5s
-H    0     0                     642.0000000  627.00000  2.34%     -    5s
-     0     0  627.00000    0 1336  642.00000  627.00000  2.34%     -    5s
-H    0     0                     641.0000000  627.00000  2.18%     -    5s
-     0     0  627.00000    0 1115  641.00000  627.00000  2.18%     -    5s
-     0     0  627.00000    0 1107  641.00000  627.00000  2.18%     -    5s
-H    0     0                     638.0000000  627.00000  1.72%     -    5s
-     0     0  627.00000    0 1104  638.00000  627.00000  1.72%     -    5s
-H    0     0                     634.0000000  627.00000  1.10%     -    6s
-     0     0  627.00000    0 1080  634.00000  627.00000  1.10%     -    6s
-     0     2  627.00000    0 1080  634.00000  627.00000  1.10%     -    6s
-H  124   184                     633.0000000  627.00000  0.95%  1039    8s
-H  125   184                     632.0000000  627.00000  0.79%  1036    8s
-H  148   184                     631.0000000  627.00000  0.63%   984    8s
-H  243   304                     628.0000000  627.00000  0.16%   868   20s
-H  246   304                     627.0000000  627.00000  0.00%   866   20s
+     0     0      -    -    -      738.00000  627.00000  15.0%     -    1s
+     0     0      -    -    -      738.00000  627.00000  15.0%     -    1s
+     0     0      -    -    -      738.00000  627.00000  15.0%     -    1s
+     0     0      -    -    -      738.00000  627.00000  15.0%     -    4s
+     0     0      -    -    -      737.00000  627.00000  14.9%     -    4s
+     0     0      -    -    -      716.00000  627.00000  12.4%     -    4s
+     0     0      -    -    -      702.00000  627.00000  10.7%     -    5s
+     0     2      -    -    -      689.00000  627.00000  9.00%     -    6s
+    23    34      -    -    -      689.00000  627.00000  9.00%     -   10s
+    55    97      -    -    -      685.00000  627.00000  8.47%     -   15s
+    96   284      -    -    -      680.00000  627.00000  7.79%     -   22s
+   283   445      -    -    -      671.00000  627.00000  6.56%     -   25s
+   595   718      -    -    -      663.00000  627.00000  5.43%     -   33s
+   741   838      -    -    -      659.00000  627.00000  4.86%     -   37s
+   876   973      -    -    -      654.00000  627.00000  4.13%     -   40s
+  1205  1272      -    -    -      647.00000  627.00000  3.09%     -   49s
+  1382  1418      -    -    -      643.00000  627.00000  2.49%     -   53s
+  1572  1638      -    -    -      637.00000  627.00000  1.57%     -   57s
+  1837  1797      -    -    -      637.00000  627.00000  1.57%     -   60s
+  2093  1678      -    -    -      637.00000  627.00000  1.57%     -   66s
+  2097  1681      -    -    -      635.00000  627.00000  1.26%     -   71s
+  2100  1683      -    -    -      633.00000  627.00000  0.95%     -   75s
+  2243  1660      -    -    -      631.00000  627.00000  0.63%     -   80s
 
 Cutting planes:
-  Learned: 2122
-  Gomory: 16
-  Implied bound: 194
-  MIR: 6
-  Zero half: 205
-  Relax-and-lift: 65
+  Learned: 1738
+  Gomory: 65
+  Implied bound: 126
+  MIR: 1
+  Flow cover: 14
+  Zero half: 87
+  Relax-and-lift: 28
 
-Explored 303 nodes (307228 simplex iterations) in 20.23 seconds (17.97 work units)
-Thread count was 60 (of 128 available processors)
+Instance 46 was solved
+
+Explored 2880 nodes (1902498 simplex iterations) in 83.04 seconds (34.21 work units)
+Thread count was 2 (of 128 available processors)
 
 Solution count 1: 627 
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 6.270000000000e+02, best bound 6.270000000000e+02, gap 0.0000%
-
-Gurobi 10.0.3 (linux64) logging started Sun Jul 28 19:26:09 2024
-
-Set parameter LogFile to value "fwd/logs/w6-k1-s3.log"
