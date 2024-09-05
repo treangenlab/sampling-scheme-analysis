@@ -4,4 +4,27 @@ Set parameter WLSAccessID
 Set parameter WLSSecret
 Set parameter LicenseID to value 2533279
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
-slurmstepd: error: *** JOB 914900 ON owlet01 CANCELLED AT 2024-09-01T19:23:32 ***
+Command terminated by signal 9
+	Command being timed: "python /home/Users/blk6/Projects/winnowing-LB-manuscript/scripts/run-ilp.py -w 8 -k 1 2 3 4 5 6 7 8 9 --sigma 2 --threads 128 --output local --time-limit 14400 --local"
+	User time (seconds): 105258.87
+	System time (seconds): 16207.16
+	Percent of CPU this job got: 7005%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 28:53.97
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 127600944
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 347598
+	Minor (reclaiming a frame) page faults: 47897550
+	Voluntary context switches: 7915358
+	Involuntary context switches: 512215
+	Swaps: 0
+	File system inputs: 24150960
+	File system outputs: 39416
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

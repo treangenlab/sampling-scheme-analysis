@@ -60,3 +60,111 @@ Solution count 1: 112
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 1.120000000000e+02, best bound 1.120000000000e+02, gap 0.0000%
+
+Gurobi 10.0.3 (linux64) logging started Wed Sep  4 11:58:14 2024
+
+Set parameter LogFile to value "local/logs/w3-k4-s2.log"
+Set parameter PoolSearchMode to value 2
+Set parameter PoolSolutions to value 1
+Set parameter PoolGap to value 0
+Set parameter Method to value 3
+Set parameter ConcurrentMIP to value 64
+Set parameter TimeLimit to value 14400
+Set parameter Heuristics to value 0.95
+Set parameter MIPFocus to value 1
+Set parameter Threads to value 128
+Set parameter Threads to value 128
+Warning: variable name "x_(000000, 0)" has a space
+Warning: default variable names used to write mps file
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 832 rows, 448 columns and 1728 nonzeros
+Model fingerprint: 0x2540f439
+Variable types: 0 continuous, 448 integer (448 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 112 (0.08s)
+Loaded user MIP start with objective 112
+
+Presolve removed 14 rows and 4 columns
+Presolve time: 0.00s
+Presolved: 818 rows, 444 columns, 1704 nonzeros
+Variable types: 0 continuous, 444 integer (444 binary)
+Root relaxation presolved: 818 rows, 444 columns, 1704 nonzeros
+
+
+Root relaxation: objective 8.866667e+01, 510 iterations, 0.01 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0      -    -    -      112.00000   88.66667  20.8%     -    0s
+     0     0      -    -    -      112.00000   91.33333  18.5%     -    0s
+     0     0      -    -    -      112.00000   92.66667  17.3%     -    0s
+     0     0      -    -    -      112.00000   92.66667  17.3%     -    0s
+     0     0      -    -    -      112.00000   93.55556  16.5%     -    0s
+     0     0      -    -    -      112.00000   93.57143  16.5%     -    0s
+     0     0      -    -    -      112.00000   93.65476  16.4%     -    0s
+     0     0      -    -    -      112.00000   94.15476  15.9%     -    0s
+     0     0      -    -    -      112.00000   94.15476  15.9%     -    0s
+     0     0      -    -    -      112.00000   94.38889  15.7%     -    0s
+     0     2      -    -    -      112.00000   99.00000  11.6%     -    6s
+   203    87      -    -    -      112.00000  100.77778  10.0%     -   10s
+   437   166      -    -    -      112.00000  102.16667  8.78%     -   15s
+   496   183      -    -    -      112.00000  103.10556  7.94%     -   20s
+  1006   325      -    -    -      112.00000  103.91358  7.22%     -   28s
+  1068   344      -    -    -      112.00000  104.38889  6.80%     -   31s
+  1348   389      -    -    -      112.00000  104.61905  6.59%     -   35s
+  1817   424      -    -    -      112.00000  104.80000  6.43%     -   40s
+  2090   462      -    -    -      112.00000  105.00000  6.25%     -   47s
+  2143   482      -    -    -      112.00000  105.37778  5.91%     -   53s
+  2288   485      -    -    -      112.00000  105.50000  5.80%     -   56s
+  2612   525      -    -    -      112.00000  105.50000  5.80%     -   60s
+  2899   545      -    -    -      112.00000  105.66667  5.65%     -   66s
+  2912   554      -    -    -      112.00000  105.91667  5.43%     -   74s
+  3000   580      -    -    -      112.00000  106.25000  5.13%     -   77s
+  3095   574      -    -    -      112.00000  106.25000  5.13%     -   81s
+  3556   543      -    -    -      112.00000  106.25000  5.13%     -   85s
+  3726   528      -    -    -      112.00000  106.25000  5.13%     -   90s
+  4012   474      -    -    -      112.00000  106.25000  5.13%     -   97s
+  4123   469      -    -    -      112.00000  106.33333  5.06%     -  100s
+  4474   399      -    -    -      112.00000  106.70833  4.72%     -  109s
+  4686   399      -    -    -      112.00000  106.78082  4.66%     -  110s
+  4960   438      -    -    -      112.00000  106.99324  4.47%     -  115s
+  5324   466      -    -    -      112.00000  107.18750  4.30%     -  121s
+  5421   473      -    -    -      112.00000  107.18750  4.30%     -  125s
+  5520   504      -    -    -      112.00000  107.26190  4.23%     -  130s
+  5722   509      -    -    -      112.00000  107.50000  4.02%     -  137s
+  6060   512      -    -    -      112.00000  107.65909  3.88%     -  140s
+  6100   514      -    -    -      112.00000  108.00000  3.57%     -  147s
+  6304   529      -    -    -      112.00000  108.14634  3.44%     -  152s
+  6608   533      -    -    -      112.00000  108.16667  3.42%     -  155s
+  6899   527      -    -    -      112.00000  108.63636  3.00%     -  161s
+  7103   525      -    -    -      112.00000  109.30769  2.40%     -  166s
+  7356   526      -    -    -      112.00000  112.00000  0.00%     -  170s
+
+Cutting planes:
+  Gomory: 5
+  Zero half: 78
+  RLT: 3
+
+Instance 30 was solved
+
+Explored 8893 nodes (967655 simplex iterations) in 170.86 seconds (194.83 work units)
+Thread count was 2 (of 128 available processors)
+
+Solution count 1: 112 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.120000000000e+02, best bound 1.120000000000e+02, gap 0.0000%

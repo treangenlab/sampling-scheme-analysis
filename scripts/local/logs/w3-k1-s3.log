@@ -160,3 +160,84 @@ Solution count 1: 126
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 1.260000000000e+02, best bound 1.260000000000e+02, gap 0.0000%
+
+Gurobi 10.0.3 (linux64) logging started Wed Sep  4 20:29:10 2024
+
+Set parameter LogFile to value "local/logs/w3-k1-s3.log"
+Set parameter PoolSearchMode to value 2
+Set parameter PoolSolutions to value 1
+Set parameter PoolGap to value 0
+Set parameter Method to value 3
+Set parameter ConcurrentMIP to value 64
+Set parameter TimeLimit to value 14400
+Set parameter Heuristics to value 0.95
+Set parameter MIPFocus to value 1
+Set parameter Threads to value 128
+Set parameter Threads to value 128
+Warning: variable name "x_(000, 0)" has a space
+Warning: default variable names used to write mps file
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 756 rows, 324 columns and 1539 nonzeros
+Model fingerprint: 0xb26dba57
+Variable types: 0 continuous, 324 integer (324 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 126 (0.07s)
+Loaded user MIP start with objective 126
+
+Presolve removed 27 rows and 3 columns
+Presolve time: 0.00s
+Presolved: 729 rows, 321 columns, 1485 nonzeros
+Variable types: 0 continuous, 321 integer (321 binary)
+Root relaxation presolved: 729 rows, 321 columns, 1485 nonzeros
+
+
+Root relaxation: objective 8.900000e+01, 383 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0      -    -    -      126.00000   89.00000  29.4%     -    0s
+     0     0      -    -    -      126.00000   95.33333  24.3%     -    0s
+     0     0      -    -    -      126.00000   95.33333  24.3%     -    0s
+     0     0      -    -    -      126.00000   97.66667  22.5%     -    0s
+     0     0      -    -    -      126.00000   98.00000  22.2%     -    0s
+     0     0      -    -    -      126.00000   99.50000  21.0%     -    0s
+     0     0      -    -    -      126.00000  100.00000  20.6%     -    0s
+     0     0      -    -    -      126.00000  100.16667  20.5%     -    0s
+     0     0      -    -    -      126.00000  100.33333  20.4%     -    0s
+     0     0      -    -    -      126.00000  100.94444  19.9%     -    0s
+     0     2      -    -    -      126.00000  106.00000  15.9%     -    1s
+   240    77      -    -    -      126.00000  113.00000  10.3%     -    5s
+  1275   209      -    -    -      126.00000  118.75000  5.75%     -   10s
+  1987   193      -    -    -      126.00000  119.71429  4.99%     -   15s
+  2375   169      -    -    -      126.00000  121.00000  3.97%     -   20s
+  2571   153      -    -    -      126.00000  122.00000  3.17%     -   25s
+  2758   126      -    -    -      126.00000  123.16667  2.25%     -   30s
+
+Cutting planes:
+  Gomory: 2
+  Zero half: 56
+  RLT: 27
+
+Instance 10 was solved
+
+Explored 3366 nodes (169414 simplex iterations) in 31.84 seconds (31.93 work units)
+Thread count was 2 (of 128 available processors)
+
+Solution count 1: 126 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.260000000000e+02, best bound 1.260000000000e+02, gap 0.0000%

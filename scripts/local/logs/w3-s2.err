@@ -1,7 +1,11 @@
-Working on w=3, k=1, s=2
+w3-k1-s2 already completed!
+w3-k2-s2 already completed!
+w3-k3-s2 already completed!
+w3-k4-s2 already completed!
+w3-k5-s2 already completed!
+Working on w=3, k=6, s=2
 Set parameter Username
 Set parameter WLSAccessID
 Set parameter WLSSecret
 Set parameter LicenseID to value 2533279
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
-slurmstepd: error: *** JOB 914895 ON owlet01 CANCELLED AT 2024-09-01T17:06:40 ***

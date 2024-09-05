@@ -1,0 +1,108 @@
+
+Gurobi 10.0.3 (linux64) logging started Thu Sep  5 10:06:58 2024
+
+Set parameter LogFile to value "local/logs/w3-k9-s2.log"
+
+Gurobi 10.0.3 (linux64) logging started Thu Sep  5 10:06:58 2024
+
+Set parameter LogFile to value "local/logs/w3-k9-s2.log"
+Warning: variable name "x_(00000000000, 0)" has a space
+Warning: default variable names used to write mps file
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 26625 rows, 18432 columns and 59392 nonzeros
+Model fingerprint: 0x767f0b79
+Model has 8192 general constraints
+Variable types: 0 continuous, 18432 integer (18432 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+03]
+  GenCon coe range [1e+00, 1e+00]
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+User MIP start produced solution with objective 3154 (0.45s)
+Loaded user MIP start with objective 3154
+
+Presolve added 24556 rows and 8188 columns
+Presolve time: 1.25s
+Presolved: 51181 rows, 26620 columns, 124878 nonzeros
+Variable types: 0 continuous, 26620 integer (26620 binary)
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root relaxation presolved: 51181 rows, 26620 columns, 124878 nonzeros
+
+Root barrier log...
+
+Ordering time: 0.11s
+
+Barrier statistics:
+ AA' NZ     : 8.873e+04
+ Factor NZ  : 5.327e+05 (roughly 12 MB of memory)
+ Factor Ops : 4.826e+07 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   2.11355599e+05 -3.15120131e+03  2.68e+04 3.70e-02  5.83e+01     2s
+   1   4.95784956e+04 -1.23172366e+04  3.07e+03 3.11e-15  7.19e+00     2s
+   2   6.74638004e+03 -7.52046939e+03  7.28e-12 1.24e-14  5.55e-01     2s
+   3   3.47194313e+03  1.55510370e+03  8.64e-12 4.22e-15  7.45e-02     2s
+   4   2.74207502e+03  2.63888668e+03  4.55e-12 3.16e-15  4.01e-03     2s
+   5   2.73401664e+03  2.73390108e+03  1.14e-11 3.30e-15  4.49e-06     2s
+   6   2.73400002e+03  2.73399990e+03  8.64e-12 3.21e-15  4.49e-09     2s
+   7   2.73400000e+03  2.73400000e+03  3.72e-12 3.50e-15  4.04e-12     2s
+
+Barrier solved model in 7 iterations and 2.23 seconds (0.67 work units)
+Optimal objective 2.73400000e+03
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Solved with barrier
+
+Root relaxation: objective 2.734000e+03, 4730 iterations, 1.32 seconds (0.74 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0      -    -    -     3154.00000 2734.00000  13.3%     -    4s
+     0     0      -    -    -     3154.00000 2735.00000  13.3%     -    7s
+     0     0      -    -    -     3154.00000 2735.33333  13.3%     -    7s
+     0     0      -    -    -     3154.00000 2736.66667  13.2%     -   10s
+     0     0      -    -    -     3154.00000 2736.66667  13.2%     -   10s
+     0     0      -    -    -     3154.00000 2737.66667  13.2%     -   15s
+     0     0      -    -    -     3154.00000 2737.66667  13.2%     -   15s
+     0     0      -    -    -     3154.00000 2738.33333  13.2%     -   20s
+     0     0      -    -    -     3154.00000 2738.33333  13.2%     -   20s
+     0     0      -    -    -     3154.00000 2738.46667  13.2%     -   28s
+     0     2      -    -    -     3154.00000 2739.91667  13.1%     -   88s
+     1     4      -    -    -     3154.00000 2740.81111  13.1%     -   99s
+     3     6      -    -    -     3154.00000 2740.81111  13.1%     -  106s
+     5     8      -    -    -     3154.00000 2740.91111  13.1%     -  116s
+     7    10      -    -    -     3154.00000 2741.25000  13.1%     -  130s
+     9    12      -    -    -     3154.00000 2741.25000  13.1%     -  144s
+    11    14      -    -    -     3154.00000 2741.25000  13.1%     -  173s
+    13    16      -    -    -     3154.00000 2742.30786  13.1%     -  201s
+    15    18      -    -    -     3154.00000 2742.30786  13.1%     -  211s
+    17    20      -    -    -     3154.00000 2742.30786  13.1%     -  219s
+    19    22      -    -    -     3154.00000 2743.64119  13.0%     -  244s
+    21    24      -    -    -     3154.00000 2743.64119  13.0%     -  258s
+    23    26      -    -    -     3154.00000 2743.64119  13.0%     -  266s
+    25    28      -    -    -     3154.00000 2743.64119  13.0%     -  276s
+    27    30      -    -    -     3154.00000 2743.64119  13.0%     -  380s
+    29    32      -    -    -     3154.00000 2743.64119  13.0%     -  398s
+    31    35      -    -    -     3154.00000 2743.64119  13.0%     -  416s
+    34    37      -    -    -     3154.00000 2743.64119  13.0%     -  433s
+    36    39      -    -    -     3154.00000 2743.64119  13.0%     -  751s
+    38    42      -    -    -     3154.00000 2743.64119  13.0%     -  841s
+    41    45      -    -    -     3154.00000 2743.64119  13.0%     -  941s

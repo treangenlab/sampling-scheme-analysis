@@ -1,7 +1,46 @@
-Working on w=5, k=1, s=2
+w5-k1-s2 already completed!
+Working on w=5, k=2, s=2
 Set parameter Username
 Set parameter WLSAccessID
 Set parameter WLSSecret
 Set parameter LicenseID to value 2533279
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
-slurmstepd: error: *** JOB 914897 ON owlet02 CANCELLED AT 2024-09-01T17:06:43 ***
+Optimization terminated at non-zero gap = 6.73%
+Working on w=5, k=3, s=2
+(5, 3, 2)-forward scheme not found. There's no hope...
+Working on w=5, k=4, s=2
+(5, 4, 2)-forward scheme not found. There's no hope...
+Working on w=5, k=5, s=2
+(5, 5, 2)-forward scheme not found. There's no hope...
+Working on w=5, k=6, s=2
+Optimization terminated at non-zero gap = 25.90%
+(5, 6, 2)-local has lower density than fwd!
+Working on w=5, k=7, s=2
+(5, 7, 2)-forward scheme not found. There's no hope...
+Working on w=5, k=8, s=2
+(5, 8, 2)-forward scheme not found. There's no hope...
+Working on w=5, k=9, s=2
+(5, 9, 2)-forward scheme not found. There's no hope...
+	Command being timed: "python /home/Users/blk6/Projects/winnowing-LB-manuscript/scripts/run-ilp.py -w 5 -k 1 2 3 4 5 6 7 8 9 --sigma 2 --threads 128 --output local --time-limit 14400 --local"
+	User time (seconds): 3228938.95
+	System time (seconds): 6617.42
+	Percent of CPU this job got: 11230%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 8:00:09
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 40954708
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 26
+	Minor (reclaiming a frame) page faults: 34234785
+	Voluntary context switches: 415655148
+	Involuntary context switches: 8358673
+	Swaps: 0
+	File system inputs: 2528
+	File system outputs: 22144
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

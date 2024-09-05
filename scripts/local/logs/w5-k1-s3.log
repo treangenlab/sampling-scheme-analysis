@@ -274,3 +274,103 @@ Solution count 1: 6612
 
 Time limit reached
 Best objective 6.612000000000e+03, best bound 4.310000000000e+03, gap 34.8155%
+
+Gurobi 10.0.3 (linux64) logging started Thu Sep  5 10:07:02 2024
+
+Set parameter LogFile to value "local/logs/w5-k1-s3.log"
+Set parameter PoolSearchMode to value 2
+Set parameter PoolSolutions to value 1
+Set parameter PoolGap to value 0
+Set parameter Method to value 3
+Set parameter ConcurrentMIP to value 64
+Set parameter TimeLimit to value 14400
+Set parameter Heuristics to value 0.95
+Set parameter MIPFocus to value 1
+Set parameter Threads to value 128
+Set parameter Threads to value 128
+Warning: variable name "x_(00000, 0)" has a space
+Warning: default variable names used to write mps file
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 64 physical cores, 128 logical processors, using up to 128 threads
+
+Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
+Optimize a model with 98659 rows, 21627 columns and 198774 nonzeros
+Model fingerprint: 0x03c2f3be
+Model has 2916 general constraints
+Variable types: 0 continuous, 21627 integer (21627 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+  GenCon coe range [1e+00, 1e+00]
+
+Concurrent MIP optimizer: 64 concurrent instances (2 threads per instance)
+
+
+Warning: Completing partial solution with 20412 unfixed non-continuous variables out of 21627
+User MIP start produced solution with objective 6642 (2.52s)
+Loaded user MIP start with objective 6642
+
+Presolve added 8355 rows and 2913 columns
+Presolve time: 4.45s
+Presolved: 107014 rows, 24540 columns, 221652 nonzeros
+Variable types: 0 continuous, 24540 integer (24540 binary)
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root relaxation presolved: 107014 rows, 24540 columns, 221652 nonzeros
+
+Root barrier log...
+
+Elapsed ordering time = 5s
+Elapsed ordering time = 7s
+Elapsed ordering time = 10s
+Elapsed ordering time = 13s
+Elapsed ordering time = 15s
+Elapsed ordering time = 19s
+Elapsed ordering time = 20s
+Elapsed ordering time = 24s
+Elapsed ordering time = 25s
+Ordering time: 29.25s
+
+Barrier statistics:
+ AA' NZ     : 5.245e+06
+ Factor NZ  : 1.858e+08 (roughly 1.5 GB of memory)
+ Factor Ops : 5.914e+11 (roughly 25 seconds per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   3.73754782e+05 -9.60109773e+03  1.36e+04 8.29e-03  1.50e+01    76s
+   1   4.29905339e+04 -3.20977241e+04  4.38e+02 4.27e-14  8.33e-01   121s
+   2   1.94434410e+04 -6.38568561e+02  2.31e+00 1.88e-13  1.29e-01   160s
+   3   1.17508189e+04  3.05861702e+03  2.83e-02 2.05e-14  5.58e-02   211s
+   4   4.18886108e+03  3.69295267e+03  4.34e-03 2.05e-14  3.18e-03   264s
+   5   4.01127190e+03  4.00600248e+03  8.22e-06 2.02e-14  3.38e-05   309s
+   6   4.01020108e+03  4.01019580e+03  5.74e-12 3.16e-14  3.38e-08   384s
+
+Barrier performed 6 iterations in 417.92 seconds (143.83 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+
+Root relaxation: objective 4.010200e+03, 64780 iterations, 410.76 seconds (132.14 work units)
+Total elapsed time = 421.60s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0      -    -    -     6642.00000 4010.20000  39.6%     -  422s
+     0     0      -    -    -     6642.00000 4196.43000  36.8%     -  954s
+     0     0      -    -    -     6642.00000 4209.90000  36.6%     - 1010s
+     0     0      -    -    -     6642.00000 4209.90000  36.6%     - 1010s
+     0     0      -    -    -     6642.00000 4215.04667  36.5%     - 1034s
+     0     0      -    -    -     6642.00000 4217.33333  36.5%     - 1044s
+     0     0      -    -    -     6642.00000 4219.38000  36.5%     - 1052s
+     0     0      -    -    -     6642.00000 4221.00000  36.4%     - 1062s
+     0     0      -    -    -     6642.00000 4221.30000  36.4%     - 1064s

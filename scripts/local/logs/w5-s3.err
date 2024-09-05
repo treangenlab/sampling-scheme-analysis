@@ -4,27 +4,3 @@ Set parameter WLSAccessID
 Set parameter WLSSecret
 Set parameter LicenseID to value 2533279
 Academic license 2533279 - for non-commercial use only - registered to bl___@rice.edu
-Optimization terminated at non-zero gap = 34.82%
-	Command being timed: "python /home/Users/blk6/Projects/winnowing-LB-manuscript/scripts/run-ilp.py -w 5 -k 1 2 3 4 --sigma 3 --threads 128 --output local --time-limit 43200 --local"
-	User time (seconds): 2743725.28
-	System time (seconds): 15575.98
-	Percent of CPU this job got: 6386%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 12:00:08
-	Average shared text size (kbytes): 0
-	Average unshared data size (kbytes): 0
-	Average stack size (kbytes): 0
-	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 80681520
-	Average resident set size (kbytes): 0
-	Major (requiring I/O) page faults: 41
-	Minor (reclaiming a frame) page faults: 1791844970
-	Voluntary context switches: 2636006439
-	Involuntary context switches: 1056065
-	Swaps: 0
-	File system inputs: 6232
-	File system outputs: 16248
-	Socket messages sent: 0
-	Socket messages received: 0
-	Signals delivered: 0
-	Page size (bytes): 4096
-	Exit status: 0
