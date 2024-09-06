@@ -3,7 +3,7 @@ from gurobipy import GRB
 
 from utils import *
 
-def get_ILP_local(w, k, sigma=2, nSolutions=1, seed=None, sketch_size=1, method=-1, time_limit=None):
+def get_ILP_local(w, k, sigma=2, nSolutions=1, seed=None, sketch_size=1, method=-1, concurrentMIP=1, time_limit=None):
     pgap = 0.0000
     context_size = 2 * w + k - 2
     ell = w + k - 1
@@ -12,8 +12,13 @@ def get_ILP_local(w, k, sigma=2, nSolutions=1, seed=None, sketch_size=1, method=
     gp.setParam("PoolSolutions", nSolutions)
     gp.setParam("PoolGap", pgap)
     gp.setParam("Method", method)
+    gp.setParam("ConcurrentMIP", concurrentMIP)
     if time_limit:
         gp.setParam("TimeLimit", time_limit)
+
+    # Focus on finding better solution, not proving optimality
+    gp.setParam("Heuristics", .95)
+    gp.setParam("MIPFocus", 1)
 
     alphabet = [str(c) for c in range(sigma)]
     nodes = list("".join(x) for x in itertools.product(alphabet, repeat=ell))
@@ -119,7 +124,7 @@ def get_ILP_fwd(w, k, sigma=2, nSolutions=1, heuristics=0.1, seed=None, method=-
             cycle_constraints = 0
 
             # Reduce cycle space for larger alphabets
-            max_cycle = {2: 14, 3: 12, 4: 8}[sigma]
+            max_cycle = {2: 14, 3: 9, 4: 7}[sigma]
 
             # Use other simple cycles
             for d in range(1, max_cycle + 1):
@@ -142,7 +147,7 @@ def get_ILP_fwd(w, k, sigma=2, nSolutions=1, heuristics=0.1, seed=None, method=-
                         continue
 
                     # If not helpful cycle
-                    if p % w != 1:
+                    if p % w == 0:
                         continue
 
                     neck_edges = [(v[:-1], v[1:]) for v in cycle]
