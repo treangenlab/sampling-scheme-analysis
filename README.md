@@ -13,7 +13,7 @@ To generate benchmarking results for alphabet sizes of 2, 4, and 256:
 ```
 mkdir output
 for SIGMA in 2 4 256; do 
-    RUSTFLAGS="-C target-cpu=native" cargo +nightly run -r -- -n 5000000 -s ${SIGMA} eval --practical -o output/practical-s${SIGMA}.json
+    RUSTFLAGS="-C target-cpu=native" cargo +nightly run -r -- -n 10000000 -s ${SIGMA} eval --practical -o output/practical-s${SIGMA}.json
 done;
 ```
 
