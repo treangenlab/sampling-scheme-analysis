@@ -56,7 +56,7 @@ python run-ilp.py -w 2 3 4 -k 1 2 3 4 5 --sigma 2 3 4 --verbose
 All options are listed with `--help`:
 ```bash
 >$ python run-ilp.py --help
-usage: run-ilp.py [-h] -w WINDOW_SIZE [WINDOW_SIZE ...] -k KMER [KMER ...] --sigma SIGMA [SIGMA ...] [--local] [--method METHOD] [-t THREADS] [-v]
+usage: run-ilp.py [-h] -w WINDOW_SIZE [WINDOW_SIZE ...] -k KMER [KMER ...] --sigma SIGMA [SIGMA ...] [--local] [-o OUTPUT] [--time-limit TIME_LIMIT] [-t THREADS] [-v]
 
 options:
   -h, --help            show this help message and exit
@@ -64,7 +64,10 @@ options:
   -k KMER [KMER ...], --kmer KMER [KMER ...]
   --sigma SIGMA [SIGMA ...]
   --local               Find minimum local scheme density
-  --method METHOD       Gurobi method parameter
+  -o OUTPUT, --output OUTPUT
+                        Path to output directory
+  --time-limit TIME_LIMIT
+                        Time limit (in seconds)
   -t THREADS, --threads THREADS
   -v, --verbose         Log ILP to output
 ```
