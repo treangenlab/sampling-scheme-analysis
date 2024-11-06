@@ -92,7 +92,7 @@ if __name__ == "__main__":
         last_was_tight = k % w == 1
         if os.path.isfile(f"{out_dir}/sols/w{w}-k{k}-s{sigma}.pck"):
             print(f"w{w}-k{k}-s{sigma} already completed!")
-            continue
+            # continue
 
         print(f"Working on w={w}, k={k}, s={sigma}")
         num_contexts = sigma ** (2*w + k - 2 if is_local else w + k)
@@ -142,7 +142,7 @@ if __name__ == "__main__":
             with open(f"fwd/dens/w{w}-k{k}-s{sigma}.pck", 'rb') as pck_in:
                 fwd_dens = pck.load(pck_in)[w, k, sigma]
 
-            model = get_ILP_local(w, k, sigma=sigma, seed=fwd_seed, method=3, concurrentMIP=max(1, n_threads//2), time_limit=args.time_limit)
+            model = get_ILP_local(w, k, sigma=sigma, seed=fwd_seed, method=3, concurrentMIP=max(1, n_threads//32), time_limit=args.time_limit)
 
         # Optimize model
         gp.setParam("Threads", n_threads)

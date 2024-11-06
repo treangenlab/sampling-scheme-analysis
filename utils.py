@@ -6,17 +6,13 @@ import itertools
 from functools import lru_cache
 from itertools import chain, zip_longest
 import pickle, random
-from tqdm.notebook import tqdm
 import copy
-from pprint import pprint
-from sympy.ntheory.modular import solve_congruence
 
 from copy import deepcopy
 import pickle as pck
 from functools import cache
 from sympy import totient, isprime, divisors
 from sympy.ntheory.residue_ntheory import mobius
-import networkx as nx
 from fractions import Fraction
 
 
@@ -50,19 +46,6 @@ def de_bruijn_invBWT(n, k):
 
     db(1, 1)
     return "".join(alphabet[i] for i in sequence)
-
-
-def create_dbg(n, sigma):
-    G = nx.DiGraph()
-    nodes = [
-        "".join(x)
-        for x in (itertools.product([str(i) for i in range(sigma)], repeat=n))
-    ]
-    for n in nodes:
-        for c in range(sigma):
-            G.add_edge(n, n[1:] + str(c))
-
-    return G
 
 
 def necklace(n, sigma=2):
