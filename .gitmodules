@@ -1,0 +1,3 @@
+[submodule "minimizers"]
+	path = minimizers
+	url = git@github.com:RagnarGrootKoerkamp/minimizers.git
