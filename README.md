@@ -1,3 +1,13 @@
+# Density analysis of sampling schemes
+
+This repository contains code to go with the paper ([bioRxiv](https://www.biorxiv.org/content/10.1101/2024.09.06.611668v1))
+> A near-tight lower bound on the density of forward sampling schemes
+
+1. A script ([run-benchmarks.sh](./run-benchmarks.sh)) to benchmark existing sampling schemes, using the repo [RagnarGrootKoerkamp/minimizers](https://github.com/RagnarGrootKoerkamp/minimizers).
+2. Code to run our ILP (integer linear program, [run-ilp.py](./run-ilp.py)) that searches for optimal
+   sampling schemes for small parameters.
+3. A python notebook ([plots.ipynb](./plots.ipynb)) that plots all results and
+   lower bounds.
 
 
 ## Requirements
