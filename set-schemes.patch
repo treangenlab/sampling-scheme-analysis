@@ -1,0 +1,39 @@
+diff --git a/src/main.rs b/src/main.rs
+index 0aa3d5f..ffe66f4 100644
+--- a/src/main.rs
++++ b/src/main.rs
+@@ -341,26 +341,26 @@ fn main() {
+             input,
+         } => {
+             let mut base_types = vec![
+-                // MinimizerType::Minimizer,
++                 MinimizerType::Minimizer,
+                 // MinimizerType::BdAnchor { r: 0 },
+                 MinimizerType::Miniception { k0: 0 },
+                 // MinimizerType::MiniceptionNew { k0: 0 },
+                 // MinimizerType::ModSampling { k0: 0 },
+-                MinimizerType::LrMinimizer,
+-                // MinimizerType::ModMinimizer,
++                //MinimizerType::LrMinimizer,
++                 MinimizerType::ModMinimizer,
+                 // NOTE: These Rotmini/AltRotmini assume alphabet size 4.
+                 // MinimizerType::RotMinimizer,
+                 // MinimizerType::AltRotMinimizer,
+                 // MinimizerType::DecyclingMinimizer,
+-                // MinimizerType::DoubleDecyclingMinimizer,
++                 MinimizerType::DoubleDecyclingMinimizer,
+                 // MinimizerType::OpenSyncmerMinimizer {
+                 //     t: 0,
+                 //     tiebreak: false,
+                 // },
+-                MinimizerType::OpenClosedSyncmerMinimizer {
+-                    t: 0,
+-                    tiebreak: false,
+-                },
++                //MinimizerType::OpenClosedSyncmerMinimizer {
++                    //t: 0,
++                    //tiebreak: false,
++                //},
+                 // MinimizerType::FracMin { f: 0 },
+             ];
+             if small {
