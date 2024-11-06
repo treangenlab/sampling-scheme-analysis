@@ -1,47 +1,22 @@
 
-## Steps for generating sampling scheme benchmark results
 
-### Clone minimizer benchmarking repo
+## Requirements
+### Python
+* matplotlib
+* pandas
+* numpy
+* sympy
+* gurobipy ([requires a license, free for academics](https://www.gurobi.com/features/academic-wls-license/))
 
-```bash
-git clone https://github.com/RagnarGrootKoerkamp/minimizers.git
-cd minimizers
+### Other
+* [seqkit](https://bioinf.shenwei.me/seqkit/)
+* [rust nightly](https://doc.rust-lang.org/book/appendix-07-nightly-rust.html#rustup-and-the-role-of-rust-nightly)
+
+## Running the benchmarks
+Benchmarks can be generated via
 ```
-
-### Benchmarking on random strings
-To generate benchmarking results for alphabet sizes of 2, 4, and 256:
+./run-benchmarks.sh
 ```
-mkdir output
-for SIGMA in 2 4 256; do 
-    RUSTFLAGS="-C target-cpu=native" cargo +nightly run -r -- -n 10000000 -s ${SIGMA} eval --practical -o output/practical-s${SIGMA}.json
-done;
-```
-
-### Benchmarking on CHM13 ChrY
-
-You can download the CHM13 genome, extract the Y chromosome, filter out all non ACTG characters,
-and convert to uppercase with the following commands:
-```bash
-mkdir input
-wget -O input/T2T-CHM13v2.0.fna.gz https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz
-seqkit grep -ip NC_060948.1 input-data/T2T-CHM13v2.0.fna.gz > input/chm13Y.fna
-tail input/chm13Y.fna -n+2 | tr '[:lower:]' '[:upper:]' | tr -dc 'ATCG' > input/chm13Y.trimmed.txt
-```
-
-To generate benchmarking results for this specific input text, we use the `--input` flag:
-```bash
-RUSTFLAGS="-C target-cpu=native" cargo +nightly run -r -- -s 4 eval --practical -o output/practical-chm13Y.json --input input/chm13Y.trimmed.txt
-```
-
-### Analyzing output in `plots.ipynb`
-In order to plot the benchmarking results, the output json files must be gzipped and 
-moved to `scripts/data`
-
-```
-gzip output/*.json
-cp output/*.json ../data/
-```
-
 
 ## Instructions for running the ILP models
 The ILP models are built with [gurobipy](https://support.gurobi.com/hc/en-us/articles/360044290292-How-do-I-install-Gurobi-for-Python).
