@@ -20,13 +20,14 @@ This repository contains code to go with the paper ([bioRxiv](https://www.biorxi
 
 ### Other
 * [seqkit](https://bioinf.shenwei.me/seqkit/)
-* [rust nightly](https://doc.rust-lang.org/book/appendix-07-nightly-rust.html#rustup-and-the-role-of-rust-nightly)
+* [rust](https://www.rust-lang.org/)
 
 ## Running the benchmarks
 Benchmarks can be generated via
 ```
 ./run-benchmarks.sh
 ```
+which takes around an hour on a machine with 6 cores.
 
 ## Instructions for running the ILP models
 The ILP models are built with [gurobipy](https://support.gurobi.com/hc/en-us/articles/360044290292-How-do-I-install-Gurobi-for-Python).
