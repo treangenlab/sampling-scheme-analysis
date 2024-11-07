@@ -6,6 +6,8 @@ if [ ! -d minimizers/ ]; then
     git clone https://github.com/RagnarGrootKoerkamp/minimizers.git
 fi
 cd minimizers
+
+export PYO3_PYTHON=$(which python3)
 git checkout lower-bound-paper
 
 mkdir -p output
