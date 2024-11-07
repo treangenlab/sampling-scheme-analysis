@@ -21,7 +21,7 @@ seqkit grep -ip NC_060948.1 input/T2T-CHM13v2.0.fna.gz >input/chm13Y.fna
 tail input/chm13Y.fna -n+2 | tr '[:lower:]' '[:upper:]' | tr -dc 'ATCG' >input/chm13Y.trimmed.txt
 
 echo "Running benchmarks on chrY..."
-RUSTFLAGS="-C target-cpu=native" cargo run -r -- -s 4 eval --practical -o output/practical-chm13Y.json --input input/chm13Y.trimmed.txt
+RUSTFLAGS="-C target-cpu=native" cargo run -r -- -s 4 eval --practicaly -o output/practical-chm13Y.json --input input/chm13Y.trimmed.txt
 
 gzip output/*.json
 cd ..
