@@ -11,16 +11,17 @@ This repository contains code to go with the paper ([bioRxiv](https://www.biorxi
 
 
 ## Requirements
+Listed below are the necessary packages and corresponding versions we used to perform the analysis. 
 ### Python
-* matplotlib
-* pandas
-* numpy
-* sympy
-* gurobipy ([requires a license, free for academics](https://www.gurobi.com/features/academic-wls-license/))
+* matplotlib (3.7.1)
+* pandas (2.2.1)
+* numpy (1.26.4)
+* sympy (1.12)
+* gurobipy (10.0.3) ([requires a license, free for academics](https://www.gurobi.com/features/academic-wls-license/))
 
 ### Other
-* [seqkit](https://bioinf.shenwei.me/seqkit/)
-* [rust](https://www.rust-lang.org/)
+* [seqkit](https://bioinf.shenwei.me/seqkit/) (2.5.1)
+* [rust](https://www.rust-lang.org/) (1.82.0)
 
 ## Running the benchmarks
 Benchmarks can be generated via
